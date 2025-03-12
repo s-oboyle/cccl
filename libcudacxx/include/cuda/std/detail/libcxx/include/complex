@@ -1122,7 +1122,7 @@ _LIBCUDACXX_HIDE_FROM_ABI complex<double> log(const complex<double>& __x)
 
   // We now need log1p(__hypot_sq_scaled)
   // The range of __hypot_sq_scaled is too large for a simple polynomial at the moment,
-  // and the log1p function inself is quite heavy. We do some other reduction using:
+  // and the log1p function itself is quite heavy. We do some other reduction using:
   //    log1p(x) = -ln(C) + log1p(C-1 + C*x)
 
   // C = 2: log1p = ln(1/2) + log1p(1 + 2*x)
@@ -1401,7 +1401,7 @@ _LIBCUDACXX_HIDE_FROM_ABI complex<double> exp(const complex<double>& __x)
   // We can split this j up into three parts to fit it into three double exponents's.
   // j can be in a set of 3174 values.
   // (Splitting j into 4 is much better than splitting into 3).
-  uint64_t __j_quarter  = (__j / 4);
+  uint64_t __j_quarter  = (__j_int / 4);
   uint64_t __j_remainder = __j_int - (3*__j_quarter);
 
   // Pack these into exponents:
