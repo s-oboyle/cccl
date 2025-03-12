@@ -1053,7 +1053,10 @@ _LIBCUDACXX_HIDE_FROM_ABI complex<double> log(const complex<double>& __x)
 
   // Slowpath, denormal/nan/zero/rare-underflow:
   if((__exp == -1022) || __exp >= 1023){
-    if(__max == 0.0 || __exp == 1025){
+    // Here __exp can also be 3073, as fabs(NaN) can still return a "negative" NaN,
+    // And our exponent extraction does not strip the sign. We can still check for this with
+    // "__exp >= 1025" as opposed to "__exp == 1025", which only catches "positive" NaNs.
+    if(__max == 0.0 || __exp >= 1025){
       // NaN/Inf/0.0 (Inf doesn't matter, gets fixed later by hypot)
       __max_reduced = __max;
     }else{
