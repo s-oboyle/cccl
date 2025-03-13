@@ -1609,6 +1609,79 @@ _LIBCUDACXX_HIDE_FROM_ABI complex<_Tp> sinh(const complex<_Tp>& __x)
                       _CUDA_VSTD::cosh(__x.real()) * _CUDA_VSTD::sin(__x.imag()));
 }
 
+// sinh double specialization
+
+template <>
+_LIBCUDACXX_HIDE_FROM_ABI complex<double> sinh(const complex<double>& __x)
+{
+  // Need to distinguish +-0.0, use signbit
+  const bool __x_neg = _CUDA_VSTD::signbit(__x.real());
+
+  // Get real >= +0
+  double __in_imag = __x_neg ? -__x.imag() : __x.imag();
+  double __in_real =  _CUDA_VSTD::fabs(__x.real());
+
+  // Purge the special cases that don't pass through correctly:
+  if((!_CUDA_VSTD::isfinite(__in_imag)) && ((__in_real == 0.0) || (__in_real == INFINITY))){
+    return complex<double>(__x.real(), NAN);
+  }
+  if(_CUDA_VSTD::isnan(__in_real) && (__in_imag == 0.0)){
+    return __x;
+  }
+
+  // Make sure this get's compiled to sincos:
+  double __sin =  _CUDA_VSTD::sin(__in_imag);
+  double __cos =  _CUDA_VSTD::cos(__in_imag);
+
+  // The math functions cosh(real) and sinh(real) will have overflowed too early for complex(cosh),
+  // We scale them in this case. We would still like to use the local sinh/cosh functions, which will
+  // presumably have been optimised for whatever architecture we are compiling on.
+  //
+  // with sin(smallest denormal) = smallest denormal = 4.94065645841246544176568792868E-324,
+  // We are only guarenteed cosh(complex) overflows if cosh(real) is >= 3.63857141251215733008468631e631,
+  // aka |real| >= 1454.916...
+  // Now the real functions cosh(real) and sin(real) overflow for real > 710.475, so to use these library functions
+  // we must make sure their input is less than this.
+  //
+  // Unfortunately we can't scale according to a single criteria due to sin(x) being able to take on the smallest
+  // denormal value, so instead we do a slowpath calculation and split it three ways.
+  double __in_scale  = 0.0;
+  double __out_scale = 1.0;
+
+  // This does incur a small accuracy penalty so we keep the intervals fairly tight.
+  if(__in_real > 710.0){
+    // sinh and cosh will overflow, but the final result may not.
+    __in_scale = 300;
+    __out_scale =  1.39370958066637969029387812939e65; // exp(150)
+
+    // Here both sinh and the final answer will always overflow.
+    // However, if imag == 0.0, we would end up multiplying inf * 0.0 to get NaN,
+    // while the correct answer is 0.0.
+    // This is the most efficient place to correct this. We clamp the value to a value that still
+    // always overflows the final answer, however the intermediate calculation with our scaling will not.
+    // Note that __real == inf has already been purged.
+    if(__in_real > 1455.0){
+      __in_real = 1455;
+    }
+
+    // This also takes the large values that have been clamped above, and makes sure intermediate results
+    // don't do anything funny.
+    if(__in_real > 1000.0){
+      __in_scale  = 800.0;
+      __out_scale =  5.22146968976414425470418128918e173; // exp(400)
+    }
+  }
+
+  double __cosh_re_scaled = _CUDA_VSTD::cosh(__in_real - __in_scale);
+  double __sinh_re_scaled = _CUDA_VSTD::sinh(__in_real - __in_scale);
+
+  // Order of multiplication matters:
+  double __ans_re = (__sinh_re_scaled * (__cos * __out_scale)) * __out_scale;
+  double __ans_im = (__cosh_re_scaled * (__sin * __out_scale)) * __out_scale;
+
+  return  __x_neg ? -complex<double>(__ans_re, __ans_im) : complex<double>(__ans_re, __ans_im);
+}
+
 // cosh
 
 template <class _Tp>
