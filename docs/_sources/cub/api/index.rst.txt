@@ -54,7 +54,6 @@ Structs
 * :doc:`cub::AgentScanByKeyPolicy <structcub_1_1AgentScanByKeyPolicy>`
 * :doc:`cub::AgentScanPolicy <structcub_1_1AgentScanPolicy>`
 * :doc:`cub::AgentSelectIfPolicy <structcub_1_1AgentSelectIfPolicy>`
-* :doc:`cub::AgentSmallAndMediumSegmentedSortPolicy <structcub_1_1AgentSmallAndMediumSegmentedSortPolicy>`
 * :doc:`cub::AgentSubWarpMergeSortPolicy <structcub_1_1AgentSubWarpMergeSortPolicy>`
 * :doc:`cub::AgentThreeWayPartitionPolicy <structcub_1_1AgentThreeWayPartitionPolicy>`
 * :doc:`cub::AgentUniqueByKeyPolicy <structcub_1_1AgentUniqueByKeyPolicy>`
@@ -72,7 +71,6 @@ Structs
 * :doc:`cub::CachingDeviceAllocator <structcub_1_1CachingDeviceAllocator>`
 * :doc:`cub::CastOp <structcub_1_1CastOp>`
 * :doc:`cub::ChainedPolicy <structcub_1_1ChainedPolicy>`
-* :doc:`structcub_1_1ChainedPolicy_3_01PolicyPtxVersion_00_01PolicyT_00_01PolicyT_01_4`
 * :doc:`cub::DeviceAdjacentDifference <structcub_1_1DeviceAdjacentDifference>`
 * :doc:`cub::DeviceCopy <structcub_1_1DeviceCopy>`
 * :doc:`cub::DeviceFor <structcub_1_1DeviceFor>`
@@ -249,7 +247,6 @@ Enumerations
    structcub_1_1AgentScanByKeyPolicy
    structcub_1_1AgentScanPolicy
    structcub_1_1AgentSelectIfPolicy
-   structcub_1_1AgentSmallAndMediumSegmentedSortPolicy
    structcub_1_1AgentSubWarpMergeSortPolicy
    structcub_1_1AgentThreeWayPartitionPolicy
    structcub_1_1AgentUniqueByKeyPolicy
@@ -267,7 +264,6 @@ Enumerations
    structcub_1_1CachingDeviceAllocator
    structcub_1_1CastOp
    structcub_1_1ChainedPolicy
-   structcub_1_1ChainedPolicy_3_01PolicyPtxVersion_00_01PolicyT_00_01PolicyT_01_4
    structcub_1_1DeviceAdjacentDifference
    structcub_1_1DeviceCopy
    structcub_1_1DeviceFor
