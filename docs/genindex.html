@@ -327,6 +327,7 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="libcudacxx/ptx_api.html">PTX API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="libcudacxx/ptx/examples.html">Examples</a></li>
 <li class="toctree-l4"><a class="reference internal" href="libcudacxx/ptx/instructions.html">PTX Instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="libcudacxx/ptx/pragmas.html">PTX Pragmas</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="libcudacxx/api/index.html">API reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -346,8 +347,8 @@
 <li class="toctree-l4"><a class="reference internal" href="libcudacxx/api/group__iterators_1ga83ac1a6f53e106d83b8f7db6757f7334.html">zip_iterator::difference_type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="libcudacxx/api/group__iterators_1gadcd3d726e080dfd5ec73d1816aa41744.html">zip_iterator::iterator_concept</a></li>
 <li class="toctree-l4"><a class="reference internal" href="libcudacxx/api/group__iterators_1ga3a57fccd85438fe6ac517f59802807b5.html">zip_iterator::pointer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="libcudacxx/api/group__iterators_1ga843f5392a85c60af68ceedbd62d71d7f.html">zip_iterator::reference</a></li>
-<li class="toctree-l4"><a class="reference internal" href="libcudacxx/api/group__iterators_1ga64c3e03435ec5e5dc3b9eaad6349c1c2.html">zip_iterator::value_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="libcudacxx/api/group__iterators_1ga3d65c0bac93cd905b59b6b7cb0c04f08.html">zip_iterator::reference</a></li>
+<li class="toctree-l4"><a class="reference internal" href="libcudacxx/api/group__iterators_1gaebe2d9c8478b11e187372e211ab26711.html">zip_iterator::value_type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="libcudacxx/api/group__iterators.html">Iterators</a></li>
 </ul>
 </details></li>
@@ -1105,9 +1106,7 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="cudax/memory_resource.html">Memory Resources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1basic__any__resource.html">cuda::experimental::basic_any_resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1memory__pool__properties.html">cuda::experimental::memory_pool_properties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html">cuda::experimental::device_memory_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html">cuda::experimental::device_memory_resource</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html">cuda::experimental::pinned_memory_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1legacy__pinned__memory__resource.html">cuda::experimental::legacy_pinned_memory_resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html">cuda::experimental::pinned_memory_resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1shared__resource.html">cuda::experimental::shared_resource</a></li>
@@ -1166,7 +1165,6 @@
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1data__interface.html">cuda::experimental::stf::data_interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1data__place.html">cuda::experimental::stf::data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1deferred__stream__task.html">cuda::experimental::stf::deferred_stream_task</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html">cuda::experimental::device_memory_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html">cuda::experimental::device_memory_resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1dim4.html">cuda::experimental::stf::dim4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html">cuda::experimental::stf::event_impl</a></li>
@@ -1199,14 +1197,12 @@
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1logical__data__untyped.html">cuda::experimental::stf::logical_data_untyped</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1logical__device.html">cuda::experimental::logical_device</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1reducer_1_1logical__or.html">cuda::experimental::stf::reducer::logical_or</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html">cuda::experimental::managed_memory_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html">cuda::experimental::managed_memory_resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1reducer_1_1maxval.html">cuda::experimental::stf::reducer::maxval</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1reducer_1_1minval.html">cuda::experimental::stf::reducer::minval</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1no__init.html">cuda::experimental::stf::no_init</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1nvtx__range.html">cuda::experimental::stf::nvtx_range</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1optionally__static.html">cuda::experimental::stf::optionally_static</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html">cuda::experimental::pinned_memory_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html">cuda::experimental::pinned_memory_resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1place__partition.html">cuda::experimental::stf::place_partition</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/classcuda_1_1experimental_1_1stf_1_1pooled__allocator.html">cuda::experimental::stf::pooled_allocator</a></li>
@@ -1264,6 +1260,7 @@
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1cooperative__launch.html">cuda::experimental::cooperative_launch</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1stf_1_1cuda__kernel__desc.html">cuda::experimental::stf::cuda_kernel_desc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1stf_1_1decorated__stream.html">cuda::experimental::stf::decorated_stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1device__memory__pool.html">cuda::experimental::device_memory_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1dynamic__shared__memory__option.html">cuda::experimental::dynamic_shared_memory_option</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1graph.html">cuda::experimental::graph</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1graph__builder.html">cuda::experimental::graph_builder</a></li>
@@ -1293,12 +1290,13 @@
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1launch__priority.html">cuda::experimental::launch_priority</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1stf_1_1layout__stride.html">cuda::experimental::stf::layout_stride</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1level__dimensions.html">cuda::experimental::level_dimensions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1managed__memory__pool.html">cuda::experimental::managed_memory_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1memory__pool__properties.html">cuda::experimental::memory_pool_properties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1stf_1_1owning__container__of.html">cuda::experimental::stf::owning_container_of</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1stf_1_1owning__container__of_3_01scalar__view_3_01T_01_4_01_4.html">cuda::experimental::stf::owning_container_of&lt; scalar_view&lt; T &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1path__builder.html">cuda::experimental::path_builder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1pinned__memory__pool.html">cuda::experimental::pinned_memory_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1stf_1_1pooled__allocator__config.html">cuda::experimental::stf::pooled_allocator_config</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1properties__list.html">cuda::experimental::properties_list</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1stf_1_1scalar__view.html">cuda::experimental::stf::scalar_view</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1shared__resource.html">cuda::experimental::shared_resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/structcuda_1_1experimental_1_1stream.html">cuda::experimental::stream</a></li>
@@ -1398,12 +1396,12 @@
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1a64c350f4b7a5ca83daf762270e3df393.html">cuda::experimental::async_host_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1a240e2877377596bbbe54ead3ec7561a5.html">cuda::experimental::dimensions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1aa7e410c16ff7d4b08d9b7da94658778c.html">cuda::experimental::dimensions_index_type</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a9ea877271b16e8827b4751991836c99e.html">cuda::experimental::memory_pool_attributes::release_threshold_t</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1ae99474547cc43fcec667fe746cf0cde2.html">cuda::experimental::memory_pool_attributes::reuse_allow_internal_dependencies_t</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a8ed6fa618dd93866a687e2665cb25806.html">cuda::experimental::memory_pool_attributes::reuse_allow_opportunistic_t</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1adb50f6a641c48acb3b95baf66b049b8b.html">cuda::experimental::memory_pool_attributes::reuse_follow_event_dependencies_t</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a3e9caecbd0bacc7e915615490d86d965.html">cuda::experimental::memory_pool_attributes::used_mem_current_t</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1abdd79c2d26aca5e91a3e0656a8b4050d.html">cuda::experimental::memory_pool_attributes::used_mem_high_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1ad9e7a2d9988226c47e97ff36596872ce.html">cuda::experimental::memory_pool_attributes::release_threshold_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a28bb8550df2273e5a6bcece9402c3642.html">cuda::experimental::memory_pool_attributes::reuse_allow_internal_dependencies_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a1bb91ce496fb92b92ff182872235eb26.html">cuda::experimental::memory_pool_attributes::reuse_allow_opportunistic_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1aae7b5ffcfde3e15ae2fc465502835732.html">cuda::experimental::memory_pool_attributes::reuse_follow_event_dependencies_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a70dbd98d310d0e929ad45cb02fc30473.html">cuda::experimental::memory_pool_attributes::used_mem_current_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a7b110ec707f1324f09cb54a0f793f1c2.html">cuda::experimental::memory_pool_attributes::used_mem_high_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1a9cbc3f609cd9a335648c2e314d35466d.html">cuda::experimental::resource_ref</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1stf_1ad79958209ea876e5dafe78f59ab52d79.html">cuda::experimental::stf::array_tuple</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1stf_1aa7d4170e1a89607a1064da6257130929.html">cuda::experimental::stf::blocked_partition</a></li>
@@ -1415,8 +1413,8 @@
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1stf_1a3e15e8ae386f7f07da8d7503a0046b62.html">cuda::experimental::stf::task_dep_vector_untyped</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1stf_1aa9c8a86afb5d22780fd035a16435c768.html">cuda::experimental::stf::token</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1ab23ef2175595750ef0075ca8bef26a33.html">cuda::experimental::synchronous_resource_ref</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1a352a2bd6a5dd2cd31b01168b92c06b60.html">cuda::experimental::uninitialized_async_device_buffer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1a985dd73cbbab6e6d44aa7307e27ed90b.html">cuda::experimental::uninitialized_device_buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1aefba5d75351aad499faf30658b54df50.html">cuda::experimental::uninitialized_async_device_buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1a0d0aa10903bca9350c88da9e7121c089.html">cuda::experimental::uninitialized_device_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1a4401baa9c7798a0dd6f981de4e549d86.html">cuda::experimental::graph_node_type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1stf_1a923aa8f0346e2b2a9e970a0fab753673.html">cuda::experimental::stf::access_mode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="cudax/api/namespacecuda_1_1experimental_1_1stf_1a82008bf924d44262d76e4dd3e923e196.html">cuda::experimental::stf::hw_scope</a></li>
@@ -1467,13 +1465,16 @@
 <li class="toctree-l2"><a class="reference internal" href="cccl/license.html">License</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="python/setup.html">Setup and Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python/compute.html"><code class="docutils literal notranslate"><span class="pre">cuda.compute</span></code>: Parallel Computing Primitives</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python/coop.html"><code class="docutils literal notranslate"><span class="pre">cuda.coop</span></code>: Cooperative Algorithms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="python/resources.html">Resources</a></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="python/api_reference.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="python/compute_api.html"><code class="docutils literal notranslate"><span class="pre">cuda.compute</span></code> API Reference</a></li>
-<li class="toctree-l2"><a class="reference internal" href="python/coop_api.html"><code class="docutils literal notranslate"><span class="pre">cuda.coop</span></code> API Reference</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="python/index.html">CCCL Python Libraries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="python/setup.html">Setup and Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python/compute.html"><code class="docutils literal notranslate"><span class="pre">cuda.compute</span></code>: Parallel Computing Primitives</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python/coop.html"><code class="docutils literal notranslate"><span class="pre">cuda.coop</span></code>: Cooperative Algorithms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python/resources.html">Resources</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="python/api_reference.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="python/compute_api.html"><code class="docutils literal notranslate"><span class="pre">cuda.compute</span></code> API Reference</a></li>
+<li class="toctree-l3"><a class="reference internal" href="python/coop_api.html"><code class="docutils literal notranslate"><span class="pre">cuda.coop</span></code> API Reference</a></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 </ul>
@@ -1588,9 +1589,9 @@
 </li>
       <li><a href="cub/api/structcub_1_1AgentRadixSortDownsweepPolicy.html#_CPPv4I_i_i0_18BlockLoadAlgorithm_17CacheLoadModifier_18RadixRankAlgorithm_18BlockScanAlgorithm_i0EN3cub29AgentRadixSortDownsweepPolicyE">AgentRadixSortDownsweepPolicy (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortDownsweepPolicy.html#_CPPv4N3cub29AgentRadixSortDownsweepPolicyUt1_8E">AgentRadixSortDownsweepPolicy::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortDownsweepPolicy.html#_CPPv4N3cub29AgentRadixSortDownsweepPolicyUt2_10E">AgentRadixSortDownsweepPolicy::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortDownsweepPolicy.html#_CPPv4N3cub29AgentRadixSortDownsweepPolicyUt1_810RADIX_BITSE">AgentRadixSortDownsweepPolicy::[anonymous]::RADIX_BITS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortDownsweepPolicy.html#_CPPv4N3cub29AgentRadixSortDownsweepPolicyUt2_1010RADIX_BITSE">AgentRadixSortDownsweepPolicy::[anonymous]::RADIX_BITS (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1AgentRadixSortDownsweepPolicy.html#_CPPv4N3cub29AgentRadixSortDownsweepPolicy14LOAD_ALGORITHME">AgentRadixSortDownsweepPolicy::LOAD_ALGORITHM (C++ member)</a>
 </li>
@@ -1602,31 +1603,31 @@
 </li>
       <li><a href="cub/api/structcub_1_1AgentRadixSortExclusiveSumPolicy.html#_CPPv4I_i_iEN3cub32AgentRadixSortExclusiveSumPolicyE">AgentRadixSortExclusiveSumPolicy (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortExclusiveSumPolicy.html#_CPPv4N3cub32AgentRadixSortExclusiveSumPolicyUt2_12E">AgentRadixSortExclusiveSumPolicy::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortExclusiveSumPolicy.html#_CPPv4N3cub32AgentRadixSortExclusiveSumPolicyUt2_14E">AgentRadixSortExclusiveSumPolicy::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortExclusiveSumPolicy.html#_CPPv4N3cub32AgentRadixSortExclusiveSumPolicyUt2_1213BLOCK_THREADSE">AgentRadixSortExclusiveSumPolicy::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortExclusiveSumPolicy.html#_CPPv4N3cub32AgentRadixSortExclusiveSumPolicyUt2_1413BLOCK_THREADSE">AgentRadixSortExclusiveSumPolicy::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortExclusiveSumPolicy.html#_CPPv4N3cub32AgentRadixSortExclusiveSumPolicyUt2_1210RADIX_BITSE">AgentRadixSortExclusiveSumPolicy::[anonymous]::RADIX_BITS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortExclusiveSumPolicy.html#_CPPv4N3cub32AgentRadixSortExclusiveSumPolicyUt2_1410RADIX_BITSE">AgentRadixSortExclusiveSumPolicy::[anonymous]::RADIX_BITS (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4I_i_i_i0_iEN3cub29AgentRadixSortHistogramPolicyE">AgentRadixSortHistogramPolicy (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4N3cub29AgentRadixSortHistogramPolicyUt2_11E">AgentRadixSortHistogramPolicy::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4N3cub29AgentRadixSortHistogramPolicyUt2_13E">AgentRadixSortHistogramPolicy::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4N3cub29AgentRadixSortHistogramPolicyUt2_1113BLOCK_THREADSE">AgentRadixSortHistogramPolicy::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4N3cub29AgentRadixSortHistogramPolicyUt2_1313BLOCK_THREADSE">AgentRadixSortHistogramPolicy::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4N3cub29AgentRadixSortHistogramPolicyUt2_1116ITEMS_PER_THREADE">AgentRadixSortHistogramPolicy::[anonymous]::ITEMS_PER_THREAD (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4N3cub29AgentRadixSortHistogramPolicyUt2_1316ITEMS_PER_THREADE">AgentRadixSortHistogramPolicy::[anonymous]::ITEMS_PER_THREAD (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4N3cub29AgentRadixSortHistogramPolicyUt2_119NUM_PARTSE">AgentRadixSortHistogramPolicy::[anonymous]::NUM_PARTS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4N3cub29AgentRadixSortHistogramPolicyUt2_139NUM_PARTSE">AgentRadixSortHistogramPolicy::[anonymous]::NUM_PARTS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4N3cub29AgentRadixSortHistogramPolicyUt2_1110RADIX_BITSE">AgentRadixSortHistogramPolicy::[anonymous]::RADIX_BITS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortHistogramPolicy.html#_CPPv4N3cub29AgentRadixSortHistogramPolicyUt2_1310RADIX_BITSE">AgentRadixSortHistogramPolicy::[anonymous]::RADIX_BITS (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1AgentRadixSortOnesweepPolicy.html#_CPPv4I_i_i0_i_18RadixRankAlgorithm_18BlockScanAlgorithm_23RadixSortStoreAlgorithm_i0EN3cub28AgentRadixSortOnesweepPolicyE">AgentRadixSortOnesweepPolicy (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortOnesweepPolicy.html#_CPPv4N3cub28AgentRadixSortOnesweepPolicyUt2_13E">AgentRadixSortOnesweepPolicy::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortOnesweepPolicy.html#_CPPv4N3cub28AgentRadixSortOnesweepPolicyUt2_15E">AgentRadixSortOnesweepPolicy::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortOnesweepPolicy.html#_CPPv4N3cub28AgentRadixSortOnesweepPolicyUt2_1310RADIX_BITSE">AgentRadixSortOnesweepPolicy::[anonymous]::RADIX_BITS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortOnesweepPolicy.html#_CPPv4N3cub28AgentRadixSortOnesweepPolicyUt2_1510RADIX_BITSE">AgentRadixSortOnesweepPolicy::[anonymous]::RADIX_BITS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortOnesweepPolicy.html#_CPPv4N3cub28AgentRadixSortOnesweepPolicyUt2_1314RANK_NUM_PARTSE">AgentRadixSortOnesweepPolicy::[anonymous]::RANK_NUM_PARTS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortOnesweepPolicy.html#_CPPv4N3cub28AgentRadixSortOnesweepPolicyUt2_1514RANK_NUM_PARTSE">AgentRadixSortOnesweepPolicy::[anonymous]::RANK_NUM_PARTS (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1AgentRadixSortOnesweepPolicy.html#_CPPv4N3cub28AgentRadixSortOnesweepPolicy14RANK_ALGORITHME">AgentRadixSortOnesweepPolicy::RANK_ALGORITHM (C++ member)</a>
 </li>
@@ -1636,9 +1637,9 @@
 </li>
       <li><a href="cub/api/structcub_1_1AgentRadixSortUpsweepPolicy.html#_CPPv4I_i_i0_17CacheLoadModifier_i0EN3cub27AgentRadixSortUpsweepPolicyE">AgentRadixSortUpsweepPolicy (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortUpsweepPolicy.html#_CPPv4N3cub27AgentRadixSortUpsweepPolicyUt2_19E">AgentRadixSortUpsweepPolicy::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortUpsweepPolicy.html#_CPPv4N3cub27AgentRadixSortUpsweepPolicyUt2_21E">AgentRadixSortUpsweepPolicy::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRadixSortUpsweepPolicy.html#_CPPv4N3cub27AgentRadixSortUpsweepPolicyUt2_1910RADIX_BITSE">AgentRadixSortUpsweepPolicy::[anonymous]::RADIX_BITS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRadixSortUpsweepPolicy.html#_CPPv4N3cub27AgentRadixSortUpsweepPolicyUt2_2110RADIX_BITSE">AgentRadixSortUpsweepPolicy::[anonymous]::RADIX_BITS (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1AgentRadixSortUpsweepPolicy.html#_CPPv4N3cub27AgentRadixSortUpsweepPolicy13LOAD_MODIFIERE">AgentRadixSortUpsweepPolicy::LOAD_MODIFIER (C++ member)</a>
 </li>
@@ -1664,13 +1665,13 @@
 </li>
       <li><a href="cub/api/structcub_1_1AgentRlePolicy.html#_CPPv4I_i_i_18BlockLoadAlgorithm_17CacheLoadModifier_b_18BlockScanAlgorithm0EN3cub14AgentRlePolicyE">AgentRlePolicy (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRlePolicy.html#_CPPv4N3cub14AgentRlePolicyUt2_21E">AgentRlePolicy::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1AgentRlePolicy.html#_CPPv4N3cub14AgentRlePolicyUt2_23E">AgentRlePolicy::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRlePolicy.html#_CPPv4N3cub14AgentRlePolicyUt2_2113BLOCK_THREADSE">AgentRlePolicy::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRlePolicy.html#_CPPv4N3cub14AgentRlePolicyUt2_2313BLOCK_THREADSE">AgentRlePolicy::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRlePolicy.html#_CPPv4N3cub14AgentRlePolicyUt2_2116ITEMS_PER_THREADE">AgentRlePolicy::[anonymous]::ITEMS_PER_THREAD (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRlePolicy.html#_CPPv4N3cub14AgentRlePolicyUt2_2316ITEMS_PER_THREADE">AgentRlePolicy::[anonymous]::ITEMS_PER_THREAD (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentRlePolicy.html#_CPPv4N3cub14AgentRlePolicyUt2_2123STORE_WARP_TIME_SLICINGE">AgentRlePolicy::[anonymous]::STORE_WARP_TIME_SLICING (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentRlePolicy.html#_CPPv4N3cub14AgentRlePolicyUt2_2323STORE_WARP_TIME_SLICINGE">AgentRlePolicy::[anonymous]::STORE_WARP_TIME_SLICING (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1AgentRlePolicy.html#_CPPv4N3cub14AgentRlePolicy14LOAD_ALGORITHME">AgentRlePolicy::LOAD_ALGORITHM (C++ member)</a>
 </li>
@@ -1706,11 +1707,11 @@
 </li>
       <li><a href="cub/api/structcub_1_1AgentSelectIfPolicy.html#_CPPv4I_i_i_18BlockLoadAlgorithm_17CacheLoadModifier_18BlockScanAlgorithm0EN3cub19AgentSelectIfPolicyE">AgentSelectIfPolicy (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentSelectIfPolicy.html#_CPPv4N3cub19AgentSelectIfPolicyUt2_24E">AgentSelectIfPolicy::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1AgentSelectIfPolicy.html#_CPPv4N3cub19AgentSelectIfPolicyUt2_26E">AgentSelectIfPolicy::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentSelectIfPolicy.html#_CPPv4N3cub19AgentSelectIfPolicyUt2_2413BLOCK_THREADSE">AgentSelectIfPolicy::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentSelectIfPolicy.html#_CPPv4N3cub19AgentSelectIfPolicyUt2_2613BLOCK_THREADSE">AgentSelectIfPolicy::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentSelectIfPolicy.html#_CPPv4N3cub19AgentSelectIfPolicyUt2_2416ITEMS_PER_THREADE">AgentSelectIfPolicy::[anonymous]::ITEMS_PER_THREAD (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentSelectIfPolicy.html#_CPPv4N3cub19AgentSelectIfPolicyUt2_2616ITEMS_PER_THREADE">AgentSelectIfPolicy::[anonymous]::ITEMS_PER_THREAD (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1AgentSelectIfPolicy.html#_CPPv4N3cub19AgentSelectIfPolicy14LOAD_ALGORITHME">AgentSelectIfPolicy::LOAD_ALGORITHM (C++ member)</a>
 </li>
@@ -1750,11 +1751,11 @@
 </li>
       <li><a href="cub/api/structcub_1_1AgentUniqueByKeyPolicy.html#_CPPv4I_i_i_N3cub18BlockLoadAlgorithmE_N3cub17CacheLoadModifierE_N3cub18BlockScanAlgorithmE0EN3cub22AgentUniqueByKeyPolicyE">AgentUniqueByKeyPolicy (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentUniqueByKeyPolicy.html#_CPPv4N3cub22AgentUniqueByKeyPolicyUt2_28E">AgentUniqueByKeyPolicy::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1AgentUniqueByKeyPolicy.html#_CPPv4N3cub22AgentUniqueByKeyPolicyUt2_30E">AgentUniqueByKeyPolicy::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentUniqueByKeyPolicy.html#_CPPv4N3cub22AgentUniqueByKeyPolicyUt2_2813BLOCK_THREADSE">AgentUniqueByKeyPolicy::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentUniqueByKeyPolicy.html#_CPPv4N3cub22AgentUniqueByKeyPolicyUt2_3013BLOCK_THREADSE">AgentUniqueByKeyPolicy::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1AgentUniqueByKeyPolicy.html#_CPPv4N3cub22AgentUniqueByKeyPolicyUt2_2816ITEMS_PER_THREADE">AgentUniqueByKeyPolicy::[anonymous]::ITEMS_PER_THREAD (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1AgentUniqueByKeyPolicy.html#_CPPv4N3cub22AgentUniqueByKeyPolicyUt2_3016ITEMS_PER_THREADE">AgentUniqueByKeyPolicy::[anonymous]::ITEMS_PER_THREAD (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1AgentUniqueByKeyPolicy.html#_CPPv4N3cub22AgentUniqueByKeyPolicy14LOAD_ALGORITHME">AgentUniqueByKeyPolicy::LOAD_ALGORITHM (C++ member)</a>
 </li>
@@ -2006,9 +2007,9 @@
 </li>
       <li><a href="cub/api/classcub_1_1BlockRadixRank.html#_CPPv4I_i_i_b_b_18BlockScanAlgorithm_19cudaSharedMemConfig_i_iEN3cub14BlockRadixRankE">BlockRadixRank (C++ class)</a>
 </li>
-      <li><a href="cub/api/classcub_1_1BlockRadixRank.html#_CPPv4N3cub14BlockRadixRankUt2_34E">BlockRadixRank::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/classcub_1_1BlockRadixRank.html#_CPPv4N3cub14BlockRadixRankUt2_36E">BlockRadixRank::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/classcub_1_1BlockRadixRank.html#_CPPv4N3cub14BlockRadixRankUt2_3423BINS_TRACKED_PER_THREADE">BlockRadixRank::[anonymous]::BINS_TRACKED_PER_THREAD (C++ enumerator)</a>
+      <li><a href="cub/api/classcub_1_1BlockRadixRank.html#_CPPv4N3cub14BlockRadixRankUt2_3623BINS_TRACKED_PER_THREADE">BlockRadixRank::[anonymous]::BINS_TRACKED_PER_THREAD (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/classcub_1_1BlockRadixRank.html#_CPPv4N3cub14BlockRadixRank14BlockRadixRankER11TempStorage">BlockRadixRank::BlockRadixRank (C++ function)</a>, <a href="cub/api/classcub_1_1BlockRadixRank.html#_CPPv4N3cub14BlockRadixRank14BlockRadixRankEv">[1]</a>
 </li>
@@ -2022,9 +2023,9 @@
 </li>
       <li><a href="cub/api/classcub_1_1BlockRadixRankMatch.html#_CPPv4I_i_i_b_18BlockScanAlgorithm_i_iEN3cub19BlockRadixRankMatchE">BlockRadixRankMatch (C++ class)</a>
 </li>
-      <li><a href="cub/api/classcub_1_1BlockRadixRankMatch.html#_CPPv4N3cub19BlockRadixRankMatchUt2_36E">BlockRadixRankMatch::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/classcub_1_1BlockRadixRankMatch.html#_CPPv4N3cub19BlockRadixRankMatchUt2_38E">BlockRadixRankMatch::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/classcub_1_1BlockRadixRankMatch.html#_CPPv4N3cub19BlockRadixRankMatchUt2_3623BINS_TRACKED_PER_THREADE">BlockRadixRankMatch::[anonymous]::BINS_TRACKED_PER_THREAD (C++ enumerator)</a>
+      <li><a href="cub/api/classcub_1_1BlockRadixRankMatch.html#_CPPv4N3cub19BlockRadixRankMatchUt2_3823BINS_TRACKED_PER_THREADE">BlockRadixRankMatch::[anonymous]::BINS_TRACKED_PER_THREAD (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/classcub_1_1BlockRadixRankMatch.html#_CPPv4N3cub19BlockRadixRankMatch19BlockRadixRankMatchER11TempStorage">BlockRadixRankMatch::BlockRadixRankMatch (C++ function)</a>
 </li>
@@ -2036,31 +2037,31 @@
 </li>
       <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4I_i_i_b_18BlockScanAlgorithm_18WarpMatchAlgorithm_iEN3cub30BlockRadixRankMatchEarlyCountsE">BlockRadixRankMatchEarlyCounts (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_37E">BlockRadixRankMatchEarlyCounts::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_39E">BlockRadixRankMatchEarlyCounts::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3715BINS_PER_THREADE">BlockRadixRankMatchEarlyCounts::[anonymous]::BINS_PER_THREAD (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3915BINS_PER_THREADE">BlockRadixRankMatchEarlyCounts::[anonymous]::BINS_PER_THREAD (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3723BINS_TRACKED_PER_THREADE">BlockRadixRankMatchEarlyCounts::[anonymous]::BINS_TRACKED_PER_THREAD (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3923BINS_TRACKED_PER_THREADE">BlockRadixRankMatchEarlyCounts::[anonymous]::BINS_TRACKED_PER_THREAD (C++ enumerator)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3713BLOCK_THREADSE">BlockRadixRankMatchEarlyCounts::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3913BLOCK_THREADSE">BlockRadixRankMatchEarlyCounts::[anonymous]::BLOCK_THREADS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3711BLOCK_WARPSE">BlockRadixRankMatchEarlyCounts::[anonymous]::BLOCK_WARPS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3911BLOCK_WARPSE">BlockRadixRankMatchEarlyCounts::[anonymous]::BLOCK_WARPS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_379FULL_BINSE">BlockRadixRankMatchEarlyCounts::[anonymous]::FULL_BINS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_399FULL_BINSE">BlockRadixRankMatchEarlyCounts::[anonymous]::FULL_BINS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3715NUM_MATCH_MASKSE">BlockRadixRankMatchEarlyCounts::[anonymous]::NUM_MATCH_MASKS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3915NUM_MATCH_MASKSE">BlockRadixRankMatchEarlyCounts::[anonymous]::NUM_MATCH_MASKS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3715PARTIAL_WARP_IDE">BlockRadixRankMatchEarlyCounts::[anonymous]::PARTIAL_WARP_ID (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3915PARTIAL_WARP_IDE">BlockRadixRankMatchEarlyCounts::[anonymous]::PARTIAL_WARP_ID (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3720PARTIAL_WARP_THREADSE">BlockRadixRankMatchEarlyCounts::[anonymous]::PARTIAL_WARP_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3920PARTIAL_WARP_THREADSE">BlockRadixRankMatchEarlyCounts::[anonymous]::PARTIAL_WARP_THREADS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3712RADIX_DIGITSE">BlockRadixRankMatchEarlyCounts::[anonymous]::RADIX_DIGITS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3912RADIX_DIGITSE">BlockRadixRankMatchEarlyCounts::[anonymous]::RADIX_DIGITS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_379WARP_MASKE">BlockRadixRankMatchEarlyCounts::[anonymous]::WARP_MASK (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_399WARP_MASKE">BlockRadixRankMatchEarlyCounts::[anonymous]::WARP_MASK (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3712WARP_THREADSE">BlockRadixRankMatchEarlyCounts::[anonymous]::WARP_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCountsUt2_3912WARP_THREADSE">BlockRadixRankMatchEarlyCounts::[anonymous]::WARP_THREADS (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCounts30BlockRadixRankMatchEarlyCountsER11TempStorage">BlockRadixRankMatchEarlyCounts::BlockRadixRankMatchEarlyCounts (C++ function)</a>
 </li>
@@ -2100,7 +2101,7 @@
 </li>
       <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCounts11TempStorageE">BlockRadixRankMatchEarlyCounts::TempStorage (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCounts11TempStorageUt2_39E">BlockRadixRankMatchEarlyCounts::TempStorage::[anonymous] (C++ member)</a>
+      <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCounts11TempStorageUt2_41E">BlockRadixRankMatchEarlyCounts::TempStorage::[anonymous] (C++ member)</a>
 </li>
       <li><a href="cub/api/structcub_1_1BlockRadixRankMatchEarlyCounts.html#_CPPv4N3cub30BlockRadixRankMatchEarlyCounts11TempStorage11match_masksE">BlockRadixRankMatchEarlyCounts::TempStorage::match_masks (C++ member)</a>
 </li>
@@ -2126,25 +2127,25 @@
 </li>
       <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4I0_iEN3cub17BlockRakingLayoutE">BlockRakingLayout (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_41E">BlockRakingLayout::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_43E">BlockRakingLayout::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4115CONFLICT_DEGREEE">BlockRakingLayout::[anonymous]::CONFLICT_DEGREE (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4315CONFLICT_DEGREEE">BlockRakingLayout::[anonymous]::CONFLICT_DEGREE (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4113GRID_ELEMENTSE">BlockRakingLayout::[anonymous]::GRID_ELEMENTS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4313GRID_ELEMENTSE">BlockRakingLayout::[anonymous]::GRID_ELEMENTS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4113HAS_CONFLICTSE">BlockRakingLayout::[anonymous]::HAS_CONFLICTS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4313HAS_CONFLICTSE">BlockRakingLayout::[anonymous]::HAS_CONFLICTS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4118MAX_RAKING_THREADSE">BlockRakingLayout::[anonymous]::MAX_RAKING_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4318MAX_RAKING_THREADSE">BlockRakingLayout::[anonymous]::MAX_RAKING_THREADS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4114RAKING_THREADSE">BlockRakingLayout::[anonymous]::RAKING_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4314RAKING_THREADSE">BlockRakingLayout::[anonymous]::RAKING_THREADS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4114SEGMENT_LENGTHE">BlockRakingLayout::[anonymous]::SEGMENT_LENGTH (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4314SEGMENT_LENGTHE">BlockRakingLayout::[anonymous]::SEGMENT_LENGTH (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4115SHARED_ELEMENTSE">BlockRakingLayout::[anonymous]::SHARED_ELEMENTS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4315SHARED_ELEMENTSE">BlockRakingLayout::[anonymous]::SHARED_ELEMENTS (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_419UNGUARDEDE">BlockRakingLayout::[anonymous]::UNGUARDED (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_439UNGUARDEDE">BlockRakingLayout::[anonymous]::UNGUARDED (C++ enumerator)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4119USE_SEGMENT_PADDINGE">BlockRakingLayout::[anonymous]::USE_SEGMENT_PADDING (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayoutUt2_4319USE_SEGMENT_PADDINGE">BlockRakingLayout::[anonymous]::USE_SEGMENT_PADDING (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1BlockRakingLayout.html#_CPPv4N3cub17BlockRakingLayout12_TempStorageE">BlockRakingLayout::_TempStorage (C++ struct)</a>
 </li>
@@ -2689,23 +2690,27 @@
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1ae52f048fec5bb8c0e028ec6ee18e0ae4.html#_CPPv4IDpEN4cuda12experimental10depends_onEN4cudaSt5arrayI15cudaGraphNode_tXsZ6_NodesEEEDpRK6_Nodes">cuda::experimental::depends_on (C++ function)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_poolE">cuda::experimental::device_memory_pool (C++ class)</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_poolE">cuda::experimental::device_memory_pool (C++ struct)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool18device_memory_poolE13cudaMemPool_t">cuda::experimental::device_memory_pool::device_memory_pool (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool18device_memory_poolEKN4cuda10device_refE22memory_pool_properties">[1]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool18device_memory_poolERK18device_memory_pool">[2]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool18device_memory_poolERR18device_memory_pool">[3]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool15default_queriesE">cuda::experimental::device_memory_pool::default_queries (C++ type)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool18from_native_handleE13cudaMemPool_t">cuda::experimental::device_memory_pool::from_native_handle (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool18from_native_handleEN4cudaSt9nullptr_tE">[1]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool18from_native_handleEi">[2]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool18device_memory_poolEN4cuda10device_refE22memory_pool_properties">cuda::experimental::device_memory_pool::device_memory_pool (C++ function)</a>, <a href="cudax/api/structcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool18device_memory_poolERK18device_memory_pool">[1]</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_poolaSERK18device_memory_pool">cuda::experimental::device_memory_pool::operator= (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_poolaSERR18device_memory_pool">[1]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool18from_native_handleE13cudaMemPool_t">cuda::experimental::device_memory_pool::from_native_handle (C++ function)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool13resource_typeE">cuda::experimental::device_memory_pool::resource_type (C++ type)</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_poolaSERK18device_memory_pool">cuda::experimental::device_memory_pool::operator= (C++ function)</a>
+</li>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_pool14reference_typeE">cuda::experimental::device_memory_pool::reference_type (C++ type)</a>
+</li>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1device__memory__pool.html#_CPPv4N4cuda12experimental18device_memory_poolD0Ev">cuda::experimental::device_memory_pool::~device_memory_pool (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resourceE">cuda::experimental::device_memory_resource (C++ class)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource15default_queriesE">cuda::experimental::device_memory_resource::default_queries (C++ type)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource22device_memory_resourceE13cudaMemPool_t">cuda::experimental::device_memory_resource::device_memory_resource (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource22device_memory_resourceEN4cuda10device_refE">[1]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource22device_memory_resourceEN4cudaSt9nullptr_tE">[2]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource22device_memory_resourceER18device_memory_pool">[3]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource22device_memory_resourceEi">[4]</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource22device_memory_resourceE13cudaMemPool_t">cuda::experimental::device_memory_resource::device_memory_resource (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource22device_memory_resourceEN4cuda10device_refE">[1]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource22device_memory_resourceEN4cudaSt9nullptr_tE">[2]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource22device_memory_resourceEi">[3]</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource12get_propertyERK22device_memory_resource17device_accessible">cuda::experimental::device_memory_resource::get_property (C++ function)</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1device__memory__resource.html#_CPPv4N4cuda12experimental22device_memory_resource12get_propertyERK22device_memory_resourceN4cuda2mr17device_accessibleE">cuda::experimental::device_memory_resource::get_property (C++ function)</a>
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1a23fa8e60cb63ed8f206e9a003088dec1.html#_CPPv4N4cuda12experimental16device_transformE">cuda::experimental::device_transform (C++ member)</a>
 </li>
@@ -2999,7 +3004,7 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1legacy__managed__memory__resource.html#_CPPv4N4cuda12experimental30legacy_managed_memory_resource15default_queriesE">cuda::experimental::legacy_managed_memory_resource::default_queries (C++ type)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1legacy__managed__memory__resource.html#_CPPv4N4cuda12experimental30legacy_managed_memory_resource12get_propertyERK30legacy_managed_memory_resource15host_accessible">cuda::experimental::legacy_managed_memory_resource::get_property (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1legacy__managed__memory__resource.html#_CPPv4N4cuda12experimental30legacy_managed_memory_resource12get_propertyERK30legacy_managed_memory_resource17device_accessible">[1]</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1legacy__managed__memory__resource.html#_CPPv4N4cuda12experimental30legacy_managed_memory_resource12get_propertyERK30legacy_managed_memory_resourceN4cuda2mr15host_accessibleE">cuda::experimental::legacy_managed_memory_resource::get_property (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1legacy__managed__memory__resource.html#_CPPv4N4cuda12experimental30legacy_managed_memory_resource12get_propertyERK30legacy_managed_memory_resourceN4cuda2mr17device_accessibleE">[1]</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1legacy__managed__memory__resource.html#_CPPv4N4cuda12experimental30legacy_managed_memory_resource30legacy_managed_memory_resourceEKj10device_ref">cuda::experimental::legacy_managed_memory_resource::legacy_managed_memory_resource (C++ function)</a>
 </li>
@@ -3013,7 +3018,7 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1legacy__pinned__memory__resource.html#_CPPv4N4cuda12experimental29legacy_pinned_memory_resource15default_queriesE">cuda::experimental::legacy_pinned_memory_resource::default_queries (C++ type)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1legacy__pinned__memory__resource.html#_CPPv4N4cuda12experimental29legacy_pinned_memory_resource12get_propertyERK29legacy_pinned_memory_resource15host_accessible">cuda::experimental::legacy_pinned_memory_resource::get_property (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1legacy__pinned__memory__resource.html#_CPPv4N4cuda12experimental29legacy_pinned_memory_resource12get_propertyERK29legacy_pinned_memory_resource17device_accessible">[1]</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1legacy__pinned__memory__resource.html#_CPPv4N4cuda12experimental29legacy_pinned_memory_resource12get_propertyERK29legacy_pinned_memory_resourceN4cuda2mr15host_accessibleE">cuda::experimental::legacy_pinned_memory_resource::get_property (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1legacy__pinned__memory__resource.html#_CPPv4N4cuda12experimental29legacy_pinned_memory_resource12get_propertyERK29legacy_pinned_memory_resourceN4cuda2mr17device_accessibleE">[1]</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1legacy__pinned__memory__resource.html#_CPPv4N4cuda12experimental29legacy_pinned_memory_resource29legacy_pinned_memory_resourceE10device_ref">cuda::experimental::legacy_pinned_memory_resource::legacy_pinned_memory_resource (C++ function)</a>
 </li>
@@ -3055,47 +3060,51 @@
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1a6bd77db8b90bae41aca5ae2cbb485f2f.html#_CPPv4I0DpEN4cuda12experimental20make_shared_resourceE15shared_resourceI9_ResourceEDpRR5_Args">cuda::experimental::make_shared_resource (C++ function)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_poolE">cuda::experimental::managed_memory_pool (C++ class)</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_poolE">cuda::experimental::managed_memory_pool (C++ struct)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool18from_native_handleE13cudaMemPool_t">cuda::experimental::managed_memory_pool::from_native_handle (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool18from_native_handleEN4cudaSt9nullptr_tE">[1]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool18from_native_handleEi">[2]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool15default_queriesE">cuda::experimental::managed_memory_pool::default_queries (C++ type)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool19managed_memory_poolE13cudaMemPool_t">cuda::experimental::managed_memory_pool::managed_memory_pool (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool19managed_memory_poolE22memory_pool_properties">[1]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool19managed_memory_poolERK19managed_memory_pool">[2]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool19managed_memory_poolERR19managed_memory_pool">[3]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool18from_native_handleE13cudaMemPool_t">cuda::experimental::managed_memory_pool::from_native_handle (C++ function)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_poolaSERK19managed_memory_pool">cuda::experimental::managed_memory_pool::operator= (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_poolaSERR19managed_memory_pool">[1]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool19managed_memory_poolE22memory_pool_properties">cuda::experimental::managed_memory_pool::managed_memory_pool (C++ function)</a>, <a href="cudax/api/structcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool19managed_memory_poolERK19managed_memory_pool">[1]</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool13resource_typeE">cuda::experimental::managed_memory_pool::resource_type (C++ type)</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_poolaSERK19managed_memory_pool">cuda::experimental::managed_memory_pool::operator= (C++ function)</a>
+</li>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_pool14reference_typeE">cuda::experimental::managed_memory_pool::reference_type (C++ type)</a>
+</li>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1managed__memory__pool.html#_CPPv4N4cuda12experimental19managed_memory_poolD0Ev">cuda::experimental::managed_memory_pool::~managed_memory_pool (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resourceE">cuda::experimental::managed_memory_resource (C++ class)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resource15default_queriesE">cuda::experimental::managed_memory_resource::default_queries (C++ type)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resource12get_propertyERK23managed_memory_resource15host_accessible">cuda::experimental::managed_memory_resource::get_property (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resource12get_propertyERK23managed_memory_resource17device_accessible">[1]</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resource12get_propertyERK23managed_memory_resourceN4cuda2mr15host_accessibleE">cuda::experimental::managed_memory_resource::get_property (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resource12get_propertyERK23managed_memory_resourceN4cuda2mr17device_accessibleE">[1]</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resource23managed_memory_resourceE13cudaMemPool_t">cuda::experimental::managed_memory_resource::managed_memory_resource (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resource23managed_memory_resourceER19managed_memory_pool">[1]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resource23managed_memory_resourceEv">[2]</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resource23managed_memory_resourceE13cudaMemPool_t">cuda::experimental::managed_memory_resource::managed_memory_resource (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1managed__memory__resource.html#_CPPv4N4cuda12experimental23managed_memory_resource23managed_memory_resourceEv">[1]</a>
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a5c331384f105d692a7c93708e4c638e0.html#_CPPv4N4cuda12experimental22memory_pool_attributes17release_thresholdE">cuda::experimental::memory_pool_attributes::release_threshold (C++ member)</a>
 </li>
-      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a9ea877271b16e8827b4751991836c99e.html#_CPPv4N4cuda12experimental22memory_pool_attributes19release_threshold_tE">cuda::experimental::memory_pool_attributes::release_threshold_t (C++ type)</a>
+      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1ad9e7a2d9988226c47e97ff36596872ce.html#_CPPv4N4cuda12experimental22memory_pool_attributes19release_threshold_tE">cuda::experimental::memory_pool_attributes::release_threshold_t (C++ type)</a>
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a551193c59923960fffb4d6513bb752ad.html#_CPPv4N4cuda12experimental22memory_pool_attributes33reuse_allow_internal_dependenciesE">cuda::experimental::memory_pool_attributes::reuse_allow_internal_dependencies (C++ member)</a>
 </li>
-      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1ae99474547cc43fcec667fe746cf0cde2.html#_CPPv4N4cuda12experimental22memory_pool_attributes35reuse_allow_internal_dependencies_tE">cuda::experimental::memory_pool_attributes::reuse_allow_internal_dependencies_t (C++ type)</a>
+      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a28bb8550df2273e5a6bcece9402c3642.html#_CPPv4N4cuda12experimental22memory_pool_attributes35reuse_allow_internal_dependencies_tE">cuda::experimental::memory_pool_attributes::reuse_allow_internal_dependencies_t (C++ type)</a>
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a5f772a864ee96d6f4af867da0bdf0f7f.html#_CPPv4N4cuda12experimental22memory_pool_attributes25reuse_allow_opportunisticE">cuda::experimental::memory_pool_attributes::reuse_allow_opportunistic (C++ member)</a>
 </li>
-      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a8ed6fa618dd93866a687e2665cb25806.html#_CPPv4N4cuda12experimental22memory_pool_attributes27reuse_allow_opportunistic_tE">cuda::experimental::memory_pool_attributes::reuse_allow_opportunistic_t (C++ type)</a>
+      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a1bb91ce496fb92b92ff182872235eb26.html#_CPPv4N4cuda12experimental22memory_pool_attributes27reuse_allow_opportunistic_tE">cuda::experimental::memory_pool_attributes::reuse_allow_opportunistic_t (C++ type)</a>
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a6903df51149751b8239868245efefb0c.html#_CPPv4N4cuda12experimental22memory_pool_attributes31reuse_follow_event_dependenciesE">cuda::experimental::memory_pool_attributes::reuse_follow_event_dependencies (C++ member)</a>
 </li>
-      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1adb50f6a641c48acb3b95baf66b049b8b.html#_CPPv4N4cuda12experimental22memory_pool_attributes33reuse_follow_event_dependencies_tE">cuda::experimental::memory_pool_attributes::reuse_follow_event_dependencies_t (C++ type)</a>
+      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1aae7b5ffcfde3e15ae2fc465502835732.html#_CPPv4N4cuda12experimental22memory_pool_attributes33reuse_follow_event_dependencies_tE">cuda::experimental::memory_pool_attributes::reuse_follow_event_dependencies_t (C++ type)</a>
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a0686072577848574a963847a80eac4e9.html#_CPPv4N4cuda12experimental22memory_pool_attributes16used_mem_currentE">cuda::experimental::memory_pool_attributes::used_mem_current (C++ member)</a>
 </li>
-      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a3e9caecbd0bacc7e915615490d86d965.html#_CPPv4N4cuda12experimental22memory_pool_attributes18used_mem_current_tE">cuda::experimental::memory_pool_attributes::used_mem_current_t (C++ type)</a>
+      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a70dbd98d310d0e929ad45cb02fc30473.html#_CPPv4N4cuda12experimental22memory_pool_attributes18used_mem_current_tE">cuda::experimental::memory_pool_attributes::used_mem_current_t (C++ type)</a>
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a02c4554f5959b81139ae93af92ce60e2.html#_CPPv4N4cuda12experimental22memory_pool_attributes13used_mem_highE">cuda::experimental::memory_pool_attributes::used_mem_high (C++ member)</a>
 </li>
-      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1abdd79c2d26aca5e91a3e0656a8b4050d.html#_CPPv4N4cuda12experimental22memory_pool_attributes15used_mem_high_tE">cuda::experimental::memory_pool_attributes::used_mem_high_t (C++ type)</a>
+      <li><a href="cudax/api/namespacecuda_1_1experimental_1_1memory__pool__attributes_1a7b110ec707f1324f09cb54a0f793f1c2.html#_CPPv4N4cuda12experimental22memory_pool_attributes15used_mem_high_tE">cuda::experimental::memory_pool_attributes::used_mem_high_t (C++ type)</a>
 </li>
       <li><a href="cudax/api/structcuda_1_1experimental_1_1memory__pool__properties.html#_CPPv4N4cuda12experimental22memory_pool_propertiesE">cuda::experimental::memory_pool_properties (C++ struct)</a>
 </li>
@@ -3127,29 +3136,27 @@
 </li>
       <li><a href="cudax/api/structcuda_1_1experimental_1_1path__builder.html#_CPPv4N4cuda12experimental12path_builder4waitERK12path_builder">cuda::experimental::path_builder::wait (C++ function)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_poolE">cuda::experimental::pinned_memory_pool (C++ class)</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_poolE">cuda::experimental::pinned_memory_pool (C++ struct)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18from_native_handleE13cudaMemPool_t">cuda::experimental::pinned_memory_pool::from_native_handle (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18from_native_handleEN4cudaSt9nullptr_tE">[1]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18from_native_handleEi">[2]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool15default_queriesE">cuda::experimental::pinned_memory_pool::default_queries (C++ type)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_poolaSERK18pinned_memory_pool">cuda::experimental::pinned_memory_pool::operator= (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_poolaSERR18pinned_memory_pool">[1]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18from_native_handleE13cudaMemPool_t">cuda::experimental::pinned_memory_pool::from_native_handle (C++ function)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18pinned_memory_poolE13cudaMemPool_t">cuda::experimental::pinned_memory_pool::pinned_memory_pool (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18pinned_memory_poolE22memory_pool_properties">[1]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18pinned_memory_poolERK18pinned_memory_pool">[2]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18pinned_memory_poolERR18pinned_memory_pool">[3]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18pinned_memory_poolEi22memory_pool_properties">[4]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_poolaSERK18pinned_memory_pool">cuda::experimental::pinned_memory_pool::operator= (C++ function)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool13resource_typeE">cuda::experimental::pinned_memory_pool::resource_type (C++ type)</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18pinned_memory_poolE22memory_pool_properties">cuda::experimental::pinned_memory_pool::pinned_memory_pool (C++ function)</a>, <a href="cudax/api/structcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18pinned_memory_poolERK18pinned_memory_pool">[1]</a>, <a href="cudax/api/structcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool18pinned_memory_poolEi22memory_pool_properties">[2]</a>
+</li>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_pool14reference_typeE">cuda::experimental::pinned_memory_pool::reference_type (C++ type)</a>
+</li>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1pinned__memory__pool.html#_CPPv4N4cuda12experimental18pinned_memory_poolD0Ev">cuda::experimental::pinned_memory_pool::~pinned_memory_pool (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resourceE">cuda::experimental::pinned_memory_resource (C++ class)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resource15default_queriesE">cuda::experimental::pinned_memory_resource::default_queries (C++ type)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resource12get_propertyERK22pinned_memory_resource15host_accessible">cuda::experimental::pinned_memory_resource::get_property (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resource12get_propertyERK22pinned_memory_resource17device_accessible">[1]</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resource12get_propertyERK22pinned_memory_resourceN4cuda2mr15host_accessibleE">cuda::experimental::pinned_memory_resource::get_property (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resource12get_propertyERK22pinned_memory_resourceN4cuda2mr17device_accessibleE">[1]</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resource22pinned_memory_resourceE13cudaMemPool_t">cuda::experimental::pinned_memory_resource::pinned_memory_resource (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resource22pinned_memory_resourceER18pinned_memory_pool">[1]</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resource22pinned_memory_resourceEv">[2]</a>
-</li>
-      <li><a href="cudax/api/structcuda_1_1experimental_1_1properties__list.html#_CPPv4IDpEN4cuda12experimental15properties_listE">cuda::experimental::properties_list (C++ struct)</a>
-</li>
-      <li><a href="cudax/api/structcuda_1_1experimental_1_1properties__list.html#_CPPv4I0EN4cuda12experimental15properties_list12has_propertyEb14_QueryProperty">cuda::experimental::properties_list::has_property (C++ function)</a>
-</li>
-      <li><a href="cudax/api/structcuda_1_1experimental_1_1properties__list.html#_CPPv4IIDpE0DpEN4cuda12experimental15properties_list6rebindE">cuda::experimental::properties_list::rebind (C++ type)</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resource22pinned_memory_resourceE13cudaMemPool_t">cuda::experimental::pinned_memory_resource::pinned_memory_resource (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1pinned__memory__resource.html#_CPPv4N4cuda12experimental22pinned_memory_resource22pinned_memory_resourceEv">[1]</a>
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1a9cbc3f609cd9a335648c2e314d35466d.html#_CPPv4IDpEN4cuda12experimental12resource_refE">cuda::experimental::resource_ref (C++ type)</a>
 </li>
@@ -4689,10 +4696,10 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache.html#_CPPv4N4cuda12experimental3stf22executable_graph_cache5entry9footprintE">cuda::experimental::stf::executable_graph_cache::entry::footprint (C++ member)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache.html#_CPPv4N4cuda12experimental3stf22executable_graph_cache5entry8last_useE">cuda::experimental::stf::executable_graph_cache::entry::last_use (C++ member)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache.html#_CPPv4N4cuda12experimental3stf22executable_graph_cache5entry8last_useE">cuda::experimental::stf::executable_graph_cache::entry::last_use (C++ member)</a>
+</li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache.html#_CPPv4N4cuda12experimental3stf22executable_graph_cache5entry11lru_refreshEv">cuda::experimental::stf::executable_graph_cache::entry::lru_refresh (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache.html#_CPPv4N4cuda12experimental3stf22executable_graph_cache22executable_graph_cacheEv">cuda::experimental::stf::executable_graph_cache::executable_graph_cache (C++ function)</a>
@@ -6985,7 +6992,7 @@
 </li>
       <li><a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4N4cuda12experimental6streamaSERK6stream">cuda::experimental::stream::operator= (C++ function)</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4N4cuda12experimental6streamaSERR6stream">[1]</a>
 </li>
-      <li><a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4NK4cuda12experimental6stream5queryERKN9execution12get_domain_tE">cuda::experimental::stream::query (C++ function)</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4NK4cuda12experimental6stream5queryERKN9execution32get_forward_progress_guarantee_tE">[1]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4I0ENK4cuda12experimental6stream5queryE15__call_result_tIN9execution12get_domain_tERK4_EnvERKN9execution23get_completion_domain_tIN9execution11set_error_tEEERK4_Env">cuda::experimental::stream::query (C++ function)</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4I0ENK4cuda12experimental6stream5queryEN9execution16__scheduler_of_tIRK4_EnvEERKN9execution26get_completion_scheduler_tIN9execution11set_error_tEEERK4_Env">[1]</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4NK4cuda12experimental6stream5queryERKN9execution23get_completion_domain_tIN9execution11set_value_tEEE">[2]</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4NK4cuda12experimental6stream5queryERKN9execution25get_completion_behavior_tE">[3]</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4NK4cuda12experimental6stream5queryERKN9execution26get_completion_scheduler_tIN9execution11set_value_tEEE">[4]</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4NK4cuda12experimental6stream5queryERKN9execution32get_forward_progress_guarantee_tE">[5]</a>
 </li>
       <li><a href="cudax/api/structcuda_1_1experimental_1_1stream.html#_CPPv4NK4cuda12experimental6stream5readyEv">cuda::experimental::stream::ready (C++ function)</a>
 </li>
@@ -7003,7 +7010,7 @@
 </li>
       <li><a href="cudax/api/structcuda_1_1experimental_1_1stream__ref.html#_CPPv4NK4cuda12experimental10stream_ref14logical_deviceEv">cuda::experimental::stream_ref::logical_device (C++ function)</a>
 </li>
-      <li><a href="cudax/api/structcuda_1_1experimental_1_1stream__ref.html#_CPPv4NK4cuda12experimental10stream_ref5queryERKN9execution12get_domain_tE">cuda::experimental::stream_ref::query (C++ function)</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream__ref.html#_CPPv4NK4cuda12experimental10stream_ref5queryERKN9execution32get_forward_progress_guarantee_tE">[1]</a>
+      <li><a href="cudax/api/structcuda_1_1experimental_1_1stream__ref.html#_CPPv4I0ENK4cuda12experimental10stream_ref5queryE15__call_result_tIN9execution12get_domain_tERK4_EnvERKN9execution23get_completion_domain_tIN9execution11set_error_tEEERK4_Env">cuda::experimental::stream_ref::query (C++ function)</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream__ref.html#_CPPv4I0ENK4cuda12experimental10stream_ref5queryEN9execution16__scheduler_of_tIRK4_EnvEERKN9execution26get_completion_scheduler_tIN9execution11set_error_tEEERK4_Env">[1]</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream__ref.html#_CPPv4NK4cuda12experimental10stream_ref5queryERKN9execution23get_completion_domain_tIN9execution11set_value_tEEE">[2]</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream__ref.html#_CPPv4NK4cuda12experimental10stream_ref5queryERKN9execution25get_completion_behavior_tE">[3]</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream__ref.html#_CPPv4NK4cuda12experimental10stream_ref5queryERKN9execution26get_completion_scheduler_tIN9execution11set_value_tEEE">[4]</a>, <a href="cudax/api/structcuda_1_1experimental_1_1stream__ref.html#_CPPv4NK4cuda12experimental10stream_ref5queryERKN9execution32get_forward_progress_guarantee_tE">[5]</a>
 </li>
       <li><a href="cudax/api/structcuda_1_1experimental_1_1stream__ref.html#_CPPv4NK4cuda12experimental10stream_ref5readyEv">cuda::experimental::stream_ref::ready (C++ function)</a>
 </li>
@@ -7067,7 +7074,7 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1uninitialized__async__buffer.html#_CPPv4N4cuda12experimental26uninitialized_async_bufferD0Ev">cuda::experimental::uninitialized_async_buffer::~uninitialized_async_buffer (C++ function)</a>
 </li>
-      <li><a href="cudax/api/namespacecuda_1_1experimental_1a352a2bd6a5dd2cd31b01168b92c06b60.html#_CPPv4I0EN4cuda12experimental33uninitialized_async_device_bufferE">cuda::experimental::uninitialized_async_device_buffer (C++ type)</a>
+      <li><a href="cudax/api/namespacecuda_1_1experimental_1aefba5d75351aad499faf30658b54df50.html#_CPPv4I0EN4cuda12experimental33uninitialized_async_device_bufferE">cuda::experimental::uninitialized_async_device_buffer (C++ type)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1uninitialized__buffer.html#_CPPv4I0DpEN4cuda12experimental20uninitialized_bufferE">cuda::experimental::uninitialized_buffer (C++ class)</a>
 </li>
@@ -7105,7 +7112,7 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1uninitialized__buffer.html#_CPPv4N4cuda12experimental20uninitialized_bufferD0Ev">cuda::experimental::uninitialized_buffer::~uninitialized_buffer (C++ function)</a>
 </li>
-      <li><a href="cudax/api/namespacecuda_1_1experimental_1a985dd73cbbab6e6d44aa7307e27ed90b.html#_CPPv4I0EN4cuda12experimental27uninitialized_device_bufferE">cuda::experimental::uninitialized_device_buffer (C++ type)</a>
+      <li><a href="cudax/api/namespacecuda_1_1experimental_1a0d0aa10903bca9350c88da9e7121c089.html#_CPPv4I0EN4cuda12experimental27uninitialized_device_bufferE">cuda::experimental::uninitialized_device_buffer (C++ type)</a>
 </li>
       <li><a href="cudax/api/namespacecuda_1_1experimental_1ac2bd49a968880629779df2659e34459e.html#_CPPv4I0EN4cuda12experimental14work_submitterE">cuda::experimental::work_submitter (C++ member)</a>
 </li>
@@ -7156,6 +7163,8 @@
       <li><a href="cub/api/structcub_1_1DeviceFor.html#_CPPv4I000EN3cub9DeviceFor12ForEachCopyNE11cudaError_t21RandomAccessIteratorT9NumItemsT3OpT12cudaStream_t">DeviceFor::ForEachCopyN (C++ function)</a>, <a href="cub/api/structcub_1_1DeviceFor.html#_CPPv4I000EN3cub9DeviceFor12ForEachCopyNE11cudaError_tPvR6size_t21RandomAccessIteratorT9NumItemsT3OpT12cudaStream_t">[1]</a>
 </li>
       <li><a href="cub/api/structcub_1_1DeviceFor.html#_CPPv4I0_Dp6size_t0EN3cub9DeviceFor16ForEachInExtentsE11cudaError_tPvR6size_tRKN4cudaSt7extentsI9IndexTypeDp7ExtentsEE6OpType12cudaStream_t">DeviceFor::ForEachInExtents (C++ function)</a>, <a href="cub/api/structcub_1_1DeviceFor.html#_CPPv4I0_Dp6size_t0EN3cub9DeviceFor16ForEachInExtentsE11cudaError_tRKN4cudaSt7extentsI9IndexTypeDp7ExtentsEE6OpType12cudaStream_t">[1]</a>
+</li>
+      <li><a href="cub/api/structcub_1_1DeviceFor.html#_CPPv4I00EN3cub9DeviceFor15ForEachInLayoutE11cudaError_tRK13LayoutMapping6OpType12cudaStream_t">DeviceFor::ForEachInLayout (C++ function)</a>
 </li>
       <li><a href="cub/api/structcub_1_1DeviceFor.html#_CPPv4I000EN3cub9DeviceFor8ForEachNE11cudaError_t21RandomAccessIteratorT9NumItemsT3OpT12cudaStream_t">DeviceFor::ForEachN (C++ function)</a>, <a href="cub/api/structcub_1_1DeviceFor.html#_CPPv4I000EN3cub9DeviceFor8ForEachNE11cudaError_tPvR6size_t21RandomAccessIteratorT9NumItemsT3OpT12cudaStream_t">[1]</a>
 </li>
@@ -7295,10 +7304,6 @@
 </li>
       <li><a href="cub/api/structcub_1_1DeviceScan.html#_CPPv4I00000EN3cub10DeviceScan17InclusiveSumByKeyE11cudaError_tPvR6size_t18KeysInputIteratorT20ValuesInputIteratorT21ValuesOutputIteratorT9NumItemsT11EqualityOpT12cudaStream_t">DeviceScan::InclusiveSumByKey (C++ function)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1DeviceScan.html#_CPPv4I000000_N4cuda9execution11determinism15__determinism_tE_14ForceInclusiveEN3cub10DeviceScan21scan_impl_determinismE11cudaError_tPvR6size_t14InputIteratorT15OutputIteratorT7ScanOpT10InitValueT9NumItemsTN4cuda9execution11determinism22__determinism_holder_tI11DeterminismEE12cudaStream_t">DeviceScan::scan_impl_determinism (C++ function)</a>
-</li>
-      <li><a href="cub/api/structcub_1_1DeviceScan.html#_CPPv4I00000_14ForceInclusive0EN3cub10DeviceScan13scan_impl_envE11cudaError_t14InputIteratorT15OutputIteratorT7ScanOpT10InitValueT9NumItemsT4EnvT">DeviceScan::scan_impl_env (C++ function)</a>
-</li>
       <li><a href="cub/api/structcub_1_1DeviceSegmentedRadixSort.html#_CPPv4N3cub24DeviceSegmentedRadixSortE">DeviceSegmentedRadixSort (C++ struct)</a>
 </li>
       <li><a href="cub/api/structcub_1_1DeviceSegmentedRadixSort.html#_CPPv4I000EN3cub24DeviceSegmentedRadixSort8SortKeysE11cudaError_tPvR6size_tPK4KeyTP4KeyTN4cudaSt7int64_tEN4cudaSt7int64_tE20BeginOffsetIteratorT18EndOffsetIteratorTii12cudaStream_t">DeviceSegmentedRadixSort::SortKeys (C++ function)</a>, <a href="cub/api/structcub_1_1DeviceSegmentedRadixSort.html#_CPPv4I000EN3cub24DeviceSegmentedRadixSort8SortKeysE11cudaError_tPvR6size_tR12DoubleBufferI4KeyTEN4cudaSt7int64_tEN4cudaSt7int64_tE20BeginOffsetIteratorT18EndOffsetIteratorTii12cudaStream_t">[1]</a>
@@ -7365,15 +7370,15 @@
 </li>
       <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4N3cub15DeviceTransformE">DeviceTransform (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4I000EN3cub15DeviceTransform4FillE11cudaError_t23RandomAccessIteratorOut9NumItemsT5Value12cudaStream_t">DeviceTransform::Fill (C++ function)</a>
+      <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4I0000EN3cub15DeviceTransform4FillE11cudaError_t23RandomAccessIteratorOut9NumItemsT5Value3Env">DeviceTransform::Fill (C++ function)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4I000EN3cub15DeviceTransform8GenerateE11cudaError_t23RandomAccessIteratorOut9NumItemsT9Generator12cudaStream_t">DeviceTransform::Generate (C++ function)</a>
+      <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4I0000EN3cub15DeviceTransform8GenerateE11cudaError_t23RandomAccessIteratorOut9NumItemsT9Generator3Env">DeviceTransform::Generate (C++ function)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4I0000EN3cub15DeviceTransform9TransformE11cudaError_t22RandomAccessIteratorIn23RandomAccessIteratorOut9NumItemsT11TransformOp12cudaStream_t">DeviceTransform::Transform (C++ function)</a>, <a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4IDp000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT11TransformOp12cudaStream_t">[1]</a>
+      <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4I00000EN3cub15DeviceTransform9TransformE11cudaError_t22RandomAccessIteratorIn23RandomAccessIteratorOut9NumItemsT11TransformOp3Env">DeviceTransform::Transform (C++ function)</a>, <a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4IDp0000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT11TransformOp3Env">[1]</a>
 </li>
-      <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4I00000EN3cub15DeviceTransform11TransformIfE11cudaError_t22RandomAccessIteratorIn23RandomAccessIteratorOut9NumItemsT9Predicate11TransformOp12cudaStream_t">DeviceTransform::TransformIf (C++ function)</a>, <a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4IDp0000EN3cub15DeviceTransform11TransformIfE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT9Predicate11TransformOp12cudaStream_t">[1]</a>
+      <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4I000000EN3cub15DeviceTransform11TransformIfE11cudaError_t22RandomAccessIteratorIn23RandomAccessIteratorOut9NumItemsT9Predicate11TransformOp3Env">DeviceTransform::TransformIf (C++ function)</a>, <a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4IDp00000EN3cub15DeviceTransform11TransformIfE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT9Predicate11TransformOp3Env">[1]</a>
 </li>
-      <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4I0000EN3cub15DeviceTransform32TransformStableArgumentAddressesE11cudaError_t22RandomAccessIteratorIn23RandomAccessIteratorOut9NumItemsT11TransformOp12cudaStream_t">DeviceTransform::TransformStableArgumentAddresses (C++ function)</a>, <a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4IDp000EN3cub15DeviceTransform32TransformStableArgumentAddressesE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT11TransformOp12cudaStream_t">[1]</a>
+      <li><a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4I00000EN3cub15DeviceTransform32TransformStableArgumentAddressesE11cudaError_t22RandomAccessIteratorIn23RandomAccessIteratorOut9NumItemsT11TransformOp3Env">DeviceTransform::TransformStableArgumentAddresses (C++ function)</a>, <a href="cub/api/structcub_1_1DeviceTransform.html#_CPPv4IDp0000EN3cub15DeviceTransform32TransformStableArgumentAddressesE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT11TransformOp3Env">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classdiscard__iterator.html#_CPPv416discard_iterator">discard_iterator (C++ class)</a>
 </li>
@@ -7927,9 +7932,9 @@
 </li>
       <li><a href="cub/api/structcub_1_1DispatchUniqueByKey.html#_CPPv4I0000000000000EN3cub19DispatchUniqueByKeyE">DispatchUniqueByKey (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1DispatchUniqueByKey.html#_CPPv4N3cub19DispatchUniqueByKeyUt2_51E">DispatchUniqueByKey::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1DispatchUniqueByKey.html#_CPPv4N3cub19DispatchUniqueByKeyUt2_53E">DispatchUniqueByKey::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1DispatchUniqueByKey.html#_CPPv4N3cub19DispatchUniqueByKeyUt2_5119INIT_KERNEL_THREADSE">DispatchUniqueByKey::[anonymous]::INIT_KERNEL_THREADS (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1DispatchUniqueByKey.html#_CPPv4N3cub19DispatchUniqueByKeyUt2_5319INIT_KERNEL_THREADSE">DispatchUniqueByKey::[anonymous]::INIT_KERNEL_THREADS (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1DispatchUniqueByKey.html#_CPPv4N3cub19DispatchUniqueByKey9d_keys_inE">DispatchUniqueByKey::d_keys_in (C++ member)</a>
 </li>
@@ -8252,10 +8257,10 @@
 </li>
       <li><a href="libcudacxx/api/classpermutation__iterator.html#_CPPv4N20permutation_iteratorpLE15difference_type">permutation_iterator::operator+= (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libcudacxx/api/classpermutation__iterator.html#_CPPv4N20permutation_iteratormiERK20permutation_iteratorRK20permutation_iterator">permutation_iterator::operator- (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="libcudacxx/api/classpermutation__iterator.html#_CPPv4N20permutation_iteratormmEi">permutation_iterator::operator-- (C++ function)</a>, <a href="libcudacxx/api/classpermutation__iterator.html#_CPPv4N20permutation_iteratormmEv">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classpermutation__iterator.html#_CPPv4N20permutation_iteratormIE15difference_type">permutation_iterator::operator-= (C++ function)</a>
@@ -8275,6 +8280,8 @@
       <li><a href="libcudacxx/api/classpermutation__iterator.html#_CPPv4N20permutation_iterator20permutation_iteratorE5_Iter6_Index">permutation_iterator::permutation_iterator (C++ function)</a>, <a href="libcudacxx/api/classpermutation__iterator.html#_CPPv4N20permutation_iterator20permutation_iteratorEv">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classpermutation__iterator.html#_CPPv4N20permutation_iterator10value_typeE">permutation_iterator::value_type (C++ type)</a>
+</li>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.PermutationIterator">PermutationIterator() (in module cuda.compute.iterators)</a>
 </li>
       <li><a href="python/compute_api.html#cuda.compute.iterators.cuda.compute.op.OpKind.PLUS">PLUS (cuda.compute.iterators.cuda.compute.op.OpKind attribute)</a>
 </li>
@@ -8374,9 +8381,9 @@
 </li>
       <li><a href="cub/api/structcub_1_1ScanTileState_3_01T_00_01false_01_4.html#_CPPv4I0EN3cub13ScanTileStateI1TXL0EEEE">ScanTileState&lt;T, false&gt; (C++ struct)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1ScanTileState_3_01T_00_01false_01_4.html#_CPPv4N3cub13ScanTileStateI1TXL0EEEUt2_30E">ScanTileState&lt;T, false&gt;::[anonymous] (C++ enum)</a>
+      <li><a href="cub/api/structcub_1_1ScanTileState_3_01T_00_01false_01_4.html#_CPPv4N3cub13ScanTileStateI1TXL0EEEUt2_32E">ScanTileState&lt;T, false&gt;::[anonymous] (C++ enum)</a>
 </li>
-      <li><a href="cub/api/structcub_1_1ScanTileState_3_01T_00_01false_01_4.html#_CPPv4N3cub13ScanTileStateI1TXL0EEEUt2_3019TILE_STATUS_PADDINGE">ScanTileState&lt;T, false&gt;::[anonymous]::TILE_STATUS_PADDING (C++ enumerator)</a>
+      <li><a href="cub/api/structcub_1_1ScanTileState_3_01T_00_01false_01_4.html#_CPPv4N3cub13ScanTileStateI1TXL0EEEUt2_3219TILE_STATUS_PADDINGE">ScanTileState&lt;T, false&gt;::[anonymous]::TILE_STATUS_PADDING (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/structcub_1_1ScanTileState_3_01T_00_01false_01_4.html#_CPPv4N3cub13ScanTileStateI1TXL0EEE14AllocationSizeEiR6size_t">ScanTileState&lt;T, false&gt;::AllocationSize (C++ function)</a>
 </li>
@@ -8536,13 +8543,13 @@
 </li>
       <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt17__dereferenceableIK6_Iter2EEiEEENK16strided_iteratormlEDcv">strided_iterator::operator* (C++ function)</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratormlEv">[1]</a>
 </li>
-      <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratorplE15difference_type16strided_iterator">strided_iterator::operator+ (C++ function)</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratorplE16strided_iterator15difference_type">[1]</a>
+      <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratorplE15difference_typeRK16strided_iterator">strided_iterator::operator+ (C++ function)</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratorplERK16strided_iterator15difference_type">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratorppEi">strided_iterator::operator++ (C++ function)</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratorppEv">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratorpLE15difference_type">strided_iterator::operator+= (C++ function)</a>
 </li>
-      <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4I00EN16strided_iteratormiE15difference_typeRK16strided_iteratorRK16strided_iteratorI10_OtherIter12_OtherStrideE">strided_iterator::operator- (C++ function)</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratormiE16strided_iterator15difference_type">[1]</a>
+      <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4I00EN16strided_iteratormiE15difference_typeRK16strided_iteratorRK16strided_iteratorI10_OtherIter12_OtherStrideE">strided_iterator::operator- (C++ function)</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratormiERK16strided_iterator15difference_type">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratormmEi">strided_iterator::operator-- (C++ function)</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iteratormmEv">[1]</a>
 </li>
@@ -8566,7 +8573,7 @@
 </li>
       <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4NK16strided_iterator6strideEv">strided_iterator::stride (C++ function)</a>
 </li>
-      <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt24__integral_constant_likeI8_Stride2EEiEEEN16strided_iterator16strided_iteratorE5_Iter">strided_iterator::strided_iterator (C++ function)</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iterator16strided_iteratorE5_Iter7_Stride">[1]</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iterator16strided_iteratorEv">[2]</a>
+      <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4I00EN16strided_iterator16strided_iteratorEv">strided_iterator::strided_iterator (C++ function)</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt24__integral_constant_likeI8_Stride2EEiEEEN16strided_iterator16strided_iteratorE5_Iter">[1]</a>, <a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iterator16strided_iteratorE5_Iter7_Stride">[2]</a>
 </li>
       <li><a href="libcudacxx/api/classstrided__iterator.html#_CPPv4N16strided_iterator10value_typeE">strided_iterator::value_type (C++ type)</a>
 </li>
@@ -8606,13 +8613,13 @@
 </li>
       <li><a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4N24tabulate_output_iteratormlEv">tabulate_output_iterator::operator* (C++ function)</a>, <a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4NK24tabulate_output_iteratormlEv">[1]</a>
 </li>
-      <li><a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4N24tabulate_output_iteratorplE15difference_typeRK24tabulate_output_iterator">tabulate_output_iterator::operator+ (C++ function)</a>, <a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4NK24tabulate_output_iteratorplE15difference_type">[1]</a>
+      <li><a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4I_iEN24tabulate_output_iteratorplE24tabulate_output_iterator15difference_typeRK24tabulate_output_iterator">tabulate_output_iterator::operator+ (C++ function)</a>, <a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4I_iEN24tabulate_output_iteratorplE24tabulate_output_iteratorRK24tabulate_output_iterator15difference_type">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4N24tabulate_output_iteratorppEi">tabulate_output_iterator::operator++ (C++ function)</a>, <a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4N24tabulate_output_iteratorppEv">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4N24tabulate_output_iteratorpLE15difference_type">tabulate_output_iterator::operator+= (C++ function)</a>
 </li>
-      <li><a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4N24tabulate_output_iteratormiERK24tabulate_output_iteratorRK24tabulate_output_iterator">tabulate_output_iterator::operator- (C++ function)</a>, <a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4NK24tabulate_output_iteratormiE15difference_type">[1]</a>
+      <li><a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4I_iEN24tabulate_output_iteratormiE24tabulate_output_iteratorRK24tabulate_output_iterator15difference_type">tabulate_output_iterator::operator- (C++ function)</a>, <a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4N24tabulate_output_iteratormiERK24tabulate_output_iteratorRK24tabulate_output_iterator">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4N24tabulate_output_iteratormmEi">tabulate_output_iterator::operator-- (C++ function)</a>, <a href="libcudacxx/api/classtabulate__output__iterator.html#_CPPv4N24tabulate_output_iteratormmEv">[1]</a>
 </li>
@@ -10604,7 +10611,7 @@
 </li>
       <li><a href="libcudacxx/api/classtransform__input__output__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt29__has_random_access_traversalI6_Iter2EEiEEEN31transform_input_output_iteratorpLER31transform_input_output_iterator15difference_type">transform_input_output_iterator::operator+= (C++ function)</a>
 </li>
-      <li><a href="libcudacxx/api/classtransform__input__output__iterator.html#_CPPv4I0EIQN4cudaSt18sized_sentinel_forI6_Iter26_Iter2EEEN31transform_input_output_iteratormiE15difference_typeRK31transform_input_output_iteratorRK31transform_input_output_iterator">transform_input_output_iterator::operator- (C++ function)</a>, <a href="libcudacxx/api/classtransform__input__output__iterator.html#_CPPv4I0EIQN4cudaSt29__has_random_access_traversalI6_Iter2EEEN31transform_input_output_iteratormiE31transform_input_output_iteratorRK31transform_input_output_iterator15difference_type">[1]</a>
+      <li><a href="libcudacxx/api/classtransform__input__output__iterator.html#_CPPv4I0EIQ16__can_differenceI6_Iter2EEN31transform_input_output_iteratormiE15difference_typeRK31transform_input_output_iteratorRK31transform_input_output_iterator">transform_input_output_iterator::operator- (C++ function)</a>, <a href="libcudacxx/api/classtransform__input__output__iterator.html#_CPPv4I0EIQN4cudaSt29__has_random_access_traversalI6_Iter2EEEN31transform_input_output_iteratormiE31transform_input_output_iteratorRK31transform_input_output_iterator15difference_type">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classtransform__input__output__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt29__has_bidirectional_traversalI6_Iter2EEiEEEN31transform_input_output_iteratormmE31transform_input_output_iteratori">transform_input_output_iterator::operator-- (C++ function)</a>, <a href="libcudacxx/api/classtransform__input__output__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt29__has_bidirectional_traversalI6_Iter2EEiEEEN31transform_input_output_iteratormmER31transform_input_output_iteratorv">[1]</a>
 </li>
@@ -10648,7 +10655,7 @@
 </li>
       <li><a href="libcudacxx/api/classtransform__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt29__has_random_access_traversalI6_Iter2EEiEEEN18transform_iteratorpLER18transform_iterator15difference_type">transform_iterator::operator+= (C++ function)</a>
 </li>
-      <li><a href="libcudacxx/api/classtransform__iterator.html#_CPPv4I0EIQN4cudaSt18sized_sentinel_forI6_Iter26_Iter2EEEN18transform_iteratormiE15difference_typeRK18transform_iteratorRK18transform_iterator">transform_iterator::operator- (C++ function)</a>, <a href="libcudacxx/api/classtransform__iterator.html#_CPPv4I0EIQN4cudaSt29__has_random_access_traversalI6_Iter2EEEN18transform_iteratormiE18transform_iteratorRK18transform_iterator15difference_type">[1]</a>
+      <li><a href="libcudacxx/api/classtransform__iterator.html#_CPPv4I0EIQ16__can_differenceI6_Iter2EEN18transform_iteratormiE15difference_typeRK18transform_iteratorRK18transform_iterator">transform_iterator::operator- (C++ function)</a>, <a href="libcudacxx/api/classtransform__iterator.html#_CPPv4I0EIQN4cudaSt29__has_random_access_traversalI6_Iter2EEEN18transform_iteratormiE18transform_iteratorRK18transform_iterator15difference_type">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classtransform__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt29__has_bidirectional_traversalI6_Iter2EEiEEEN18transform_iteratormmE18transform_iteratori">transform_iterator::operator-- (C++ function)</a>, <a href="libcudacxx/api/classtransform__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt29__has_bidirectional_traversalI6_Iter2EEiEEEN18transform_iteratormmER18transform_iteratorv">[1]</a>
 </li>
@@ -10696,7 +10703,7 @@
 </li>
       <li><a href="libcudacxx/api/classtransform__output__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt21__iter_can_plus_equalI6_Iter2EEiEEEN25transform_output_iteratorpLER25transform_output_iterator15difference_type">transform_output_iterator::operator+= (C++ function)</a>
 </li>
-      <li><a href="libcudacxx/api/classtransform__output__iterator.html#_CPPv4I0EIQN4cudaSt16__iter_can_minusI6_Iter2EEEN25transform_output_iteratormiE25transform_output_iteratorRK25transform_output_iterator15difference_type">transform_output_iterator::operator- (C++ function)</a>, <a href="libcudacxx/api/classtransform__output__iterator.html#_CPPv4I0EIQN4cudaSt18sized_sentinel_forI6_Iter26_Iter2EEEN25transform_output_iteratormiE15difference_typeRK25transform_output_iteratorRK25transform_output_iterator">[1]</a>
+      <li><a href="libcudacxx/api/classtransform__output__iterator.html#_CPPv4I0EIQ16__can_differenceI6_Iter2EEN25transform_output_iteratormiE15difference_typeRK25transform_output_iteratorRK25transform_output_iterator">transform_output_iterator::operator- (C++ function)</a>, <a href="libcudacxx/api/classtransform__output__iterator.html#_CPPv4I0EIQN4cudaSt16__iter_can_minusI6_Iter2EEEN25transform_output_iteratormiE25transform_output_iteratorRK25transform_output_iterator15difference_type">[1]</a>
 </li>
       <li><a href="libcudacxx/api/classtransform__output__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt20__iter_can_decrementI6_Iter2EEiEEEN25transform_output_iteratormmE25transform_output_iteratori">transform_output_iterator::operator-- (C++ function)</a>, <a href="libcudacxx/api/classtransform__output__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cudaSt20__iter_can_decrementI6_Iter2EEiEEEN25transform_output_iteratormmER25transform_output_iteratorv">[1]</a>
 </li>
@@ -10912,13 +10919,13 @@
 </li>
       <li><a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator7pointerE">zip_iterator::pointer (C++ type)</a>, <a href="libcudacxx/api/group__iterators_1ga3a57fccd85438fe6ac517f59802807b5.html#_CPPv4N12zip_iterator7pointerE">[1]</a>
 </li>
-      <li><a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator9referenceE">zip_iterator::reference (C++ type)</a>, <a href="libcudacxx/api/group__iterators_1ga843f5392a85c60af68ceedbd62d71d7f.html#_CPPv4N12zip_iterator9referenceE">[1]</a>
+      <li><a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator9referenceE">zip_iterator::reference (C++ type)</a>, <a href="libcudacxx/api/group__iterators_1ga3d65c0bac93cd905b59b6b7cb0c04f08.html#_CPPv4N12zip_iterator9referenceE">[1]</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator10value_typeE">zip_iterator::value_type (C++ type)</a>, <a href="libcudacxx/api/group__iterators_1ga64c3e03435ec5e5dc3b9eaad6349c1c2.html#_CPPv4N12zip_iterator10value_typeE">[1]</a>
+      <li><a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator10value_typeE">zip_iterator::value_type (C++ type)</a>, <a href="libcudacxx/api/group__iterators_1gaebe2d9c8478b11e187372e211ab26711.html#_CPPv4N12zip_iterator10value_typeE">[1]</a>
 </li>
-      <li><a href="libcudacxx/api/classzip__iterator.html#_CPPv4IDp_N4cudaSt11enable_if_tIXaaeqsZ11_OtherIterssZ10_Iterators17__all_convertibleIDp11_OtherItersEEiEEEN12zip_iterator12zip_iteratorE12zip_iteratorIDp11_OtherItersE">zip_iterator::zip_iterator (C++ function)</a>, <a href="libcudacxx/api/classzip__iterator.html#_CPPv4I_6size_t_N4cudaSt11enable_if_tIXeq13_NumIteratorsL2EEiEEEN12zip_iterator12zip_iteratorEN4cudaSt5tupleIDp10_IteratorsEE">[1]</a>, <a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator12zip_iteratorE15__tuple_or_pairIDp10_IteratorsE">[2]</a>, <a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator12zip_iteratorEDp10_Iterators">[3]</a>, <a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator12zip_iteratorEv">[4]</a>
+      <li><a href="libcudacxx/api/classzip__iterator.html#_CPPv4IDp_N4cudaSt11enable_if_tIXaaeqsZ11_OtherIterssZ10_Iterators17__all_convertibleIDp11_OtherItersEEiEEEN12zip_iterator12zip_iteratorE12zip_iteratorIDp11_OtherItersE">zip_iterator::zip_iterator (C++ function)</a>, <a href="libcudacxx/api/classzip__iterator.html#_CPPv4I_6size_t_N4cudaSt11enable_if_tIXeq13_NumIteratorsL2EEiEEEN12zip_iterator12zip_iteratorEN4cudaSt5tupleIDp10_IteratorsEE">[1]</a>, <a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator12zip_iteratorEDp10_Iterators">[2]</a>, <a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator12zip_iteratorEN4cudaSt5tupleIDp10_IteratorsEE">[3]</a>, <a href="libcudacxx/api/classzip__iterator.html#_CPPv4N12zip_iterator12zip_iteratorEv">[4]</a>
 </li>
       <li><a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4I0DpE22zip_transform_iterator">zip_transform_iterator (C++ class)</a>
 </li>
@@ -10960,7 +10967,7 @@
 </li>
       <li><a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4N22zip_transform_iterator10value_typeE">zip_transform_iterator::value_type (C++ type)</a>
 </li>
-      <li><a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIXaaN4cudaSt21default_initializableI4_Fn2EEN22__zip_iter_constraintsIDp10_IteratorsE27__all_default_initializableEEiEEEN22zip_transform_iterator22zip_transform_iteratorEv">zip_transform_iterator::zip_transform_iterator (C++ function)</a>, <a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4I_6size_t_N4cudaSt11enable_if_tIXeq13_NumIteratorsL2EEiEEEN22zip_transform_iterator22zip_transform_iteratorE3_FnN4cudaSt5tupleIDp10_IteratorsEE">[1]</a>, <a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4N22zip_transform_iterator22zip_transform_iteratorE3_Fn15__tuple_or_pairIDp10_IteratorsE">[2]</a>, <a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4N22zip_transform_iterator22zip_transform_iteratorE3_FnDp10_Iterators">[3]</a>
+      <li><a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIXaaN4cudaSt21default_initializableI4_Fn2EEN22__zip_iter_constraintsIDp10_IteratorsE27__all_default_initializableEEiEEEN22zip_transform_iterator22zip_transform_iteratorEv">zip_transform_iterator::zip_transform_iterator (C++ function)</a>, <a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4N22zip_transform_iterator22zip_transform_iteratorE3_FnDp10_Iterators">[1]</a>, <a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4N22zip_transform_iterator22zip_transform_iteratorE3_FnN4cudaSt5tupleIDp10_IteratorsEE">[2]</a>
 </li>
       <li><a href="python/compute_api.html#cuda.compute.iterators.ZipIterator">ZipIterator() (in module cuda.compute.iterators)</a>
 </li>
