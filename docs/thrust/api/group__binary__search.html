@@ -32,7 +32,7 @@
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=8f2a1f02" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/nvidia-sphinx-theme.css?v=df3ac72c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/nvidia-sphinx-theme.css?v=933278ad" />
     <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/sphinx-design.min.css?v=95c83b7e" />
@@ -43,7 +43,9 @@
   <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../../_static/documentation_options.js?v=828ea960"></script>
+
+
+    <script src="../../_static/documentation_options.js?v=26f62d79"></script>
     <script src="../../_static/doctools.js?v=9bcbadda"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -51,18 +53,22 @@
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'thrust/api/group__binary__search';</script>
+
     <link rel="icon" href="../../_static/favicon.png"/>
+
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="thrust::lower_bound" href="group__binary__search_1gad2ac5a1c5091366144d6fdbf2ff5551e.html" />
     <link rel="prev" title="Binary Search" href="../api_docs/algorithms/searching/binary_search.html" />
 
+
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="3.2" />
+  <meta name="docsearch:version" content="3.3" />
 
 
   </head>
+
   
   
   <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
@@ -70,6 +76,8 @@
   
   
   <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+
+
   
   <div id="pst-scroll-pixel-helper"></div>
   
@@ -293,6 +301,7 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../libcudacxx/standard_api.html">Standard API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/standard_api/algorithms_library.html">Algorithms Library</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/standard_api/c_library.html">C Library</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/standard_api/concepts_library.html">Concepts Library</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/standard_api/container_library.html">Container Library</a></li>
@@ -318,13 +327,20 @@
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/type_traits.html">Type traits</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/numeric.html">Numeric</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/memory.html">Memory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/streams.html">Streams</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/memory_resource.html">Memory Resources</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/math.html">Math</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/mdspan.html">Mdspan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/tma.html">Tensor Memory Accelerator (TMA)</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/warp.html">Warp</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/utility.html">Utility</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/work_stealing.html">Work stealing</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../libcudacxx/runtime.html">Runtime</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/runtime/stream.html">Streams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/runtime/event.html">Events</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/runtime/algorithm.html">Algorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/runtime/device.html">Devices</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../libcudacxx/ptx_api.html">PTX API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -334,19 +350,30 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../libcudacxx/api/index.html">API reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classcompute__capability.html">compute_capability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classconstant__iterator.html">constant_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classcounting__iterator.html">counting_iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classdevice__ref.html">device_ref</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classdiscard__iterator.html">discard_iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classevent.html">event</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classevent__ref.html">event_ref</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classpermutation__iterator.html">permutation_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classshuffle__iterator.html">shuffle_iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classstream__ref.html">stream_ref</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classstrided__iterator.html">strided_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classtabulate__output__iterator.html">tabulate_output_iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classtimed__event.html">timed_event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classtransform__input__output__iterator.html">transform_input_output_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classtransform__iterator.html">transform_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classtransform__output__iterator.html">transform_output_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classzip__function.html">zip_function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classzip__iterator.html">zip_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/classzip__transform__iterator.html">zip_transform_iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/structarch__traits__t.html">arch_traits_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/structdevice__attributes_1_1compute__capability__t.html">device_attributes::compute_capability_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/structcopy__configuration.html">copy_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/structget__stream__t.html">get_stream_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/structstream.html">stream</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/group__iterators_1ga83ac1a6f53e106d83b8f7db6757f7334.html">zip_iterator::difference_type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/group__iterators_1gadcd3d726e080dfd5ec73d1816aa41744.html">zip_iterator::iterator_concept</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/api/group__iterators_1ga3a57fccd85438fe6ac517f59802807b5.html">zip_iterator::pointer</a></li>
@@ -513,6 +540,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cub/api/structcub_1_1DeviceScan.html">cub::DeviceScan</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cub/api/structcub_1_1DeviceSegmentedRadixSort.html">cub::DeviceSegmentedRadixSort</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cub/api/structcub_1_1DeviceSegmentedReduce.html">cub::DeviceSegmentedReduce</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cub/api/structcub_1_1DeviceSegmentedScan.html">cub::DeviceSegmentedScan</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cub/api/structcub_1_1DeviceSegmentedSort.html">cub::DeviceSegmentedSort</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cub/api/structcub_1_1DeviceSelect.html">cub::DeviceSelect</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cub/api/structcub_1_1DeviceTopK.html">cub::DeviceTopK</a></li>
@@ -780,7 +808,7 @@
 <li class="toctree-l4"><a class="reference internal" href="group__binary__search_1gad2ac5a1c5091366144d6fdbf2ff5551e.html">thrust::lower_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__binary__search_1gac85cc9ea00f4bdd8f80ad25fff16741d.html">thrust::upper_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__binary__search_1gaa855fdcf3942f95919bb712e26c7bfc6.html">thrust::binary_search</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__binary__search_1gabdac721a00790e44ce9e5cbe8c4b57f2.html">thrust::equal_range</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__binary__search_1gaa62a894dd33970790599e75a186f1bb3.html">thrust::equal_range</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__complex__numbers_1ga35e716adc045312f862c2bf561f0f07e.html">thrust::abs</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__complex__numbers_1ga7038bbec1ad0891c7e84cf49691de669.html">thrust::arg</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__complex__numbers_1ga5c23c580733a912c4a782c4ec023c6b1.html">thrust::norm</a></li>
@@ -828,7 +856,7 @@
 <li class="toctree-l4"><a class="reference internal" href="group__comparisons_1ga6ee63d156e253d5db817c8bcc6a35bc4.html">thrust::equal</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__extrema_1gab17dd6fa29f87f9971b3be412d052e4b.html">thrust::min_element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__extrema_1ga879a150e971c0d4f36a0a3cc2d853f47.html">thrust::max_element</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__extrema_1gab65b7725bb3989de487002d10b371aec.html">thrust::minmax_element</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__extrema_1ga192ee620939451e27c3b00f7d3f90f68.html">thrust::minmax_element</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__filling_1ga819b9addfc37e36f5b3c8438293e27ab.html">thrust::fill</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__filling_1ga440c2be305b590c38c2e0bd727ad7641.html">thrust::fill_n</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__searching_1ga0a1bffa0a0c085b0f8feb146593ae661.html">thrust::find</a></li>
@@ -858,24 +886,24 @@
 <li class="toctree-l4"><a class="reference internal" href="group__logical_1gac5a8c0f6c91c7655a8e719b0e3aa030d.html">thrust::any_of</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__logical_1ga796d4d448b8b06a36734b3f6ff433417.html">thrust::none_of</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__memory__management_1ga50cdf0d543be6da1dd4d3f9ba3e38105.html">thrust::malloc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__memory__management_1ga189f97174f9b5e61258d8bfc8315b087.html">thrust::get_temporary_buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__memory__management_1gafa54f974b47c05fc24814aa1eb28d584.html">thrust::get_temporary_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__memory__management_1ga987c4cb56d112d9fbedee453df25bc31.html">thrust::free</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__memory__management_1ga72bb86f95d3b115663a0d9fb668165fa.html">thrust::return_temporary_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__memory__management_1ga4215d3848717050f7c47f36e43b7c19a.html">thrust::raw_pointer_cast</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__memory__management_1gae72a6da67baf8579e17836fe2c31a641.html">thrust::raw_reference_cast</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__merging_1ga63349377f04e6b5988ba362cc82141be.html">thrust::merge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__merging_1gaabef99a0678bfed77c637dedbeb1378f.html">thrust::merge_by_key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__searching_1gaa964c494db8b69aaca0a56cc26063398.html">thrust::mismatch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__merging_1gac87a13a242f94abbee8dc53131682eed.html">thrust::merge_by_key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__searching_1ga8e5d32d617390a1995e2044019532a79.html">thrust::mismatch</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__partitioning_1gad057b6f3f3f7f8098f8e5301843118e2.html">thrust::partition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__partitioning_1ga07af2df50857a88a190d342b8fc81610.html">thrust::partition_copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__partitioning_1ga6aad34780950921c7c1e2ec56ff4f4e3.html">thrust::partition_copy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__partitioning_1ga9184a73d9481374d7868f6bf9d61add7.html">thrust::stable_partition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__partitioning_1gab80ef3b12022db861780a692499c699a.html">thrust::stable_partition_copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__partitioning_1ga90418c8b0b1fa4ad87fe0f3030858139.html">thrust::stable_partition_copy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__searching_1ga902ccc1fe9aeb8585ac8ddcf10fb4337.html">thrust::partition_point</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__predicates_1ga91da05b683fadd078eb90bf126de0e52.html">thrust::is_partitioned</a></li>
 <li class="toctree-l4"><a class="reference internal" href="namespacethrust_1a7ac735b6da1bb44634d01d97cbf671de.html">thrust::get_per_device_resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__reductions_1ga6ffe364cb9c04b5ca4dfa92ead9bfc3a.html">thrust::reduce</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__reductions_1gac4f1a13fe10dd1a2f4abf6ba347e09c8.html">thrust::reduce_into</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__reductions_1ga4f2be29262626f9f41d29cda5e8d1887.html">thrust::reduce_by_key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__reductions_1gab66d365f9a531bb5b99615ac3e836f8f.html">thrust::reduce_by_key</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__stream__compaction_1ga3e0a48a2b03425d9b6ee92ca026e6cc4.html">thrust::remove</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__stream__compaction_1ga1cff040dfdb202bfc3b3bb20df9ee2a9.html">thrust::remove_copy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__stream__compaction_1gaf01d45b30fecba794afae065d625f94f.html">thrust::remove_if</a></li>
@@ -897,10 +925,10 @@
 <li class="toctree-l4"><a class="reference internal" href="group__set__operations_1ga69e037cb6ccedcc087e657641f8e5c63.html">thrust::set_intersection</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__set__operations_1ga575dc422a51753d641059e9897c51f11.html">thrust::set_symmetric_difference</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__set__operations_1gac8e1b0b7feffbbccfab972a3dab81391.html">thrust::set_union</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__set__operations_1ga5b510f186a84480f545449f7abacdc32.html">thrust::set_difference_by_key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__set__operations_1ga62af084a54134eb8d7d4cc4bca5d1989.html">thrust::set_intersection_by_key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__set__operations_1ga31f684835a1f29e7bfa9266d149adfde.html">thrust::set_symmetric_difference_by_key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__set__operations_1gabb5c7d4b788853513b0a0fd5300dd445.html">thrust::set_union_by_key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__set__operations_1ga4ab94f796b3df5bbf82594f27429ab0d.html">thrust::set_difference_by_key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__set__operations_1gac4dd7e9d6d9a971a8d048212855c4fd9.html">thrust::set_intersection_by_key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__set__operations_1ga1b867e6acb65f9667f979ad4871bfe14.html">thrust::set_symmetric_difference_by_key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__set__operations_1ga6b495740c5481a347f79eefaa45d242e.html">thrust::set_union_by_key</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__shuffling_1ga5691add2f5ae54d226463c621eeb5455.html">thrust::shuffle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__shuffling_1gaa981e499e02cbc84db91fe7b2ce2a7a1.html">thrust::shuffle_copy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__sorting_1ga857dfc9b50a03888c5703699f0fbfcd4.html">thrust::sort</a></li>
@@ -926,8 +954,8 @@
 <li class="toctree-l4"><a class="reference internal" href="group__filling_1ga42b5e2428b1e78af1f3c7cd5e8d7e2e8.html">thrust::uninitialized_fill_n</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__stream__compaction_1ga0981eb0b6034017ef622075d6612f68a.html">thrust::unique</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__stream__compaction_1gad7d0b61d3bf4ed9995f69a722693973b.html">thrust::unique_copy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__stream__compaction_1ga67e80d4d5101637c7f7856cb65dc727a.html">thrust::unique_by_key</a></li>
-<li class="toctree-l4"><a class="reference internal" href="group__stream__compaction_1gad6f62634dca9f277f9121fe03142b468.html">thrust::unique_by_key_copy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__stream__compaction_1gadde4c1003f6b621e8940f69569eb3331.html">thrust::unique_by_key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="group__stream__compaction_1ga0879ea139b0736d31b702cbcd658f054.html">thrust::unique_by_key_copy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__stream__compaction_1ga9d5a88c8b9db5ff05bf54d896d294770.html">thrust::unique_count</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__function__object__adaptors_1gab539e564de3a7ab63ac1378470c77976.html">thrust::make_zip_function</a></li>
 <li class="toctree-l4"><a class="reference internal" href="group__iterator__tags_1ga20e12ff89385c6c4658f39316e91e7ab.html">thrust::bidirectional_host_iterator_tag</a></li>
@@ -1100,14 +1128,11 @@
 <li class="toctree-l3"><a class="reference internal" href="../../cudax/index.html">Overview</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../cudax/container.html">Containers library</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1uninitialized__buffer.html">cuda::experimental::uninitialized_buffer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1uninitialized__async__buffer.html">cuda::experimental::uninitialized_async_buffer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1heterogeneous__iterator.html">cuda::experimental::heterogeneous_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1small__vector.html">cuda::experimental::stf::small_vector</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1task__dep__vector.html">cuda::experimental::stf::task_dep_vector</a></li>
 </ul>
 </details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="../../cudax/memory_resource.html">Memory Resources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1shared__resource.html">cuda::experimental::shared_resource</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../cudax/memory_resource.html">Memory Resources</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../cudax/graph.html">Graphs library</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1134,7 +1159,6 @@
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../../cudax/api/index.html">API reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1algorithm.html">cuda::experimental::stf::algorithm</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1async__buffer.html">cuda::experimental::async_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1async__resources__handle.html">cuda::experimental::stf::async_resources_handle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1backend__ctx.html">cuda::experimental::stf::backend_ctx</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1backend__ctx__untyped.html">cuda::experimental::stf::backend_ctx_untyped</a></li>
@@ -1147,6 +1171,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1blocked__partition__custom.html">cuda::experimental::stf::blocked_partition_custom</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1box.html">cuda::experimental::stf::box</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1buddy__allocator.html">cuda::experimental::stf::buddy_allocator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1buffer.html">cuda::experimental::buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1cached__block__allocator.html">cuda::experimental::stf::cached_block_allocator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1cached__block__allocator__fifo.html">cuda::experimental::stf::cached_block_allocator_fifo</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1constant__logical__data.html">cuda::experimental::stf::constant_logical_data</a></li>
@@ -1162,6 +1187,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__place.html">cuda::experimental::stf::data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1deferred__stream__task.html">cuda::experimental::stf::deferred_stream_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1dim4.html">cuda::experimental::stf::dim4</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1dynamic__shared__memory.html">cuda::experimental::dynamic_shared_memory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html">cuda::experimental::stf::event_impl</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1event__list.html">cuda::experimental::stf::event_list</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__affinity.html">cuda::experimental::stf::exec_affinity</a></li>
@@ -1183,7 +1209,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__ctx__view.html">cuda::experimental::stf::green_ctx_view</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1hashtable.html">cuda::experimental::stf::hashtable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1hashtable__stream__interface.html">cuda::experimental::stf::hashtable_stream_interface</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1heterogeneous__iterator.html">cuda::experimental::heterogeneous_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1interpreted__execution__policy.html">cuda::experimental::stf::interpreted_execution_policy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1reducer_1_1logical__and.html">cuda::experimental::stf::reducer::logical_and</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1logical__data.html">cuda::experimental::stf::logical_data</a></li>
@@ -1240,18 +1265,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1uncached__block__allocator.html">cuda::experimental::stf::uncached_block_allocator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1uncached__graph__allocator.html">cuda::experimental::stf::uncached_graph_allocator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1uncached__stream__allocator.html">cuda::experimental::stf::uncached_stream_allocator</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1uninitialized__async__buffer.html">cuda::experimental::uninitialized_async_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1uninitialized__buffer.html">cuda::experimental::uninitialized_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1void__graph__interface.html">cuda::experimental::stf::void_graph_interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1void__interface.html">cuda::experimental::stf::void_interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1void__stream__interface.html">cuda::experimental::stf::void_stream_interface</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1allowed__levels.html">cuda::experimental::allowed_levels</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1block__level.html">cuda::experimental::block_level</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1cluster__level.html">cuda::experimental::cluster_level</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1cooperative__launch.html">cuda::experimental::cooperative_launch</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1cuda__kernel__desc.html">cuda::experimental::stf::cuda_kernel_desc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1decorated__stream.html">cuda::experimental::stf::decorated_stream</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1dynamic__shared__memory__option.html">cuda::experimental::dynamic_shared_memory_option</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1graph.html">cuda::experimental::graph</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1graph__builder.html">cuda::experimental::graph_builder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1graph__builder__ref.html">cuda::experimental::graph_builder_ref</a></li>
@@ -1260,7 +1280,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1graphed__interface__of_3_01mdspan_3_01T_00_01P_8_8_8_01_4_01_4.html">cuda::experimental::stf::graphed_interface_of&lt; mdspan&lt; T, P… &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1graphed__interface__of_3_01scalar__view_3_01T_01_4_01_4.html">cuda::experimental::stf::graphed_interface_of&lt; scalar_view&lt; T &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1graphed__interface__of_3_01void__interface_01_4.html">cuda::experimental::stf::graphed_interface_of&lt; void_interface &gt;</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1grid__level.html">cuda::experimental::grid_level</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash.html">cuda::experimental::stf::hash</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01cuda_1_1experimental_1_1stf_1_1green__ctx__view_01_4.html">cuda::experimental::stf::hash&lt; cuda::experimental::stf::green_ctx_view &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01data__place_01_4.html">cuda::experimental::stf::hash&lt; data_place &gt;</a></li>
@@ -1273,19 +1292,14 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01void__interface_01_4.html">cuda::experimental::stf::hash&lt; void_interface &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_1_1std_1_1pair_3_01T1_00_01T2_01_4_01_4.html">cuda::experimental::stf::hash&lt;::std::pair&lt; T1, T2 &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_1_1std_1_1tuple_3_01Ts_8_8_8_01_4_01_4.html">cuda::experimental::stf::hash&lt;::std::tuple&lt; Ts… &gt; &gt;</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1hierarchy__dimensions.html">cuda::experimental::hierarchy_dimensions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1hierarchy__level.html">cuda::experimental::hierarchy_level</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1hierarchy__query__result.html">cuda::experimental::hierarchy_query_result</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1kernel__config.html">cuda::experimental::kernel_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1launch__priority.html">cuda::experimental::launch_priority</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1layout__stride.html">cuda::experimental::stf::layout_stride</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1level__dimensions.html">cuda::experimental::level_dimensions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1owning__container__of.html">cuda::experimental::stf::owning_container_of</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1owning__container__of_3_01scalar__view_3_01T_01_4_01_4.html">cuda::experimental::stf::owning_container_of&lt; scalar_view&lt; T &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1path__builder.html">cuda::experimental::path_builder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1pooled__allocator__config.html">cuda::experimental::stf::pooled_allocator_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1scalar__view.html">cuda::experimental::stf::scalar_view</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1shared__resource.html">cuda::experimental::shared_resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stream.html">cuda::experimental::stream</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1stream__pool.html">cuda::experimental::stf::stream_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stream__ref.html">cuda::experimental::stream_ref</a></li>
@@ -1294,29 +1308,15 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1streamed__interface__of_3_01mdspan_3_01T_00_01P_8_8_8_01_4_01_4.html">cuda::experimental::stf::streamed_interface_of&lt; mdspan&lt; T, P… &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1streamed__interface__of_3_01scalar__view_3_01T_01_4_01_4.html">cuda::experimental::stf::streamed_interface_of&lt; scalar_view&lt; T &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1streamed__interface__of_3_01void__interface_01_4.html">cuda::experimental::stf::streamed_interface_of&lt; void_interface &gt;</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1thread__level.html">cuda::experimental::thread_level</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a7984ec84817b4e0e6bf5ca6da4d0f8a0.html">cuda::experimental::make_async_buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1synchronous__resource__adapter.html">cuda::experimental::synchronous_resource_adapter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a15d66a4607d1b265790613032220837f.html">cuda::experimental::make_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1ae52f048fec5bb8c0e028ec6ee18e0ae4.html">cuda::experimental::depends_on</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a587013ea961cd2d72ce2255c4a665e7e.html">cuda::experimental::start_path</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a173aac0f7accd9eef0e7c7d2e05da650.html">cuda::experimental::get_launch_dimensions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1ab04039bc09c8136f3619e8e30ac739ab.html">cuda::experimental::make_hierarchy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1af333881b536dd39765ae2f0e003eabcd.html">cuda::experimental::hierarchy_add_level</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a1722a1a89c93bec7e741c58695c4d1b5.html">cuda::experimental::grid_dims</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1add18e119f7c345d5dfed692e1e257a6e.html">cuda::experimental::cluster_dims</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1afa68139cec4ab96febdedb9f757c3203.html">cuda::experimental::block_dims</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a16ae2fb164a4475d384839b106867f6a.html">cuda::experimental::dynamic_shared_memory</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a6885fad002736fd2c1e2bbcc81d395b5.html">cuda::experimental::operator&amp;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a1d24b80b5330c98dbf8386c0453364a8.html">cuda::experimental::operator&amp;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1afe420231beacc68eea61533757fb93fd.html">cuda::experimental::make_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a591c99d80c8d7f96a29174492e72a859.html">cuda::experimental::distribute</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a64c529b2b7d858f06b3d45a5ee1967c3.html">cuda::experimental::dynamic_smem_ref</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a5b4677b4c5bc188a0144206ace982c58.html">cuda::experimental::dynamic_smem_span</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a220f357be074348d480be71c228e1ccc.html">cuda::experimental::host_launch</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1aa8263d79aa1b3db93c6b40ca61634080.html">cuda::experimental::launch</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a6bd77db8b90bae41aca5ae2cbb485f2f.html">cuda::experimental::make_shared_resource</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1hierarchy_1aeaa73cf3e862e7f56e53862f5f840126.html">cuda::experimental::hierarchy::rank</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1hierarchy_1a3b5a407e1710c604dcde78ac322a79fc.html">cuda::experimental::hierarchy::count</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1hierarchy_1a369b81efeb5fbddff6b631322ecd9898.html">cuda::experimental::hierarchy::index</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1hierarchy_1a0dbf8173fb48a95d9be00f50054ef546.html">cuda::experimental::hierarchy::extents</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1device_1a3df43b2f3236f232dc1d7a51545cd389.html">cuda::experimental::device::dynamic_shared_memory_view</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1ad18742cd2980317d08fa22179fe9838b.html">cuda::experimental::stf::join</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a15334df9162430aaae8d98d9f6614164.html">cuda::experimental::stf::register_stream</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1ad4e01a86f130b065598ee6eccc017de9.html">cuda::experimental::stf::unregister_stream</a></li>
@@ -1374,10 +1374,8 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1af7bbd0c16d200ff11f25a06b6f8f9f9c.html">cuda::experimental::stf::shuffled_tuple</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a7769bac86e1a10e2b46241e166f27d4a.html">cuda::experimental::stf::shuffled_array_tuple</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1ab6102f1f400fb5014573fd1424e1ae0c.html">cuda::experimental::stf::unstable_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a07f516f838f53fe7a46d7dc440e83c1a.html">cuda::experimental::async_device_buffer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a64c350f4b7a5ca83daf762270e3df393.html">cuda::experimental::async_host_buffer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a240e2877377596bbbe54ead3ec7561a5.html">cuda::experimental::dimensions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1aa7e410c16ff7d4b08d9b7da94658778c.html">cuda::experimental::dimensions_index_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1ae54655ac955ae7ca93f731b0676f02ea.html">cuda::experimental::device_buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1aa6269c4bd17a8918a50a7cdb60b3f38e.html">cuda::experimental::host_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1ad79958209ea876e5dafe78f59ab52d79.html">cuda::experimental::stf::array_tuple</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1aa7d4170e1a89607a1064da6257130929.html">cuda::experimental::stf::blocked_partition</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a57eb9d03994cae3406bf9101c62d80dd.html">cuda::experimental::stf::event</a></li>
@@ -1387,29 +1385,22 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1ae06c2436b4d1c209eb27b51246a623ef.html">cuda::experimental::stf::slice</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a3e15e8ae386f7f07da8d7503a0046b62.html">cuda::experimental::stf::task_dep_vector_untyped</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1aa9c8a86afb5d22780fd035a16435c768.html">cuda::experimental::stf::token</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1aefba5d75351aad499faf30658b54df50.html">cuda::experimental::uninitialized_async_device_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a0d0aa10903bca9350c88da9e7121c089.html">cuda::experimental::uninitialized_device_buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a4401baa9c7798a0dd6f981de4e549d86.html">cuda::experimental::graph_node_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a239626d48731dada15add5fd2597eb53.html">cuda::experimental::non_portable_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a923aa8f0346e2b2a9e970a0fab753673.html">cuda::experimental::stf::access_mode</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a82008bf924d44262d76e4dd3e923e196.html">cuda::experimental::stf::hw_scope</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a0aecbcdcde59511ead903c663bd205da.html">cuda::experimental::stf::instance_id_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a843ff5e8d2e1f11de9bffbf6bb794ff2.html">cuda::experimental::stf::mem</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a5ae181afc51b82e614e9438af5705632.html">cuda::experimental::stf::place_partition_scope</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1aabada0bc94a44064d40bed511a02b6df.html">cuda::experimental::stf::scope_guard_condition</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1ae17283ae4112741c42dfd6d76f122350.html">cuda::experimental::block</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1ab1bc6a1f595a5f5bb9559aeedbc894fd.html">cuda::experimental::cluster</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a23fa8e60cb63ed8f206e9a003088dec1.html">cuda::experimental::device_transform</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a0c9948bfe5d3a18def3c7be615062928.html">cuda::experimental::graph_dependency</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a83e404642d89549ec95c95a057bf341e.html">cuda::experimental::graph_inserter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a073c3ac46bbdc534a677526d79483947.html">cuda::experimental::grid</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1aac491cdac5f8fd626e8f4a56ad1247e0.html">cuda::experimental::has_level</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a3874f5cfb790e89205370d1e8149427e.html">cuda::experimental::has_level_or_unit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a4cbd53d4681c0629ef0d1ec521f3146f.html">cuda::experimental::in</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a22a860b92240dc157802c575121a2bd8.html">cuda::experimental::inout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a3e5dbe8b28fc4da9a3883b209fb59445.html">cuda::experimental::is_core_cuda_hierarchy_level</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a97b53da02786843bd7f3006b2c996cec.html">cuda::experimental::non_portable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a0e77b206698879c24f721c676694fb6d.html">cuda::experimental::out</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a03453c0becd124285de9dad062506ef6.html">cuda::experimental::stf::type_name</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1a63441f1f11bcd505980207d326579346.html">cuda::experimental::thread</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1ac2bd49a968880629779df2659e34459e.html">cuda::experimental::work_submitter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/group__construction.html">Construction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/group__iterators.html">Iterators</a></li>
@@ -1521,7 +1512,7 @@
 <li class="toctree-l1"><a class="reference internal" href="group__binary__search_1gad2ac5a1c5091366144d6fdbf2ff5551e.html">thrust::lower_bound</a></li>
 <li class="toctree-l1"><a class="reference internal" href="group__binary__search_1gac85cc9ea00f4bdd8f80ad25fff16741d.html">thrust::upper_bound</a></li>
 <li class="toctree-l1"><a class="reference internal" href="group__binary__search_1gaa855fdcf3942f95919bb712e26c7bfc6.html">thrust::binary_search</a></li>
-<li class="toctree-l1"><a class="reference internal" href="group__binary__search_1gabdac721a00790e44ce9e5cbe8c4b57f2.html">thrust::equal_range</a></li>
+<li class="toctree-l1"><a class="reference internal" href="group__binary__search_1gaa62a894dd33970790599e75a186f1bb3.html">thrust::equal_range</a></li>
 </ul>
 </div>
 </section>
@@ -1576,9 +1567,11 @@
     </div>
   </div>
   
+
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
   <script defer src="../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
 <script defer src="../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
 
   <footer class="bd-footer">
 <div class="bd-footer__inner bd-page-width">
