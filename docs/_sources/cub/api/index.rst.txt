@@ -135,6 +135,7 @@ Functions
 * :doc:`LoadDirectWarpStriped <namespacecub_1aeaa261355c6637a70bfc4067ea57bb42>`
 * :doc:`LowerBound <namespacecub_1a8dac1b15322b4ce6b75df7e1ef1a98ce>`
 * :doc:`MatchAny <namespacecub_1ad69972e79ff49330e9a69ef2cc916ea3>`
+* :doc:`MaxPotentialDynamicSmemBytes <namespacecub_1a3855abd619d80468337b76cff16f4bc4>`
 * :doc:`MaxSmOccupancy <namespacecub_1a8b6177c635dcc16dd321af6da3e538db>`
 * :doc:`MergePath <namespacecub_1a1b6e2aaf857cfd72861cf2499bf9acb3>`
 * :doc:`MergePathSearch <namespacecub_1ae5dc63782e74ff9978bec0ef1d12f2f8>`
@@ -142,6 +143,7 @@ Functions
 * :doc:`Nominal4BItemsToItems <namespacecub_1a92146627fb9025cf631ce6894da54068>`
 * :doc:`Nominal4BItemsToItemsCombined <namespacecub_1a91f7ed12997a1c479e6c40039816e94c>`
 * :doc:`Nominal8BItemsToItems <namespacecub_1a0152e6fc2c5fb16bcc72078fc97dc4c2>`
+* :doc:`namespacecub_1a2ed79a837d7d04fc62062a113f41819f`
 * :doc:`PtxVersion <namespacecub_1adbc412e91b5a1ac2cef94a77bc4f776d>`
 * :doc:`PtxVersionUncached <namespacecub_1a9c18197e2ddb2106f71ab0735abc60e5>`
 * :doc:`RowMajorTid <namespacecub_1a767f6bb0f696ac8264755e2c5549ba52>`
@@ -322,6 +324,7 @@ Enumerations
    namespacecub_1a03d07a1e0e455128713337bc38992ec6
    namespacecub_1af987f4650f9ab899588513632a7a335c
    namespacecub_1a553633b74da5b2b77992aa60c1f278f3
+   namespacecub_1a2ed79a837d7d04fc62062a113f41819f
    namespacecub_1a1b6e2aaf857cfd72861cf2499bf9acb3
    namespacecub_1aed5ce3db2c0ebfafd33d5ef6a1eb71a8
    namespacecub_1a5bc54df3b7da4260d8c1d8579f63f0c0
@@ -340,6 +343,7 @@ Enumerations
    namespacecub_1ad79fa34a6d206203d5a611b450c4225a
    namespacecub_1a75d6eade310f187ff42915ae82e963d0
    namespacecub_1abd7ca1c640b97afa0183c61e7970b316
+   namespacecub_1a3855abd619d80468337b76cff16f4bc4
    namespacecub_1a8b6177c635dcc16dd321af6da3e538db
    namespacecub_1a91f7ed12997a1c479e6c40039816e94c
    namespacecub_1a92146627fb9025cf631ce6894da54068
