@@ -3,6 +3,8 @@
 Iterators
 =========
 
+Returns an iterator to the first element of the buffer.
+
 .. toctree::
    :maxdepth: 1
 

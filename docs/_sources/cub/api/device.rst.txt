@@ -10,6 +10,7 @@ Device-wide Primitives
    structcub_1_1CachingDeviceAllocator
    structcub_1_1DeviceAdjacentDifference
    structcub_1_1DeviceCopy
+   structcub_1_1DeviceFind
    structcub_1_1DeviceFor
    structcub_1_1DeviceHistogram
    structcub_1_1DeviceMemcpy
@@ -40,6 +41,8 @@ Device-wide Primitives
    * - :doc:`cub::DeviceAdjacentDifference <structcub_1_1DeviceAdjacentDifference>`
      - 
    * - :doc:`cub::DeviceCopy <structcub_1_1DeviceCopy>`
+     - 
+   * - :doc:`cub::DeviceFind <structcub_1_1DeviceFind>`
      - 
    * - :doc:`cub::DeviceFor <structcub_1_1DeviceFor>`
      - 

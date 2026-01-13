@@ -59,7 +59,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Graphs library" href="graph.html" />
-    <link rel="prev" title="cuda::experimental::stf::task_dep_vector" href="api/classcuda_1_1experimental_1_1stf_1_1task__dep__vector.html" />
+    <link rel="prev" title="cuda::experimental::uninitialized_buffer" href="api/classcuda_1_1experimental_1_1uninitialized__buffer.html" />
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -317,6 +317,7 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="../libcudacxx/extended_api.html">Extended API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/bit.html">Bit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/execution_model.html">Execution model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/exceptions.html">Exception Handling</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/memory_model.html">Memory model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/thread_groups.html">Thread Groups</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/synchronization_primitives.html">Synchronization Primitives</a></li>
@@ -350,14 +351,23 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../libcudacxx/api/index.html">API reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html">basic_any_resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classbasic__resource__ref.html">basic_resource_ref</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classbuffer.html">buffer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classcompute__capability.html">compute_capability</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classconstant__iterator.html">constant_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classcounting__iterator.html">counting_iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classdevice__memory__pool__ref.html">device_memory_pool_ref</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classdevice__ref.html">device_ref</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classdiscard__iterator.html">discard_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classevent.html">event</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classevent__ref.html">event_ref</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classheterogeneous__iterator.html">heterogeneous_iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html">legacy_managed_memory_resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html">legacy_pinned_memory_resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classmanaged__memory__pool__ref.html">managed_memory_pool_ref</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classpermutation__iterator.html">permutation_iterator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classpinned__memory__pool__ref.html">pinned_memory_pool_ref</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classshuffle__iterator.html">shuffle_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classstream__ref.html">stream_ref</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classstrided__iterator.html">strided_iterator</a></li>
@@ -372,14 +382,27 @@
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structarch__traits__t.html">arch_traits_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structdevice__attributes_1_1compute__capability__t.html">device_attributes::compute_capability_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structcopy__configuration.html">copy_configuration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structdevice__accessible.html">device_accessible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html">device_memory_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structget__stream__t.html">get_stream_t</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structhost__accessible.html">host_accessible</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html">managed_memory_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structmemory__pool__properties.html">memory_pool_properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html">pinned_memory_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structcuda_1_1std_1_1pointer__traits_3_1_1cuda_1_1heterogeneous__iterator_3_01__Tp_00_01__Properties_8_8_8_01_4_01_4.html">cuda::std::pointer_traits&lt;::cuda::heterogeneous_iterator&lt; _Tp, _Properties… &gt; &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structproperties__list.html">properties_list</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html">shared_resource</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structstream.html">stream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structsynchronous__resource__adapter.html">synchronous_resource_adapter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/group__iterators_1ga83ac1a6f53e106d83b8f7db6757f7334.html">zip_iterator::difference_type</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/group__iterators_1gadcd3d726e080dfd5ec73d1816aa41744.html">zip_iterator::iterator_concept</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/group__iterators_1ga3a57fccd85438fe6ac517f59802807b5.html">zip_iterator::pointer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/group__iterators_1ga3d65c0bac93cd905b59b6b7cb0c04f08.html">zip_iterator::reference</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/group__iterators_1gaebe2d9c8478b11e187372e211ab26711.html">zip_iterator::value_type</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/group__construction.html">Construction</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/group__iterators.html">Iterators</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/group__access.html">Access</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/group__size.html">Size</a></li>
 </ul>
 </details></li>
 </ul>
@@ -527,6 +550,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/structcub_1_1ChainedPolicy.html">cub::ChainedPolicy</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/structcub_1_1DeviceAdjacentDifference.html">cub::DeviceAdjacentDifference</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/structcub_1_1DeviceCopy.html">cub::DeviceCopy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cub/api/structcub_1_1DeviceFind.html">cub::DeviceFind</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/structcub_1_1DeviceFor.html">cub::DeviceFor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/structcub_1_1DeviceHistogram.html">cub::DeviceHistogram</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/structcub_1_1DeviceMemcpy.html">cub::DeviceMemcpy</a></li>
@@ -582,7 +606,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/namespacecub_1a03d07a1e0e455128713337bc38992ec6.html">cub::StoreDirectWarpStriped</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/namespacecub_1af987f4650f9ab899588513632a7a335c.html">cub::ThreadLoad</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/namespacecub_1a553633b74da5b2b77992aa60c1f278f3.html">cub::ThreadStore</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../cub/api/namespacecub_1a2ed79a837d7d04fc62062a113f41819f.html">cub::operator&lt;&lt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/namespacecub_1a1b6e2aaf857cfd72861cf2499bf9acb3.html">cub::MergePath</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/namespacecub_1aed5ce3db2c0ebfafd33d5ef6a1eb71a8.html">cub::SerialMerge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/api/namespacecub_1a5bc54df3b7da4260d8c1d8579f63f0c0.html">cub::ThreadReduce</a></li>
@@ -978,10 +1001,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1ga30dd0858022330597b14a4c034e1936d.html">thrust::integer_sequence_push_front</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1gafcd0e9ee2ab2f7123caf84f6c85a691b.html">thrust::is_contiguous_iterator</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1ga8cff578125e8f610db7f03cdba1e271d.html">thrust::is_execution_policy</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1ga80899866447b02e95640aa86cb3b9d5b.html">thrust::is_operator_greater_function_object</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1ga89fa2cd21cf618ac3f6742e015347bd4.html">thrust::is_operator_less_function_object</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1ga9e81f0f06e410e65fd4ae0ff3649aa8d.html">thrust::is_operator_less_or_greater_function_object</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1ga4951501a3c7337be79222a966d1f9d73.html">thrust::is_operator_plus_function_object</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__iterator__traits_1gadffd965cb3b426d99eab1f6506c30ed6.html">thrust::iterator_difference_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__iterator__traits_1ga9410f26f50e2038f458b0274dd0a39cf.html">thrust::iterator_pointer_t</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__iterator__traits_1ga6bbc4f5672e0638f4fb040db3a3ea90b.html">thrust::iterator_reference_t</a></li>
@@ -1056,10 +1075,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__execution__policies_1gaebabcc1c0958344babfccdcf379915e5.html">thrust::host</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1ga1da323e7acfe527a28ea6bd940488584.html">thrust::is_contiguous_iterator_v</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1ga2bdbeb4d76c1629f2b2e2323ce10a556.html">thrust::is_execution_policy_v</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1ga42415f71c7b50c51763edc7a3591a400.html">thrust::is_operator_greater_function_object_v</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1ga38d413b5daee16a97fa7d9da9f3c4b29.html">thrust::is_operator_less_function_object_v</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1gac4884b2dd3b4d114ebc739d254c9d505.html">thrust::is_operator_less_or_greater_function_object_v</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__type__traits_1gad5d7207e2d28604f48cef2daccf1ed22.html">thrust::is_operator_plus_function_object_v</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__transformations.html">Transformations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__algorithms.html">Algorithms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__searching.html">Searching</a></li>
@@ -1130,11 +1145,17 @@
 <li class="toctree-l3"><a class="reference internal" href="index.html">Overview</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="container.html">Containers library</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1uninitialized__buffer.html">cuda::experimental::uninitialized_buffer</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1small__vector.html">cuda::experimental::stf::small_vector</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1task__dep__vector.html">cuda::experimental::stf::task_dep_vector</a></li>
 </ul>
 </details></li>
-<li class="toctree-l3 current active has-children"><a class="current reference internal" href="#">Memory Resources</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l3 current active has-children"><a class="current reference internal" href="#">Memory Resources</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html">basic_any_resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structmemory__pool__properties.html">memory_pool_properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html">device_memory_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html">pinned_memory_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html">managed_memory_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html">legacy_pinned_memory_resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html">legacy_managed_memory_resource</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html">shared_resource</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="graph.html">Graphs library</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1479,23 +1500,156 @@
   <section id="memory-resources">
 <span id="cudax-memory-resource"></span><h1>Memory Resources<a class="headerlink" href="#memory-resources" title="Link to this heading">#</a></h1>
 <div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html">basic_any_resource</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I_13_ResourceKindDpE18basic_any_resource"><code class="docutils literal notranslate"><span class="pre">basic_any_resource</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resource18basic_any_resourceEv"><code class="docutils literal notranslate"><span class="pre">basic_any_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resource18basic_any_resourceERR18basic_any_resource"><code class="docutils literal notranslate"><span class="pre">basic_any_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resource18basic_any_resourceERK18basic_any_resource"><code class="docutils literal notranslate"><span class="pre">basic_any_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I0EN18basic_any_resource18basic_any_resourceE9_Resource"><code class="docutils literal notranslate"><span class="pre">basic_any_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I_13_ResourceKindDpEN18basic_any_resource18basic_any_resourceE18basic_any_resourceI10_OtherKindDp16_OtherPropertiesE"><code class="docutils literal notranslate"><span class="pre">basic_any_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I_13_ResourceKindDpEN18basic_any_resource18basic_any_resourceE18basic_resource_refI10_OtherKindDp16_OtherPropertiesE"><code class="docutils literal notranslate"><span class="pre">basic_any_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resourceaSERR18basic_any_resource"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resourceaSERK18basic_any_resource"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I0EN18basic_any_resourceaSER18basic_any_resource9_Resource"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I_13_ResourceKindDpEN18basic_any_resourceaSER18basic_any_resource18basic_any_resourceI10_OtherKindDp16_OtherPropertiesE"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I_13_ResourceKindDpEN18basic_any_resourceaSER18basic_any_resource18basic_resource_refI10_OtherKindDp16_OtherPropertiesE"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I_13_ResourceKindDpENK18basic_any_resourceeqEbRK18basic_any_resourceI10_OtherKindDp16_OtherPropertiesE"><code class="docutils literal notranslate"><span class="pre">operator==()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I_13_ResourceKindDpENK18basic_any_resourceeqEbRK18basic_resource_refI10_OtherKindDp16_OtherPropertiesE"><code class="docutils literal notranslate"><span class="pre">operator==()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resource13allocate_syncE6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">allocate_sync()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resource15deallocate_syncEPv6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">deallocate_sync()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resource8allocateEN4cuda10stream_refE6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">allocate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resource8allocateEN4cuda10stream_refE6size_t"><code class="docutils literal notranslate"><span class="pre">allocate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resource10deallocateEN4cuda10stream_refEPv6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">deallocate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resource10deallocateEN4cuda10stream_refEPv6size_t"><code class="docutils literal notranslate"><span class="pre">deallocate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4NK18basic_any_resource9has_valueEv"><code class="docutils literal notranslate"><span class="pre">has_value()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4N18basic_any_resource5resetEv"><code class="docutils literal notranslate"><span class="pre">reset()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4NK18basic_any_resource4typeEv"><code class="docutils literal notranslate"><span class="pre">type()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I0EN18basic_any_resource12get_propertyEDcRK18basic_any_resource9_Property"><code class="docutils literal notranslate"><span class="pre">get_property</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classbasic__any__resource.html#_CPPv4I0EN18basic_any_resource16try_get_propertyEDaRK18basic_any_resource9_Property"><code class="docutils literal notranslate"><span class="pre">try_get_property</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../libcudacxx/api/structmemory__pool__properties.html">memory_pool_properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libcudacxx/api/structmemory__pool__properties.html#_CPPv422memory_pool_properties"><code class="docutils literal notranslate"><span class="pre">memory_pool_properties</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmemory__pool__properties.html#_CPPv4N22memory_pool_properties17initial_pool_sizeE"><code class="docutils literal notranslate"><span class="pre">initial_pool_size</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmemory__pool__properties.html#_CPPv4N22memory_pool_properties17release_thresholdE"><code class="docutils literal notranslate"><span class="pre">release_threshold</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmemory__pool__properties.html#_CPPv4N22memory_pool_properties22allocation_handle_typeE"><code class="docutils literal notranslate"><span class="pre">allocation_handle_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmemory__pool__properties.html#_CPPv4N22memory_pool_properties13max_pool_sizeE"><code class="docutils literal notranslate"><span class="pre">max_pool_size</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html">device_memory_pool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html#_CPPv418device_memory_pool"><code class="docutils literal notranslate"><span class="pre">device_memory_pool</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html#_CPPv4N18device_memory_pool14reference_typeE"><code class="docutils literal notranslate"><span class="pre">reference_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html#_CPPv4N18device_memory_pool15default_queriesE"><code class="docutils literal notranslate"><span class="pre">default_queries</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html#_CPPv4N18device_memory_pool18device_memory_poolEN4cuda10device_refE22memory_pool_properties"><code class="docutils literal notranslate"><span class="pre">device_memory_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html#_CPPv4N18device_memory_poolD0Ev"><code class="docutils literal notranslate"><span class="pre">~device_memory_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html#_CPPv4N18device_memory_pool6as_refEv"><code class="docutils literal notranslate"><span class="pre">as_ref()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html#_CPPv4N18device_memory_pool18device_memory_poolERK18device_memory_pool"><code class="docutils literal notranslate"><span class="pre">device_memory_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html#_CPPv4N18device_memory_poolaSERK18device_memory_pool"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structdevice__memory__pool.html#_CPPv4N18device_memory_pool18from_native_handleE13cudaMemPool_t"><code class="docutils literal notranslate"><span class="pre">from_native_handle()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html">pinned_memory_pool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#_CPPv418pinned_memory_pool"><code class="docutils literal notranslate"><span class="pre">pinned_memory_pool</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#_CPPv4N18pinned_memory_pool14reference_typeE"><code class="docutils literal notranslate"><span class="pre">reference_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#_CPPv4N18pinned_memory_pool15default_queriesE"><code class="docutils literal notranslate"><span class="pre">default_queries</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#_CPPv4N18pinned_memory_pool18pinned_memory_poolE22memory_pool_properties"><code class="docutils literal notranslate"><span class="pre">pinned_memory_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#_CPPv4N18pinned_memory_pool18pinned_memory_poolEi22memory_pool_properties"><code class="docutils literal notranslate"><span class="pre">pinned_memory_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#_CPPv4N18pinned_memory_poolD0Ev"><code class="docutils literal notranslate"><span class="pre">~pinned_memory_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#_CPPv4N18pinned_memory_pool6as_refEv"><code class="docutils literal notranslate"><span class="pre">as_ref()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#_CPPv4N18pinned_memory_pool18pinned_memory_poolERK18pinned_memory_pool"><code class="docutils literal notranslate"><span class="pre">pinned_memory_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#_CPPv4N18pinned_memory_poolaSERK18pinned_memory_pool"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#_CPPv4N18pinned_memory_pool18from_native_handleE13cudaMemPool_t"><code class="docutils literal notranslate"><span class="pre">from_native_handle()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html">managed_memory_pool</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html#_CPPv419managed_memory_pool"><code class="docutils literal notranslate"><span class="pre">managed_memory_pool</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html#_CPPv4N19managed_memory_pool14reference_typeE"><code class="docutils literal notranslate"><span class="pre">reference_type</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html#_CPPv4N19managed_memory_pool15default_queriesE"><code class="docutils literal notranslate"><span class="pre">default_queries</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html#_CPPv4N19managed_memory_pool19managed_memory_poolE22memory_pool_properties"><code class="docutils literal notranslate"><span class="pre">managed_memory_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html#_CPPv4N19managed_memory_poolD0Ev"><code class="docutils literal notranslate"><span class="pre">~managed_memory_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html#_CPPv4N19managed_memory_pool6as_refEv"><code class="docutils literal notranslate"><span class="pre">as_ref()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html#_CPPv4N19managed_memory_pool19managed_memory_poolERK19managed_memory_pool"><code class="docutils literal notranslate"><span class="pre">managed_memory_pool()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html#_CPPv4N19managed_memory_poolaSERK19managed_memory_pool"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structmanaged__memory__pool.html#_CPPv4N19managed_memory_pool18from_native_handleE13cudaMemPool_t"><code class="docutils literal notranslate"><span class="pre">from_native_handle()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html">legacy_pinned_memory_resource</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html#_CPPv429legacy_pinned_memory_resource"><code class="docutils literal notranslate"><span class="pre">legacy_pinned_memory_resource</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html#_CPPv4N29legacy_pinned_memory_resource15default_queriesE"><code class="docutils literal notranslate"><span class="pre">default_queries</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html#_CPPv4N29legacy_pinned_memory_resource29legacy_pinned_memory_resourceEN4cuda10device_refE"><code class="docutils literal notranslate"><span class="pre">legacy_pinned_memory_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html#_CPPv4N29legacy_pinned_memory_resource13allocate_syncEK6size_tK6size_t"><code class="docutils literal notranslate"><span class="pre">allocate_sync()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html#_CPPv4N29legacy_pinned_memory_resource15deallocate_syncEPvK6size_tK6size_t"><code class="docutils literal notranslate"><span class="pre">deallocate_sync()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html#_CPPv4NK29legacy_pinned_memory_resourceeqERK29legacy_pinned_memory_resource"><code class="docutils literal notranslate"><span class="pre">operator==()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html#_CPPv4N29legacy_pinned_memory_resource12get_propertyERK29legacy_pinned_memory_resourceN4cuda2mr17device_accessibleE"><code class="docutils literal notranslate"><span class="pre">get_property</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__pinned__memory__resource.html#_CPPv4N29legacy_pinned_memory_resource12get_propertyERK29legacy_pinned_memory_resourceN4cuda2mr15host_accessibleE"><code class="docutils literal notranslate"><span class="pre">get_property</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html">legacy_managed_memory_resource</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html#_CPPv430legacy_managed_memory_resource"><code class="docutils literal notranslate"><span class="pre">legacy_managed_memory_resource</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html#_CPPv4N30legacy_managed_memory_resource15default_queriesE"><code class="docutils literal notranslate"><span class="pre">default_queries</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html#_CPPv4N30legacy_managed_memory_resource30legacy_managed_memory_resourceEKj10device_ref"><code class="docutils literal notranslate"><span class="pre">legacy_managed_memory_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html#_CPPv4N30legacy_managed_memory_resource13allocate_syncEK6size_tK6size_t"><code class="docutils literal notranslate"><span class="pre">allocate_sync()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html#_CPPv4N30legacy_managed_memory_resource15deallocate_syncEPvK6size_tK6size_t"><code class="docutils literal notranslate"><span class="pre">deallocate_sync()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html#_CPPv4NK30legacy_managed_memory_resourceeqERK30legacy_managed_memory_resource"><code class="docutils literal notranslate"><span class="pre">operator==()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html#_CPPv4N30legacy_managed_memory_resource12get_propertyERK30legacy_managed_memory_resourceN4cuda2mr17device_accessibleE"><code class="docutils literal notranslate"><span class="pre">get_property</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/classlegacy__managed__memory__resource.html#_CPPv4N30legacy_managed_memory_resource12get_propertyERK30legacy_managed_memory_resourceN4cuda2mr15host_accessibleE"><code class="docutils literal notranslate"><span class="pre">get_property</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html">shared_resource</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4I0E15shared_resource"><code class="docutils literal notranslate"><span class="pre">shared_resource</span></code></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4IDpEN15shared_resource15shared_resourceEN4cudaSt15in_place_type_tI9_ResourceEEDpRR5_Args"><code class="docutils literal notranslate"><span class="pre">shared_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resource15shared_resourceERK15shared_resource"><code class="docutils literal notranslate"><span class="pre">shared_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resource15shared_resourceERR15shared_resource"><code class="docutils literal notranslate"><span class="pre">shared_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resourceD0Ev"><code class="docutils literal notranslate"><span class="pre">~shared_resource()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resourceaSERK15shared_resource"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resourceaSERR15shared_resource"><code class="docutils literal notranslate"><span class="pre">operator=()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resource4swapER15shared_resource"><code class="docutils literal notranslate"><span class="pre">swap()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resource13allocate_syncE6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">allocate_sync()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resource15deallocate_syncEPv6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">deallocate_sync()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cuda2mr8resourceI13_ThisResourceEEiEEEN15shared_resource8allocateEPvN4cuda10stream_refE6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">allocate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4I0_N4cudaSt11enable_if_tIN4cuda2mr8resourceI13_ThisResourceEEiEEEN15shared_resource10deallocateEvN4cuda10stream_refEPv6size_t6size_t"><code class="docutils literal notranslate"><span class="pre">deallocate()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resource4swapER15shared_resourceR15shared_resource"><code class="docutils literal notranslate"><span class="pre">swap</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resourceeqERK15shared_resourceRK15shared_resource"><code class="docutils literal notranslate"><span class="pre">operator==</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4N15shared_resourceneERK15shared_resourceRK15shared_resource"><code class="docutils literal notranslate"><span class="pre">operator!=</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4I0_N4cudaSt11enable_if_tIXaant19property_with_valueI9_PropertyE12has_propertyI9_Resource9_PropertyEEiEEEN15shared_resource12get_propertyEvRK15shared_resource9_Property"><code class="docutils literal notranslate"><span class="pre">get_property</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#_CPPv4I0_N4cudaSt11enable_if_tIFRR19property_with_valueI9_PropertyE12has_propertyI9_Resource9_PropertyEEiEEEN15shared_resource12get_propertyE18__property_value_tI9_PropertyERK15shared_resource9_Property"><code class="docutils literal notranslate"><span class="pre">get_property</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
-<dl class="simple">
-<dt>The <code class="docutils literal notranslate"><span class="pre">&lt;cuda/experimental/memory_resource.cuh&gt;</span></code> header provides:</dt><dd><ul class="simple">
+<p>The <code class="docutils literal notranslate"><span class="pre">&lt;cuda/experimental/memory_resource.cuh&gt;</span></code> header provides:</p>
+<blockquote>
+<div><ul class="simple">
 <li><p><span class="xref std std-ref">any_synchronous_resource</span> and
 <span class="xref std std-ref">any_resource</span> type erased memory resources similar to
 <code class="docutils literal notranslate"><span class="pre">std::any</span></code>. In contrast to <a class="reference internal" href="../libcudacxx/extended_api/memory_resource/resource_ref.html#libcudacxx-extended-api-memory-resources-resource-ref"><span class="std std-ref">resource_ref</span></a> they
 own the contained resource.</p></li>
-<li><p><span class="xref std std-ref">device_memory_resource</span> A standard C++ interface for <em>heterogeneous</em>,
+<li><p><a class="reference internal" href="../libcudacxx/api/structpinned__memory__pool.html#libcudacxx-memory-resource-async"><span class="std std-ref">device_memory_resource</span></a> A standard C++ interface for <em>heterogeneous</em>,
 <em>stream-ordered</em> memory allocation tailored to the needs of CUDA C++ developers. This design builds off of the
 success of the <a class="reference external" href="https://github.com/rapidsai/rmm">RAPIDS Memory Manager (RMM)</a> project and evolves the design
 based on lessons learned.</p></li>
-<li><p><span class="xref std std-ref">shared_resource</span> a type erased reference counted memory resource.
+<li><p><a class="reference internal" href="../libcudacxx/api/structshared__resource.html#libcudacxx-memory-resource-shared-resource"><span class="std std-ref">shared_resource</span></a> a type erased reference counted memory resource.
 In contrast to <span class="xref std std-ref">any_resource</span> it additionally provides shared ownership
 semantics.</p></li>
 </ul>
-</dd>
-</dl>
+</div></blockquote>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;cuda/experimental/memory_resource.cuh&gt;</span></code> is not intended to replace RMM, but instead moves the definition of the
 memory allocation interface to a more centralized home in CCCL. RMM will remain as a collection of implementations of
 the <code class="docutils literal notranslate"><span class="pre">cuda::mr</span></code> interfaces.</p>
@@ -1512,12 +1666,12 @@ the <code class="docutils literal notranslate"><span class="pre">cuda::mr</span>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="api/classcuda_1_1experimental_1_1stf_1_1task__dep__vector.html"
+       href="api/classcuda_1_1experimental_1_1uninitialized__buffer.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">cuda::experimental::stf::task_dep_vector</p>
+        <p class="prev-next-title">cuda::experimental::uninitialized_buffer</p>
       </div>
     </a>
     <a class="right-next"
@@ -1569,7 +1723,7 @@ the <code class="docutils literal notranslate"><span class="pre">cuda::mr</span>
 
   <p class="copyright">
     
-      Copyright © 2025, NVIDIA Corporation.
+      Copyright © 2026, NVIDIA Corporation.
       <br/>
     
   </p>

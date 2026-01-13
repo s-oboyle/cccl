@@ -319,10 +319,6 @@ Type Definitions
 * :doc:`integer_sequence_push_front <group__type__traits_1ga30dd0858022330597b14a4c034e1936d>`
 * :doc:`is_contiguous_iterator <group__type__traits_1gafcd0e9ee2ab2f7123caf84f6c85a691b>`
 * :doc:`is_execution_policy <group__type__traits_1ga8cff578125e8f610db7f03cdba1e271d>`
-* :doc:`is_operator_greater_function_object <group__type__traits_1ga80899866447b02e95640aa86cb3b9d5b>`
-* :doc:`is_operator_less_function_object <group__type__traits_1ga89fa2cd21cf618ac3f6742e015347bd4>`
-* :doc:`is_operator_less_or_greater_function_object <group__type__traits_1ga9e81f0f06e410e65fd4ae0ff3649aa8d>`
-* :doc:`is_operator_plus_function_object <group__type__traits_1ga4951501a3c7337be79222a966d1f9d73>`
 * :doc:`iterator_difference_t <group__iterator__traits_1gadffd965cb3b426d99eab1f6506c30ed6>`
 * :doc:`iterator_pointer_t <group__iterator__traits_1ga9410f26f50e2038f458b0274dd0a39cf>`
 * :doc:`iterator_reference_t <group__iterator__traits_1ga6bbc4f5672e0638f4fb040db3a3ea90b>`
@@ -366,10 +362,6 @@ Type Definitions
 * :doc:`thrust::integer_sequence_push_front <group__type__traits_1ga30dd0858022330597b14a4c034e1936d>`
 * :doc:`thrust::is_contiguous_iterator <group__type__traits_1gafcd0e9ee2ab2f7123caf84f6c85a691b>`
 * :doc:`thrust::is_execution_policy <group__type__traits_1ga8cff578125e8f610db7f03cdba1e271d>`
-* :doc:`thrust::is_operator_greater_function_object <group__type__traits_1ga80899866447b02e95640aa86cb3b9d5b>`
-* :doc:`thrust::is_operator_less_function_object <group__type__traits_1ga89fa2cd21cf618ac3f6742e015347bd4>`
-* :doc:`thrust::is_operator_less_or_greater_function_object <group__type__traits_1ga9e81f0f06e410e65fd4ae0ff3649aa8d>`
-* :doc:`thrust::is_operator_plus_function_object <group__type__traits_1ga4951501a3c7337be79222a966d1f9d73>`
 * :doc:`thrust::iterator_difference_t <group__iterator__traits_1gadffd965cb3b426d99eab1f6506c30ed6>`
 * :doc:`thrust::iterator_pointer_t <group__iterator__traits_1ga9410f26f50e2038f458b0274dd0a39cf>`
 * :doc:`thrust::iterator_reference_t <group__iterator__traits_1ga6bbc4f5672e0638f4fb040db3a3ea90b>`
@@ -455,10 +447,6 @@ Variables
 * :doc:`host <group__execution__policies_1gaebabcc1c0958344babfccdcf379915e5>`
 * :doc:`is_contiguous_iterator_v <group__type__traits_1ga1da323e7acfe527a28ea6bd940488584>`
 * :doc:`is_execution_policy_v <group__type__traits_1ga2bdbeb4d76c1629f2b2e2323ce10a556>`
-* :doc:`is_operator_greater_function_object_v <group__type__traits_1ga42415f71c7b50c51763edc7a3591a400>`
-* :doc:`is_operator_less_function_object_v <group__type__traits_1ga38d413b5daee16a97fa7d9da9f3c4b29>`
-* :doc:`is_operator_less_or_greater_function_object_v <group__type__traits_1gac4884b2dd3b4d114ebc739d254c9d505>`
-* :doc:`is_operator_plus_function_object_v <group__type__traits_1gad5d7207e2d28604f48cef2daccf1ed22>`
 
 .. toctree::
    :hidden:
@@ -762,10 +750,6 @@ Variables
    group__type__traits_1ga30dd0858022330597b14a4c034e1936d
    group__type__traits_1gafcd0e9ee2ab2f7123caf84f6c85a691b
    group__type__traits_1ga8cff578125e8f610db7f03cdba1e271d
-   group__type__traits_1ga80899866447b02e95640aa86cb3b9d5b
-   group__type__traits_1ga89fa2cd21cf618ac3f6742e015347bd4
-   group__type__traits_1ga9e81f0f06e410e65fd4ae0ff3649aa8d
-   group__type__traits_1ga4951501a3c7337be79222a966d1f9d73
    group__iterator__traits_1gadffd965cb3b426d99eab1f6506c30ed6
    group__iterator__traits_1ga9410f26f50e2038f458b0274dd0a39cf
    group__iterator__traits_1ga6bbc4f5672e0638f4fb040db3a3ea90b
@@ -840,10 +824,6 @@ Variables
    group__execution__policies_1gaebabcc1c0958344babfccdcf379915e5
    group__type__traits_1ga1da323e7acfe527a28ea6bd940488584
    group__type__traits_1ga2bdbeb4d76c1629f2b2e2323ce10a556
-   group__type__traits_1ga42415f71c7b50c51763edc7a3591a400
-   group__type__traits_1ga38d413b5daee16a97fa7d9da9f3c4b29
-   group__type__traits_1gac4884b2dd3b4d114ebc739d254c9d505
-   group__type__traits_1gad5d7207e2d28604f48cef2daccf1ed22
    group__transformations
    group__algorithms
    group__searching
