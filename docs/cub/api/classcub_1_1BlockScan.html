@@ -46,8 +46,8 @@
 
 
     <script src="../../_static/documentation_options.js?v=26f62d79"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=5ceeb459"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
@@ -330,7 +330,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/functional.html">Functional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/iterators.html">Fancy Iterators</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/type_traits.html">Type traits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/vector_tuple_protocol.html">Vector Tuple Protocol</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/numeric.html">Numeric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/random.html">Random</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/memory.html">Memory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/memory_resource.html">Memory Resources</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/math.html">Math</a></li>
@@ -421,7 +423,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../developer/warp_level.html">Warp-level</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../developer/block_scope.html">Block-scope</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../developer/device_scope.html">Device-scope</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../developer/visibility.html">Symbol Visibility</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../developer/nvtx.html">NVTX</a></li>
 </ul>
 </details></li>
@@ -830,10 +831,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1ae268bfffafaa04f5a8a4cf902861367c.html">thrust::next</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a253ceec56c467b5ce73b1593ff8b1375.html">thrust::prev</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1aadb50b0c546159c3f06ecdf8349fb901.html">thrust::make_tagged_deleter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a2ac27e75b5e3ff9162038c65f9a962e6.html">thrust::allocate_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a422a511a42fdee806b0c6fd3b2c1a297.html">thrust::uninitialized_allocate_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1ac43d207f42ebc9d5ecf79d7708119ec1.html">thrust::allocate_unique_n</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a107423505ed1d5bd9e05dda2e3c2a4ad.html">thrust::uninitialized_allocate_unique_n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a82dc371eac6d1499d28f153e3f921926.html">thrust::allocate_unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1ae7fd98cda27174a35283582ebdd724c1.html">thrust::uninitialized_allocate_unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a66c4817439220a11edc1c810c9f2c4e4.html">thrust::allocate_unique_n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a3a4c778f56a57b41e72b4a6037ed08da.html">thrust::uninitialized_allocate_unique_n</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/group__binary__search_1gad2ac5a1c5091366144d6fdbf2ff5551e.html">thrust::lower_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/group__binary__search_1gac85cc9ea00f4bdd8f80ad25fff16741d.html">thrust::upper_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/group__binary__search_1gaa855fdcf3942f95919bb712e26c7bfc6.html">thrust::binary_search</a></li>
@@ -1211,6 +1212,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__instance.html">cuda::experimental::stf::data_instance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__interface.html">cuda::experimental::stf::data_interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__place.html">cuda::experimental::stf::data_place</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__place__extension.html">cuda::experimental::stf::data_place_extension</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1deferred__stream__task.html">cuda::experimental::stf::deferred_stream_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1dim4.html">cuda::experimental::stf::dim4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html">cuda::experimental::stf::event_impl</a></li>
@@ -1220,6 +1222,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__cuda__stream.html">cuda::experimental::stf::exec_place_cuda_stream</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__green__ctx.html">cuda::experimental::stf::exec_place_green_ctx</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__grid.html">cuda::experimental::stf::exec_place_grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__guard.html">cuda::experimental::stf::exec_place_guard</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__host.html">cuda::experimental::stf::exec_place_host</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache.html">cuda::experimental::stf::executable_graph_cache</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache__stat.html">cuda::experimental::stf::executable_graph_cache_stat</a></li>
@@ -1231,6 +1234,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task.html">cuda::experimental::stf::graph_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html">cuda::experimental::stf::graph_task&lt;&gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__context__helper.html">cuda::experimental::stf::green_context_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__ctx__data__place.html">cuda::experimental::stf::green_ctx_data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__ctx__view.html">cuda::experimental::stf::green_ctx_view</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1hashtable.html">cuda::experimental::stf::hashtable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1hashtable__stream__interface.html">cuda::experimental::stf::hashtable_stream_interface</a></li>
@@ -1308,6 +1312,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01cuda_1_1experimental_1_1stf_1_1green__ctx__view_01_4.html">cuda::experimental::stf::hash&lt; cuda::experimental::stf::green_ctx_view &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01data__place_01_4.html">cuda::experimental::stf::hash&lt; data_place &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01dim4_01_4.html">cuda::experimental::stf::hash&lt; dim4 &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01exec__place_01_4.html">cuda::experimental::stf::hash&lt; exec_place &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01hashtable_01_4.html">cuda::experimental::stf::hash&lt; hashtable &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01mdspan_3_01P_8_8_8_01_4_01_4.html">cuda::experimental::stf::hash&lt; mdspan&lt; P… &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01pos4_01_4.html">cuda::experimental::stf::hash&lt; pos4 &gt;</a></li>
@@ -1352,6 +1357,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a1a3f54ba8407a462e7410a45af0f75a3.html">cuda::experimental::stf::data_hash</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1abe262e91fef7dd1a874d0c45463f4529.html">cuda::experimental::stf::data_dump</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1acddbda1fa79384aa723f05740d12001c.html">cuda::experimental::stf::pack_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a20c223a02a2cfb089fe1d91f932912f2.html">cuda::experimental::stf::make_green_ctx_data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a5b257d4c2331422fd492439852cb9005.html">cuda::experimental::stf::get_cuda_context_id</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a58cda9cdc2010f7451a34efc10f8f3f2.html">cuda::experimental::stf::place_partition_scope_to_string</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a742f1c47d0b76725772e86a449d8d604.html">cuda::experimental::stf::make_grid</a></li>
@@ -1423,6 +1429,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../../cccl/development/macro.html">CCCL Internal Macros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../cccl/development/testing.html">CCCL Testing Utilities</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../cccl/development/build_and_bisect_tools.html">Build and Bisect Utilities</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../cccl/development/visibility.html">Symbol Visibility</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../cccl/development/visibility/host_stub_visibility.html">Host Stub Visibility Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cccl/development/visibility/device_kernel_visibility.html">Device Kernel Visibility Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cccl/development/visibility/different_architectures.html">Linking TUs compiled with different architectures</a></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../cccl/contributing.html">Contributing to the CUDA Core Compute Libraries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1619,12 +1631,20 @@ This example can be easily adapted to the storage required by BlockScan.</p>
 <dt class="sig sig-object cpp" id="_CPPv4N3cub9BlockScan9BlockScanEv">
 <span class="target" id="classcub_1_1BlockScan_1ac743e2d00dbc5e8e30d58435072579f4"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BlockScan</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3cub9BlockScan9BlockScanEv" title="Link to this definition">#</a><br /></dt>
 <dd><p>Collective constructor using a private static allocation of shared memory as temporary storage. </p>
+<p><div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
+</p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N3cub9BlockScan9BlockScanER11TempStorage">
 <span class="target" id="classcub_1_1BlockScan_1a3b2afa31709bf024fb9723f7aca3739d"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">BlockScan</span></span></span><span class="sig-paren">(</span><em class="sig-param"><a class="reference internal" href="#_CPPv4N3cub9BlockScan11TempStorageE" title="cub::BlockScan::TempStorage"><span class="n"><span class="pre">TempStorage</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">temp_storage</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3cub9BlockScan9BlockScanER11TempStorage" title="Link to this definition">#</a><br /></dt>
 <dd><p>Collective constructor using the specified memory allocation as temporary storage. </p>
+<p><div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
+</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>temp_storage</strong> – <strong>[in]</strong> Reference to memory allocation having layout type <a class="reference internal" href="#structcub_1_1BlockScan_1_1TempStorage"><span class="std std-ref">TempStorage</span></a></p>
@@ -1641,6 +1661,9 @@ This example can be easily adapted to the storage required by BlockScan.</p>
 <dd><p><p>Computes an exclusive block-wide prefix scan using addition (+) as the scan operator.
 Each thread contributes one input element. The value of 0 is applied as the initial value, and is assigned
 to <code class="docutils literal notranslate"><span class="pre">output</span></code> in <em>thread</em><sub>0</sub>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>This operation assumes the value of obtained by the <code class="docutils literal notranslate"><span class="pre">T</span></code>’s default constructor (or by zero-initialization if no user-defined default constructor exists) is suitable as the identity value “zero” for addition.</p></li>
 <li><p>For multi-dimensional blocks, threads are linearly ranked in row-major order.</p></li>
@@ -1690,6 +1713,9 @@ The corresponding output <code class="docutils literal notranslate"><span class=
 Each thread contributes one input element.
 The value of 0 is applied as the initial value, and is assigned to <code class="docutils literal notranslate"><span class="pre">output</span></code> in <em>thread</em><sub>0</sub>.
 Also provides every thread with the block-wide <code class="docutils literal notranslate"><span class="pre">block_aggregate</span></code> of all inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>This operation assumes the value of obtained by the <code class="docutils literal notranslate"><span class="pre">T</span></code>’s default constructor (or by zero-initialization if no user-defined default constructor exists) is suitable as the identity value “zero” for addition.</p></li>
 <li><p>For multi-dimensional blocks, threads are linearly ranked in row-major order.</p></li>
@@ -1751,6 +1777,9 @@ Each thread contributes one input element.  Instead of using 0 as the block-wide
 <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> is invoked by the first warp in the block, and the value returned by
 <em>lane</em><sub>0</sub> in that warp is used as the “seed” value that logically prefixes the thread block’s
 scan inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>This operation assumes the value of obtained by the <code class="docutils literal notranslate"><span class="pre">T</span></code>’s default constructor (or by zero-initialization if no user-defined default constructor exists) is suitable as the identity value “zero” for addition.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> functor must implement a member function
@@ -1853,6 +1882,9 @@ the logical input sequence.</p>
 <dd><p><p>Computes an exclusive block-wide prefix scan using addition (+) as the scan operator.
 Each thread contributes an array of consecutive input elements.
 The value of 0 is applied as the initial value, and is assigned to <code class="docutils literal notranslate"><span class="pre">output[0]</span></code> in <em>thread</em><sub>0</sub>.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>This operation assumes the value of obtained by the <code class="docutils literal notranslate"><span class="pre">T</span></code>’s default constructor (or by zero-initialization if no user-defined default constructor exists) is suitable as the identity value “zero” for addition.</p></li>
 <li><p>Assumes a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of (<em>block-threads</em> * <em>items-per-thread</em>) items across the thread block, where <em>thread</em><sub>i</sub> owns the <em>i</em><sup>th</sup> range of <em>items-per-thread</em> contiguous items. For multi-dimensional thread blocks, a row-major thread ordering is assumed.</p></li>
@@ -1924,6 +1956,9 @@ The corresponding output <code class="docutils literal notranslate"><span class=
 Each thread contributes an array of consecutive input elements.
 The value of 0 is applied as the initial value, and is assigned to <code class="docutils literal notranslate"><span class="pre">output[0]</span></code> in <em>thread</em><sub>0</sub>.
 Also provides every thread with the block-wide <code class="docutils literal notranslate"><span class="pre">block_aggregate</span></code> of all inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>This operation assumes the value of obtained by the <code class="docutils literal notranslate"><span class="pre">T</span></code>’s default constructor (or by zero-initialization if no user-defined default constructor exists) is suitable as the identity value “zero” for addition.</p></li>
 <li><p>Assumes a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of (<em>block-threads</em> * <em>items-per-thread</em>) items across the thread block, where <em>thread</em><sub>i</sub> owns the <em>i</em><sup>th</sup> range of <em>items-per-thread</em> contiguous items. For multi-dimensional thread blocks, a row-major thread ordering is assumed.</p></li>
@@ -1999,6 +2034,9 @@ Each thread contributes an array of consecutive input elements.
 Instead of using 0 as the block-wide prefix, the call-back functor <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> is invoked by
 the first warp in the block, and the value returned by <em>lane</em><sub>0</sub> in that warp is used as the “seed”
 value that logically prefixes the thread block’s scan inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>This operation assumes the value of obtained by the <code class="docutils literal notranslate"><span class="pre">T</span></code>’s default constructor (or by zero-initialization if no user-defined default constructor exists) is suitable as the identity value “zero” for addition.</p></li>
 <li><p>The <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> functor must implement a member function <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">operator()(T</span> <span class="pre">block_aggregate)</span></code>.
@@ -2117,6 +2155,9 @@ the logical input sequence.</p>
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3cub9BlockScan13ExclusiveScanEv1TR1T1T6ScanOp" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Computes an exclusive block-wide prefix scan using the specified binary <code class="docutils literal notranslate"><span class="pre">scan_op</span></code> functor.
 Each thread contributes one input element.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Supports non-commutative scan operators.</p></li>
 <li><p>For multi-dimensional blocks, threads are linearly ranked in row-major order.</p></li>
@@ -2182,6 +2223,9 @@ The corresponding output <code class="docutils literal notranslate"><span class=
 <dd><p><p>Computes an exclusive block-wide prefix scan using the specified binary <code class="docutils literal notranslate"><span class="pre">scan_op</span></code> functor.
 Each thread contributes one input element.
 Also provides every thread with the block-wide <code class="docutils literal notranslate"><span class="pre">block_aggregate</span></code> of all inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Supports non-commutative scan operators.</p></li>
 <li><p>For multi-dimensional blocks, threads are linearly ranked in row-major order.</p></li>
@@ -2255,6 +2299,9 @@ taken into account for <code class="docutils literal notranslate"><span class="p
 Each thread contributes one input element. The call-back functor <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> is invoked by
 the first warp in the block, and the value returned by <em>lane</em><sub>0</sub> in that warp is used as
 the “seed” value that logically prefixes the thread block’s scan inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> functor must implement a member function <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">operator()(T</span> <span class="pre">block_aggregate)</span></code>.
 The functor will be invoked by the first warp of threads in the block, however only the return value from
@@ -2362,6 +2409,9 @@ the logical input sequence.</p>
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_i0EN3cub9BlockScan13ExclusiveScanEvRA16ITEMS_PER_THREAD_1TRA16ITEMS_PER_THREAD_1T1T6ScanOp" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Computes an exclusive block-wide prefix scan using the specified binary <code class="docutils literal notranslate"><span class="pre">scan_op</span></code> functor.
 Each thread contributes an array of consecutive input elements.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Supports non-commutative scan operators.</p></li>
 <li><p>Assumes a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of (<em>block-threads</em> * <em>items-per-thread</em>) items across the thread block, where <em>thread</em><sub>i</sub> owns the <em>i</em><sup>th</sup> range of <em>items-per-thread</em> contiguous items. For multi-dimensional thread blocks, a row-major thread ordering is assumed.</p></li>
@@ -2441,6 +2491,9 @@ The corresponding output <code class="docutils literal notranslate"><span class=
 <dd><p><p>Computes an exclusive block-wide prefix scan using the specified binary <code class="docutils literal notranslate"><span class="pre">scan_op</span></code> functor.
 Each thread contributes an array of consecutive input elements.
 Also provides every thread with the block-wide <code class="docutils literal notranslate"><span class="pre">block_aggregate</span></code> of all inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Supports non-commutative scan operators.</p></li>
 <li><p>Assumes a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of (<em>block-threads</em> * <em>items-per-thread</em>) items across the thread block, where <em>thread</em><sub>i</sub> owns the <em>i</em><sup>th</sup> range of <em>items-per-thread</em> contiguous items. For multi-dimensional thread blocks, a row-major thread ordering is assumed.</p></li>
@@ -2522,6 +2575,9 @@ Each thread contributes an array of consecutive input elements.
 The call-back functor <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> is invoked by the first warp in the block, and the value
 returned by <em>lane</em><sub>0</sub> in that warp is used as the “seed” value that logically prefixes the thread
 block’s scan inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> functor must implement a member function
 <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">operator()(T</span> <span class="pre">block_aggregate)</span></code>. The functor will be invoked by the
@@ -2635,6 +2691,9 @@ the logical input sequence.</p>
 <span class="target" id="classcub_1_1BlockScan_1ac1186066f7b0d08015687ec5a7b18e3f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">InclusiveSum</span></span></span><span class="sig-paren">(</span><em class="sig-param"><a class="reference internal" href="#_CPPv4I0_i_18BlockScanAlgorithm_i_iEN3cub9BlockScanE" title="cub::BlockScan::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">input</span></span></em>, <em class="sig-param"><a class="reference internal" href="#_CPPv4I0_i_18BlockScanAlgorithm_i_iEN3cub9BlockScanE" title="cub::BlockScan::T"><span class="n"><span class="pre">T</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">output</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3cub9BlockScan12InclusiveSumE1TR1T" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Computes an inclusive block-wide prefix scan using addition (+)
 as the scan operator. Each thread contributes one input element.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>For multi-dimensional blocks, threads are linearly ranked in row-major order.</p></li>
 <li><p>A subsequent <code class="docutils literal notranslate"><span class="pre">__syncthreads()</span></code> threadblock barrier should be invoked after calling this method if the collective’s temporary storage (e.g., <code class="docutils literal notranslate"><span class="pre">temp_storage</span></code>) is to be reused or repurposed.</p></li>
@@ -2682,6 +2741,9 @@ The corresponding output <code class="docutils literal notranslate"><span class=
 <dd><p><p>Computes an inclusive block-wide prefix scan using addition (+) as the scan operator.
 Each thread contributes one input element.
 Also provides every thread with the block-wide <code class="docutils literal notranslate"><span class="pre">block_aggregate</span></code> of all inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>For multi-dimensional blocks, threads are linearly ranked in row-major order.</p></li>
 <li><p>A subsequent <code class="docutils literal notranslate"><span class="pre">__syncthreads()</span></code> threadblock barrier should be invoked after calling this method if the collective’s temporary storage (e.g., <code class="docutils literal notranslate"><span class="pre">temp_storage</span></code>) is to be reused or repurposed.</p></li>
@@ -2742,6 +2804,9 @@ Each thread contributes one input element. Instead of using 0 as the block-wide 
 <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> is invoked by the first warp in the block, and the value returned by
 <em>lane</em><sub>0</sub> in that warp is used as the “seed” value that logically prefixes the thread block’s
 scan inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> functor must implement a member function
 <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">operator()(T</span> <span class="pre">block_aggregate)</span></code>. The functor will be invoked by the first warp of threads in the block,
@@ -2841,6 +2906,9 @@ to the logical input sequence.</p>
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_iEN3cub9BlockScan12InclusiveSumEvRA16ITEMS_PER_THREAD_1TRA16ITEMS_PER_THREAD_1T" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Computes an inclusive block-wide prefix scan using addition (+) as the scan operator.
 Each thread contributes an array of consecutive input elements.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Assumes a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of (<em>block-threads</em> * <em>items-per-thread</em>) items across the thread block, where <em>thread</em><sub>i</sub> owns the <em>i</em><sup>th</sup> range of <em>items-per-thread</em> contiguous items. For multi-dimensional thread blocks, a row-major thread ordering is assumed.</p></li>
 <li><p>Efficiency is increased with increased granularity <code class="docutils literal notranslate"><span class="pre">ITEMS_PER_THREAD</span></code>. Performance is also typically increased until the additional register pressure or shared memory allocation size causes SM occupancy to fall too low. Consider variants of <code class="docutils literal notranslate"><span class="pre">cub::BlockLoad</span></code> for efficiently gathering a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of elements across threads.</p></li>
@@ -2909,6 +2977,9 @@ where each thread owns 4 consecutive items.</p>
 <dd><p><p>Computes an inclusive block-wide prefix scan using addition (+) as the scan operator.
 Each thread contributes an array of consecutive input elements.
 Also provides every thread with the block-wide <code class="docutils literal notranslate"><span class="pre">block_aggregate</span></code> of all inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Assumes a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of (<em>block-threads</em> * <em>items-per-thread</em>) items across the thread block, where <em>thread</em><sub>i</sub> owns the <em>i</em><sup>th</sup> range of <em>items-per-thread</em> contiguous items. For multi-dimensional thread blocks, a row-major thread ordering is assumed.</p></li>
 <li><p>Efficiency is increased with increased granularity <code class="docutils literal notranslate"><span class="pre">ITEMS_PER_THREAD</span></code>. Performance is also typically increased until the additional register pressure or shared memory allocation size causes SM occupancy to fall too low. Consider variants of <code class="docutils literal notranslate"><span class="pre">cub::BlockLoad</span></code> for efficiently gathering a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of elements across threads.</p></li>
@@ -2983,6 +3054,9 @@ Each thread contributes an array of consecutive input elements.
 Instead of using 0 as the block-wide prefix, the call-back functor <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> is invoked by
 the first warp in the block, and the value returned by <em>lane</em><sub>0</sub> in that warp is used as the “seed”
 value that logically prefixes the thread block’s scan inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> functor must implement a member function
 <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">operator()(T</span> <span class="pre">block_aggregate)</span></code>. The functor will be invoked by the first warp of threads in the block,
@@ -3100,6 +3174,9 @@ logical input sequence.</p>
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN3cub9BlockScan13InclusiveScanEv1TR1T6ScanOp" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Computes an inclusive block-wide prefix scan using the specified binary <code class="docutils literal notranslate"><span class="pre">scan_op</span></code> functor.
 Each thread contributes one input element.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Supports non-commutative scan operators.</p></li>
 <li><p>For multi-dimensional blocks, threads are linearly ranked in row-major order.</p></li>
@@ -3162,6 +3239,9 @@ in those threads will be <code class="docutils literal notranslate"><span class=
 <dd><p><p>Computes an inclusive block-wide prefix scan using the specified binary <code class="docutils literal notranslate"><span class="pre">scan_op</span></code> functor.
 Each thread contributes one input element. Also provides every thread with the block-wide
 <code class="docutils literal notranslate"><span class="pre">block_aggregate</span></code> of all inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Supports non-commutative scan operators.</p></li>
 <li><p>For multi-dimensional blocks, threads are linearly ranked in row-major order.</p></li>
@@ -3227,6 +3307,9 @@ in those threads will be <code class="docutils literal notranslate"><span class=
 Each thread contributes one input element. The call-back functor <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code>
 is invoked by the first warp in the block, and the value returned by <em>lane</em><sub>0</sub> in that warp is used as
 the “seed” value that logically prefixes the thread block’s scan inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> functor must implement a member function
 <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">operator()(T</span> <span class="pre">block_aggregate)</span></code>. The functor’s input parameter
@@ -3346,6 +3429,9 @@ the logical input sequence.</p>
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_i0EN3cub9BlockScan13InclusiveScanEvRA16ITEMS_PER_THREAD_1TRA16ITEMS_PER_THREAD_1T6ScanOp" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Computes an inclusive block-wide prefix scan using the specified binary <code class="docutils literal notranslate"><span class="pre">scan_op</span></code> functor.
 Each thread contributes an array of consecutive input elements.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Supports non-commutative scan operators.</p></li>
 <li><p>Assumes a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of (<em>block-threads</em> * <em>items-per-thread</em>) items across the thread block, where <em>thread</em><sub>i</sub> owns the <em>i</em><sup>th</sup> range of <em>items-per-thread</em> contiguous items. For multi-dimensional thread blocks, a row-major thread ordering is assumed.</p></li>
@@ -3420,6 +3506,9 @@ The corresponding output <code class="docutils literal notranslate"><span class=
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I_i0EN3cub9BlockScan13InclusiveScanEvRA16ITEMS_PER_THREAD_1TRA16ITEMS_PER_THREAD_1T1T6ScanOp" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Computes an inclusive block-wide prefix scan using the specified binary <code class="docutils literal notranslate"><span class="pre">scan_op</span></code> functor.
 Each thread contributes an array of consecutive input elements.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Supports non-commutative scan operators.</p></li>
 <li><p>Assumes a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of (<em>block-threads</em> * <em>items-per-thread</em>) items across the thread block, where <em>thread</em><sub>i</sub> owns the <em>i</em><sup>th</sup> range of <em>items-per-thread</em> contiguous items. For multi-dimensional thread blocks, a row-major thread ordering is assumed.</p></li>
@@ -3489,6 +3578,9 @@ where each thread owns 2 consecutive items.</p>
 <dd><p><p>Computes an inclusive block-wide prefix scan using the specified binary <code class="docutils literal notranslate"><span class="pre">scan_op</span></code> functor.
 Each thread contributes an array of consecutive input elements. Also provides every thread
 with the block-wide <code class="docutils literal notranslate"><span class="pre">block_aggregate</span></code> of all inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Supports non-commutative scan operators.</p></li>
 <li><p>Assumes a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of (<em>block-threads</em> * <em>items-per-thread</em>) items across the thread block, where <em>thread</em><sub>i</sub> owns the <em>i</em><sup>th</sup> range of <em>items-per-thread</em> contiguous items. For multi-dimensional thread blocks, a row-major thread ordering is assumed.</p></li>
@@ -3560,6 +3652,9 @@ Furthermore the value <code class="docutils literal notranslate"><span class="pr
 <dd><p><p>Computes an inclusive block-wide prefix scan using the specified binary <code class="docutils literal notranslate"><span class="pre">scan_op</span></code> functor.
 Each thread contributes an array of consecutive input elements. Also provides every thread
 with the block-wide <code class="docutils literal notranslate"><span class="pre">block_aggregate</span></code> of all inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>Supports non-commutative scan operators.</p></li>
 <li><p>Assumes a <a class="reference internal" href="../index.html#flexible-data-arrangement"><span class="std std-ref">blocked arrangement</span></a> of (<em>block-threads</em> * <em>items-per-thread</em>) items across the thread block, where <em>thread</em><sub>i</sub> owns the <em>i</em><sup>th</sup> range of <em>items-per-thread</em> contiguous items. For multi-dimensional thread blocks, a row-major thread ordering is assumed.</p></li>
@@ -3639,6 +3734,9 @@ Each thread contributes an array of consecutive input elements.
 The call-back functor <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> is invoked by the first warp in the block,
 and the value returned by <em>lane</em><sub>0</sub> in that warp is used as the “seed” value that logically prefixes the
 thread block’s scan inputs.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">block_prefix_callback_op</span></code> functor must implement a member function <code class="docutils literal notranslate"><span class="pre">T</span> <span class="pre">operator()(T</span> <span class="pre">block_aggregate)</span></code>.
 The functor will be invoked by the first warp of threads in the block, however only the return value
@@ -3881,7 +3979,7 @@ the logical input sequence.</p>
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>

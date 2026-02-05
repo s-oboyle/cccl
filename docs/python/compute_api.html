@@ -46,8 +46,8 @@
 
 
     <script src="../_static/documentation_options.js?v=26f62d79"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=5ceeb459"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -330,7 +330,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/functional.html">Functional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/iterators.html">Fancy Iterators</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/type_traits.html">Type traits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/vector_tuple_protocol.html">Vector Tuple Protocol</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/numeric.html">Numeric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/random.html">Random</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/memory.html">Memory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/memory_resource.html">Memory Resources</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/math.html">Math</a></li>
@@ -421,7 +423,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../cub/developer/warp_level.html">Warp-level</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/developer/block_scope.html">Block-scope</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/developer/device_scope.html">Device-scope</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../cub/developer/visibility.html">Symbol Visibility</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/developer/nvtx.html">NVTX</a></li>
 </ul>
 </details></li>
@@ -830,10 +831,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1ae268bfffafaa04f5a8a4cf902861367c.html">thrust::next</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a253ceec56c467b5ce73b1593ff8b1375.html">thrust::prev</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1aadb50b0c546159c3f06ecdf8349fb901.html">thrust::make_tagged_deleter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a2ac27e75b5e3ff9162038c65f9a962e6.html">thrust::allocate_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a422a511a42fdee806b0c6fd3b2c1a297.html">thrust::uninitialized_allocate_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1ac43d207f42ebc9d5ecf79d7708119ec1.html">thrust::allocate_unique_n</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a107423505ed1d5bd9e05dda2e3c2a4ad.html">thrust::uninitialized_allocate_unique_n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a82dc371eac6d1499d28f153e3f921926.html">thrust::allocate_unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1ae7fd98cda27174a35283582ebdd724c1.html">thrust::uninitialized_allocate_unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a66c4817439220a11edc1c810c9f2c4e4.html">thrust::allocate_unique_n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a3a4c778f56a57b41e72b4a6037ed08da.html">thrust::uninitialized_allocate_unique_n</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__binary__search_1gad2ac5a1c5091366144d6fdbf2ff5551e.html">thrust::lower_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__binary__search_1gac85cc9ea00f4bdd8f80ad25fff16741d.html">thrust::upper_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__binary__search_1gaa855fdcf3942f95919bb712e26c7bfc6.html">thrust::binary_search</a></li>
@@ -1211,6 +1212,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__instance.html">cuda::experimental::stf::data_instance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__interface.html">cuda::experimental::stf::data_interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__place.html">cuda::experimental::stf::data_place</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__place__extension.html">cuda::experimental::stf::data_place_extension</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1deferred__stream__task.html">cuda::experimental::stf::deferred_stream_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1dim4.html">cuda::experimental::stf::dim4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html">cuda::experimental::stf::event_impl</a></li>
@@ -1220,6 +1222,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__cuda__stream.html">cuda::experimental::stf::exec_place_cuda_stream</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__green__ctx.html">cuda::experimental::stf::exec_place_green_ctx</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__grid.html">cuda::experimental::stf::exec_place_grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__guard.html">cuda::experimental::stf::exec_place_guard</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__host.html">cuda::experimental::stf::exec_place_host</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache.html">cuda::experimental::stf::executable_graph_cache</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache__stat.html">cuda::experimental::stf::executable_graph_cache_stat</a></li>
@@ -1231,6 +1234,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task.html">cuda::experimental::stf::graph_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html">cuda::experimental::stf::graph_task&lt;&gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__context__helper.html">cuda::experimental::stf::green_context_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__ctx__data__place.html">cuda::experimental::stf::green_ctx_data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__ctx__view.html">cuda::experimental::stf::green_ctx_view</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1hashtable.html">cuda::experimental::stf::hashtable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/classcuda_1_1experimental_1_1stf_1_1hashtable__stream__interface.html">cuda::experimental::stf::hashtable_stream_interface</a></li>
@@ -1308,6 +1312,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01cuda_1_1experimental_1_1stf_1_1green__ctx__view_01_4.html">cuda::experimental::stf::hash&lt; cuda::experimental::stf::green_ctx_view &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01data__place_01_4.html">cuda::experimental::stf::hash&lt; data_place &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01dim4_01_4.html">cuda::experimental::stf::hash&lt; dim4 &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01exec__place_01_4.html">cuda::experimental::stf::hash&lt; exec_place &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01hashtable_01_4.html">cuda::experimental::stf::hash&lt; hashtable &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01mdspan_3_01P_8_8_8_01_4_01_4.html">cuda::experimental::stf::hash&lt; mdspan&lt; P… &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01pos4_01_4.html">cuda::experimental::stf::hash&lt; pos4 &gt;</a></li>
@@ -1352,6 +1357,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/namespacecuda_1_1experimental_1_1stf_1a1a3f54ba8407a462e7410a45af0f75a3.html">cuda::experimental::stf::data_hash</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/namespacecuda_1_1experimental_1_1stf_1abe262e91fef7dd1a874d0c45463f4529.html">cuda::experimental::stf::data_dump</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/namespacecuda_1_1experimental_1_1stf_1acddbda1fa79384aa723f05740d12001c.html">cuda::experimental::stf::pack_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cudax/api/namespacecuda_1_1experimental_1_1stf_1a20c223a02a2cfb089fe1d91f932912f2.html">cuda::experimental::stf::make_green_ctx_data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/namespacecuda_1_1experimental_1_1stf_1a5b257d4c2331422fd492439852cb9005.html">cuda::experimental::stf::get_cuda_context_id</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/namespacecuda_1_1experimental_1_1stf_1a58cda9cdc2010f7451a34efc10f8f3f2.html">cuda::experimental::stf::place_partition_scope_to_string</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cudax/api/namespacecuda_1_1experimental_1_1stf_1a742f1c47d0b76725772e86a449d8d604.html">cuda::experimental::stf::make_grid</a></li>
@@ -1423,6 +1429,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../cccl/development/macro.html">CCCL Internal Macros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cccl/development/testing.html">CCCL Testing Utilities</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cccl/development/build_and_bisect_tools.html">Build and Bisect Utilities</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../cccl/development/visibility.html">Symbol Visibility</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../cccl/development/visibility/host_stub_visibility.html">Host Stub Visibility Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cccl/development/visibility/device_kernel_visibility.html">Device Kernel Visibility Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cccl/development/visibility/different_architectures.html">Linking TUs compiled with different architectures</a></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../cccl/contributing.html">Contributing to the CUDA Core Compute Libraries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1550,7 +1562,7 @@ The API is subject to change without notice.</p>
 <li><p><strong>d_out</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array to store the result of the reduction</p></li>
 <li><p><strong>op</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em>) – Binary reduction operator</p></li>
 <li><p><strong>num_items</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Number of items to reduce</p></li>
-<li><p><strong>h_init</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>GpuStruct</em>) – Initial value for the reduction</p></li>
+<li><p><strong>h_init</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>_Struct</em>) – Initial value for the reduction</p></li>
 <li><p><strong>stream</strong> – CUDA stream for the operation (optional)</p></li>
 </ul>
 </dd>
@@ -1587,14 +1599,14 @@ The API is subject to change without notice.</p>
 <span class="n">reducer</span> <span class="o">=</span> <span class="n">cuda</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">make_reduce_into</span><span class="p">(</span><span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="n">h_init</span><span class="p">)</span>
 
 <span class="c1"># Get the temporary storage size.</span>
-<span class="n">temp_storage_size</span> <span class="o">=</span> <span class="n">reducer</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
+<span class="n">temp_storage_size</span> <span class="o">=</span> <span class="n">reducer</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
 
 <span class="c1"># Allocate temporary storage using any user-defined allocator.</span>
 <span class="c1"># The result must be an object exposing `__cuda_array_interface__`.</span>
 <span class="n">d_temp_storage</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">temp_storage_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Perform the reduction.</span>
-<span class="n">reducer</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
+<span class="n">reducer</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
 
 <span class="n">expected_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">h_input</span><span class="p">)</span> <span class="o">+</span> <span class="n">init_value</span>
 <span class="n">actual_result</span> <span class="o">=</span> <span class="n">d_output</span><span class="o">.</span><span class="n">get</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
@@ -1609,13 +1621,209 @@ The API is subject to change without notice.</p>
 <li><p><strong>d_out</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array (of size 1) that will store the result of the reduction</p></li>
 <li><p><strong>op</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em>) – Callable or OpKind representing the binary operator to apply</p></li>
 <li><p><strong>init</strong> – Numpy array storing initial value of the reduction</p></li>
-<li><p><strong>h_init</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>GpuStruct</em>)</p></li>
+<li><p><strong>h_init</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>_Struct</em>)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>A callable object that can be used to perform the reduction</p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cuda.compute.algorithms.lower_bound">
+<span class="sig-prename descclassname"><span class="pre">cuda.compute.algorithms.</span></span><span class="sig-name descname"><span class="pre">lower_bound</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">d_data</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">d_values</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">d_out</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">num_items</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">num_values</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.lower_bound" title="Link to this definition">#</a></dt>
+<dd><p>Find the <em>first</em> position that each value in <code class="docutils literal notranslate"><span class="pre">d_values</span></code> would be inserted into
+<code class="docutils literal notranslate"><span class="pre">d_data</span></code> to maintain sorted order.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cupy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">cuda.compute</span>
+
+<span class="n">h_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">h_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="n">d_data</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">h_data</span><span class="p">)</span>
+<span class="n">d_values</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">h_values</span><span class="p">)</span>
+<span class="n">d_out</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h_values</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uintp</span><span class="p">)</span>
+
+<span class="n">cuda</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">lower_bound</span><span class="p">(</span><span class="n">d_data</span><span class="p">,</span> <span class="n">d_values</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_values</span><span class="p">))</span>
+
+<span class="n">expected</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">h_data</span><span class="p">,</span> <span class="n">h_values</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uintp</span><span class="p">)</span>
+<span class="n">got</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asnumpy</span><span class="p">(</span><span class="n">d_out</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">got</span><span class="p">,</span> <span class="n">expected</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>d_data</strong> (<em>DeviceArrayLike</em>) – Device array containing the sorted input range.</p></li>
+<li><p><strong>d_values</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing the search values.</p></li>
+<li><p><strong>d_out</strong> (<em>DeviceArrayLike</em>) – Device array to store the index results.</p></li>
+<li><p><strong>num_items</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Number of items in <code class="docutils literal notranslate"><span class="pre">d_data</span></code>.</p></li>
+<li><p><strong>num_values</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Number of items in <code class="docutils literal notranslate"><span class="pre">d_values</span></code>.</p></li>
+<li><p><strong>comp</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em><em> | </em><em>None</em>) – Optional comparison operator (default: <code class="docutils literal notranslate"><span class="pre">OpKind.LESS</span></code>).</p></li>
+<li><p><strong>stream</strong> – CUDA stream for the operation (optional).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cuda.compute.algorithms.make_lower_bound">
+<span class="sig-prename descclassname"><span class="pre">cuda.compute.algorithms.</span></span><span class="sig-name descname"><span class="pre">make_lower_bound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.make_lower_bound" title="Link to this definition">#</a></dt>
+<dd><p>Create a lower_bound object that can be called to find insertion positions.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cupy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">cuda.compute</span>
+
+<span class="n">h_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">h_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="n">d_data</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">h_data</span><span class="p">)</span>
+<span class="n">d_values</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">h_values</span><span class="p">)</span>
+<span class="n">d_out</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h_values</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uintp</span><span class="p">)</span>
+
+<span class="n">searcher</span> <span class="o">=</span> <span class="n">cuda</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">make_lower_bound</span><span class="p">(</span><span class="n">d_data</span><span class="p">,</span> <span class="n">d_values</span><span class="p">,</span> <span class="n">d_out</span><span class="p">)</span>
+<span class="n">searcher</span><span class="p">(</span><span class="n">d_data</span><span class="p">,</span> <span class="n">d_values</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_values</span><span class="p">))</span>
+
+<span class="n">expected</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">h_data</span><span class="p">,</span> <span class="n">h_values</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;left&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uintp</span><span class="p">)</span>
+<span class="n">got</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asnumpy</span><span class="p">(</span><span class="n">d_out</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">got</span><span class="p">,</span> <span class="n">expected</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>d_data</strong> (<em>DeviceArrayLike</em>) – Device array containing the sorted input range.</p></li>
+<li><p><strong>d_values</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing the search values.</p></li>
+<li><p><strong>d_out</strong> (<em>DeviceArrayLike</em>) – Device array to store the index results.</p></li>
+<li><p><strong>comp</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em><em> | </em><em>None</em>) – Optional comparison operator (default: <code class="docutils literal notranslate"><span class="pre">OpKind.LESS</span></code>).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A callable object that performs lower_bound.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#cuda.compute.algorithms.lower_bound" title="cuda.compute.algorithms.lower_bound"><code class="xref py py-func docutils literal notranslate"><span class="pre">lower_bound()</span></code></a></p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cuda.compute.algorithms.upper_bound">
+<span class="sig-prename descclassname"><span class="pre">cuda.compute.algorithms.</span></span><span class="sig-name descname"><span class="pre">upper_bound</span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="n"><span class="pre">d_data</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">d_values</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">d_out</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">num_items</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">num_values</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>,</dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.upper_bound" title="Link to this definition">#</a></dt>
+<dd><p>Find the <em>last</em> position that each value in <code class="docutils literal notranslate"><span class="pre">d_values</span></code> would be inserted into
+<code class="docutils literal notranslate"><span class="pre">d_data</span></code> to maintain sorted order.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cupy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">cuda.compute</span>
+
+<span class="n">h_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">h_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="n">d_data</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">h_data</span><span class="p">)</span>
+<span class="n">d_values</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">h_values</span><span class="p">)</span>
+<span class="n">d_out</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h_values</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uintp</span><span class="p">)</span>
+
+<span class="n">cuda</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">upper_bound</span><span class="p">(</span><span class="n">d_data</span><span class="p">,</span> <span class="n">d_values</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_values</span><span class="p">))</span>
+
+<span class="n">expected</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">h_data</span><span class="p">,</span> <span class="n">h_values</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uintp</span><span class="p">)</span>
+<span class="n">got</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asnumpy</span><span class="p">(</span><span class="n">d_out</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">got</span><span class="p">,</span> <span class="n">expected</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>d_data</strong> (<em>DeviceArrayLike</em>) – Device array containing the sorted input range.</p></li>
+<li><p><strong>d_values</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing the search values.</p></li>
+<li><p><strong>d_out</strong> (<em>DeviceArrayLike</em>) – Device array to store the index results.</p></li>
+<li><p><strong>num_items</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Number of items in <code class="docutils literal notranslate"><span class="pre">d_data</span></code>.</p></li>
+<li><p><strong>num_values</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Number of items in <code class="docutils literal notranslate"><span class="pre">d_values</span></code>.</p></li>
+<li><p><strong>comp</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em><em> | </em><em>None</em>) – Optional comparison operator (default: <code class="docutils literal notranslate"><span class="pre">OpKind.LESS</span></code>).</p></li>
+<li><p><strong>stream</strong> – CUDA stream for the operation (optional).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cuda.compute.algorithms.make_upper_bound">
+<span class="sig-prename descclassname"><span class="pre">cuda.compute.algorithms.</span></span><span class="sig-name descname"><span class="pre">make_upper_bound</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_out</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">comp</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.make_upper_bound" title="Link to this definition">#</a></dt>
+<dd><p>Create an upper_bound object that can be called to find insertion positions.</p>
+<p class="rubric">Example</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">cupy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">cuda.compute</span>
+
+<span class="n">h_data</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">h_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="n">d_data</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">h_data</span><span class="p">)</span>
+<span class="n">d_values</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">h_values</span><span class="p">)</span>
+<span class="n">d_out</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">h_values</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uintp</span><span class="p">)</span>
+
+<span class="n">searcher</span> <span class="o">=</span> <span class="n">cuda</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">make_upper_bound</span><span class="p">(</span><span class="n">d_data</span><span class="p">,</span> <span class="n">d_values</span><span class="p">,</span> <span class="n">d_out</span><span class="p">)</span>
+<span class="n">searcher</span><span class="p">(</span><span class="n">d_data</span><span class="p">,</span> <span class="n">d_values</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_data</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_values</span><span class="p">))</span>
+
+<span class="n">expected</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">searchsorted</span><span class="p">(</span><span class="n">h_data</span><span class="p">,</span> <span class="n">h_values</span><span class="p">,</span> <span class="n">side</span><span class="o">=</span><span class="s2">&quot;right&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">uintp</span><span class="p">)</span>
+<span class="n">got</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">asnumpy</span><span class="p">(</span><span class="n">d_out</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">np</span><span class="o">.</span><span class="n">array_equal</span><span class="p">(</span><span class="n">got</span><span class="p">,</span> <span class="n">expected</span><span class="p">)</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>d_data</strong> (<em>DeviceArrayLike</em>) – Device array containing the sorted input range.</p></li>
+<li><p><strong>d_values</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing the search values.</p></li>
+<li><p><strong>d_out</strong> (<em>DeviceArrayLike</em>) – Device array to store the index results.</p></li>
+<li><p><strong>comp</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em><em> | </em><em>None</em>) – Optional comparison operator (default: <code class="docutils literal notranslate"><span class="pre">OpKind.LESS</span></code>).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A callable object that performs upper_bound.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#cuda.compute.algorithms.upper_bound" title="cuda.compute.algorithms.upper_bound"><code class="xref py py-func docutils literal notranslate"><span class="pre">upper_bound()</span></code></a></p>
+</div>
 </dd></dl>
 
 <dl class="py function">
@@ -1662,7 +1870,7 @@ The API is subject to change without notice.</p>
 <li><p><strong>d_in</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing the input sequence of data items</p></li>
 <li><p><strong>d_out</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator to store the result of the scan</p></li>
 <li><p><strong>op</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em>) – Binary scan operator</p></li>
-<li><p><strong>init_value</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>DeviceArrayLike</em><em> | </em><em>GpuStruct</em><em> | </em><em>None</em>) – Initial value for the scan</p></li>
+<li><p><strong>init_value</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>DeviceArrayLike</em><em> | </em><em>_Struct</em><em> | </em><em>None</em>) – Initial value for the scan</p></li>
 <li><p><strong>num_items</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Number of items to scan</p></li>
 <li><p><strong>stream</strong> – CUDA stream for the operation (optional)</p></li>
 </ul>
@@ -1697,11 +1905,11 @@ The API is subject to change without notice.</p>
 
 <span class="c1"># Create the scanner object and allocate temporary storage.</span>
 <span class="n">scanner</span> <span class="o">=</span> <span class="n">cuda</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">make_inclusive_scan</span><span class="p">(</span><span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="n">h_init</span><span class="p">)</span>
-<span class="n">temp_storage_size</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
+<span class="n">temp_storage_size</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
 <span class="n">d_temp_storage</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">temp_storage_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Perform the inclusive scan.</span>
-<span class="n">scanner</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
+<span class="n">scanner</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
 
 <span class="c1"># Verify the result.</span>
 <span class="n">expected_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
@@ -1716,7 +1924,7 @@ The API is subject to change without notice.</p>
 <li><p><strong>d_in</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing the input sequence of data items</p></li>
 <li><p><strong>d_out</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array that will store the result of the scan</p></li>
 <li><p><strong>op</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em>) – Callable or OpKind representing the binary operator to apply</p></li>
-<li><p><strong>init_value</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>DeviceArrayLike</em><em> | </em><em>GpuStruct</em><em> | </em><em>None</em>) – Numpy array, device array, or GPU struct storing initial value of the scan, or None for no initial value</p></li>
+<li><p><strong>init_value</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>DeviceArrayLike</em><em> | </em><em>_Struct</em><em> | </em><em>None</em>) – Numpy array, device array, or GPU struct storing initial value of the scan, or None for no initial value</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1770,7 +1978,7 @@ The API is subject to change without notice.</p>
 <li><p><strong>d_in</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing the input sequence of data items</p></li>
 <li><p><strong>d_out</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator to store the result of the scan</p></li>
 <li><p><strong>op</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em>) – Binary scan operator</p></li>
-<li><p><strong>init_value</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>DeviceArrayLike</em><em> | </em><em>GpuStruct</em><em> | </em><em>None</em>) – Initial value for the scan</p></li>
+<li><p><strong>init_value</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>DeviceArrayLike</em><em> | </em><em>_Struct</em><em> | </em><em>None</em>) – Initial value for the scan</p></li>
 <li><p><strong>num_items</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Number of items to scan</p></li>
 <li><p><strong>stream</strong> – CUDA stream for the operation (optional)</p></li>
 </ul>
@@ -1805,11 +2013,11 @@ The API is subject to change without notice.</p>
 
 <span class="c1"># Create the scanner object and allocate temporary storage.</span>
 <span class="n">scanner</span> <span class="o">=</span> <span class="n">cuda</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">make_exclusive_scan</span><span class="p">(</span><span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="n">h_init</span><span class="p">)</span>
-<span class="n">temp_storage_size</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
+<span class="n">temp_storage_size</span> <span class="o">=</span> <span class="n">scanner</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
 <span class="n">d_temp_storage</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">temp_storage_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Perform the exclusive scan.</span>
-<span class="n">scanner</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
+<span class="n">scanner</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
 
 <span class="c1"># Verify the result.</span>
 <span class="n">expected_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">6</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
@@ -1824,7 +2032,7 @@ The API is subject to change without notice.</p>
 <li><p><strong>d_in</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing the input sequence of data items</p></li>
 <li><p><strong>d_out</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array that will store the result of the scan</p></li>
 <li><p><strong>op</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em>) – Callable or OpKind representing the binary operator to apply</p></li>
-<li><p><strong>init_value</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>DeviceArrayLike</em><em> | </em><em>GpuStruct</em><em> | </em><em>None</em>) – Numpy array, device array, or GPU struct storing initial value of the scan, or None for no initial value</p></li>
+<li><p><strong>init_value</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>DeviceArrayLike</em><em> | </em><em>_Struct</em><em> | </em><em>None</em>) – Numpy array, device array, or GPU struct storing initial value of the scan, or None for no initial value</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1977,7 +2185,7 @@ storage allocation. For simpler usage, consider using <a class="reference intern
 <span class="n">transformer</span> <span class="o">=</span> <span class="n">cuda</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">make_unary_transform</span><span class="p">(</span><span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">add_one_op</span><span class="p">)</span>
 
 <span class="c1"># Perform the unary transform.</span>
-<span class="n">transformer</span><span class="p">(</span><span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">))</span>
+<span class="n">transformer</span><span class="p">(</span><span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">add_one_op</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">))</span>
 
 <span class="c1"># Verify the result.</span>
 <span class="n">expected_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
@@ -2143,7 +2351,7 @@ storage allocation. For simpler usage, consider using <a class="reference intern
 <span class="p">)</span>
 
 <span class="c1"># Perform the binary transform.</span>
-<span class="n">transformer</span><span class="p">(</span><span class="n">d_input1</span><span class="p">,</span> <span class="n">d_input2</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input1</span><span class="p">))</span>
+<span class="n">transformer</span><span class="p">(</span><span class="n">d_input1</span><span class="p">,</span> <span class="n">d_input2</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">h_input1</span><span class="p">))</span>
 
 <span class="c1"># Verify the result.</span>
 <span class="n">expected_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">11</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mi">44</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
@@ -2468,6 +2676,7 @@ storage allocation. For simpler usage, consider using <a class="reference intern
     <span class="n">d_input_values</span><span class="p">,</span>
     <span class="n">d_output_keys</span><span class="p">,</span>
     <span class="n">d_output_values</span><span class="p">,</span>
+    <span class="n">OpKind</span><span class="o">.</span><span class="n">LESS</span><span class="p">,</span>
     <span class="nb">len</span><span class="p">(</span><span class="n">h_input_keys</span><span class="p">),</span>
 <span class="p">)</span>
 
@@ -2481,6 +2690,7 @@ storage allocation. For simpler usage, consider using <a class="reference intern
     <span class="n">d_input_values</span><span class="p">,</span>
     <span class="n">d_output_keys</span><span class="p">,</span>
     <span class="n">d_output_values</span><span class="p">,</span>
+    <span class="n">OpKind</span><span class="o">.</span><span class="n">LESS</span><span class="p">,</span>
     <span class="nb">len</span><span class="p">(</span><span class="n">h_input_keys</span><span class="p">),</span>
 <span class="p">)</span>
 
@@ -2820,7 +3030,7 @@ storage allocation. For simpler usage, consider using <a class="reference intern
 <li><p><strong>start_offsets_in</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing the sequence of beginning offsets</p></li>
 <li><p><strong>end_offsets_in</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing the sequence of ending offsets</p></li>
 <li><p><strong>op</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em>) – Binary reduction operator</p></li>
-<li><p><strong>h_init</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>GpuStruct</em>) – Initial value for the reduction</p></li>
+<li><p><strong>h_init</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>_Struct</em>) – Initial value for the reduction</p></li>
 <li><p><strong>num_segments</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.14)"><em>int</em></a>) – Number of segments to reduce</p></li>
 <li><p><strong>stream</strong> – CUDA stream for the operation (optional)</p></li>
 </ul>
@@ -2874,14 +3084,23 @@ storage allocation. For simpler usage, consider using <a class="reference intern
 
 <span class="c1"># Get the temporary storage size.</span>
 <span class="n">temp_storage_size</span> <span class="o">=</span> <span class="n">reducer</span><span class="p">(</span>
-    <span class="kc">None</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">start_offsets</span><span class="p">,</span> <span class="n">end_offsets</span><span class="p">,</span> <span class="n">h_init</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">start_offsets</span><span class="p">,</span> <span class="n">end_offsets</span><span class="p">,</span> <span class="n">h_init</span>
 <span class="p">)</span>
 
 <span class="c1"># Allocate the temporary storage.</span>
 <span class="n">d_temp_storage</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">temp_storage_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Perform the segmented reduce.</span>
-<span class="n">reducer</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="n">start_offsets</span><span class="p">,</span> <span class="n">end_offsets</span><span class="p">,</span> <span class="n">h_init</span><span class="p">)</span>
+<span class="n">reducer</span><span class="p">(</span>
+    <span class="n">d_temp_storage</span><span class="p">,</span>
+    <span class="n">d_input</span><span class="p">,</span>
+    <span class="n">d_output</span><span class="p">,</span>
+    <span class="n">OpKind</span><span class="o">.</span><span class="n">PLUS</span><span class="p">,</span>
+    <span class="mi">2</span><span class="p">,</span>
+    <span class="n">start_offsets</span><span class="p">,</span>
+    <span class="n">end_offsets</span><span class="p">,</span>
+    <span class="n">h_init</span><span class="p">,</span>
+<span class="p">)</span>
 
 <span class="c1"># Verify the result.</span>
 <span class="n">expected_result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span> <span class="mi">15</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
@@ -2899,7 +3118,7 @@ storage allocation. For simpler usage, consider using <a class="reference intern
 <li><p><strong>end_offsets_in</strong> (<em>DeviceArrayLike</em><em> | </em><em>IteratorBase</em>) – Device array or iterator containing offsets to end of segments</p></li>
 <li><p><strong>op</strong> (<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Callable" title="(in Python v3.14)"><em>Callable</em></a><em> | </em><em>cuda.compute._bindings.OpKind</em>) – Callable or OpKind representing the binary operator to apply</p></li>
 <li><p><strong>init</strong> – Numpy array storing initial value of the reduction</p></li>
-<li><p><strong>h_init</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>GpuStruct</em>)</p></li>
+<li><p><strong>h_init</strong> (<a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.4)"><em>ndarray</em></a><em> | </em><em>_Struct</em>)</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -3050,6 +3269,7 @@ storage allocation. For simpler usage, consider using <a class="reference intern
     <span class="n">d_output_keys</span><span class="p">,</span>
     <span class="n">d_output_values</span><span class="p">,</span>
     <span class="n">d_num_selected</span><span class="p">,</span>
+    <span class="n">OpKind</span><span class="o">.</span><span class="n">EQUAL_TO</span><span class="p">,</span>
     <span class="nb">len</span><span class="p">(</span><span class="n">h_input_keys</span><span class="p">),</span>
 <span class="p">)</span>
 
@@ -3064,6 +3284,7 @@ storage allocation. For simpler usage, consider using <a class="reference intern
     <span class="n">d_output_keys</span><span class="p">,</span>
     <span class="n">d_output_values</span><span class="p">,</span>
     <span class="n">d_num_selected</span><span class="p">,</span>
+    <span class="n">OpKind</span><span class="o">.</span><span class="n">EQUAL_TO</span><span class="p">,</span>
     <span class="nb">len</span><span class="p">(</span><span class="n">h_input_keys</span><span class="p">),</span>
 <span class="p">)</span>
 
@@ -3524,6 +3745,8 @@ storage allocation. For simpler usage, consider using <a class="reference intern
     <span class="n">d_second_part</span><span class="p">,</span>
     <span class="n">d_unselected</span><span class="p">,</span>
     <span class="n">d_num_selected</span><span class="p">,</span>
+    <span class="n">less_than_op</span><span class="p">,</span>
+    <span class="n">greater_than_equal_op</span><span class="p">,</span>
     <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span>
 <span class="p">)</span>
 <span class="n">d_temp_storage</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">temp_storage_size</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
@@ -3536,6 +3759,8 @@ storage allocation. For simpler usage, consider using <a class="reference intern
     <span class="n">d_second_part</span><span class="p">,</span>
     <span class="n">d_unselected</span><span class="p">,</span>
     <span class="n">d_num_selected</span><span class="p">,</span>
+    <span class="n">less_than_op</span><span class="p">,</span>
+    <span class="n">greater_than_equal_op</span><span class="p">,</span>
     <span class="nb">len</span><span class="p">(</span><span class="n">h_input</span><span class="p">),</span>
 <span class="p">)</span>
 
@@ -3706,11 +3931,13 @@ storage allocation. For simpler usage, consider using <a class="reference intern
 <span class="n">selector</span> <span class="o">=</span> <span class="n">make_select</span><span class="p">(</span><span class="n">d_in</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="n">d_num_selected</span><span class="p">,</span> <span class="n">greater_than_5</span><span class="p">)</span>
 
 <span class="c1"># Get required temp storage</span>
-<span class="n">temp_storage_bytes</span> <span class="o">=</span> <span class="n">selector</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">d_in</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="n">d_num_selected</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_in</span><span class="p">))</span>
+<span class="n">temp_storage_bytes</span> <span class="o">=</span> <span class="n">selector</span><span class="p">(</span>
+    <span class="kc">None</span><span class="p">,</span> <span class="n">d_in</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="n">d_num_selected</span><span class="p">,</span> <span class="n">greater_than_5</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_in</span><span class="p">)</span>
+<span class="p">)</span>
 <span class="n">d_temp_storage</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">temp_storage_bytes</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">cp</span><span class="o">.</span><span class="n">uint8</span><span class="p">)</span>
 
 <span class="c1"># Execute select</span>
-<span class="n">selector</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_in</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="n">d_num_selected</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_in</span><span class="p">))</span>
+<span class="n">selector</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_in</span><span class="p">,</span> <span class="n">d_out</span><span class="p">,</span> <span class="n">d_num_selected</span><span class="p">,</span> <span class="n">greater_than_5</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_in</span><span class="p">))</span>
 
 <span class="c1"># Get results</span>
 <span class="n">num_selected</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">d_num_selected</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
@@ -3723,7 +3950,7 @@ storage allocation. For simpler usage, consider using <a class="reference intern
 <span class="n">d_out2</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty_like</span><span class="p">(</span><span class="n">d_in2</span><span class="p">)</span>
 <span class="n">d_num_selected2</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">cp</span><span class="o">.</span><span class="n">uint64</span><span class="p">)</span>
 
-<span class="n">selector</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_in2</span><span class="p">,</span> <span class="n">d_out2</span><span class="p">,</span> <span class="n">d_num_selected2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_in2</span><span class="p">))</span>
+<span class="n">selector</span><span class="p">(</span><span class="n">d_temp_storage</span><span class="p">,</span> <span class="n">d_in2</span><span class="p">,</span> <span class="n">d_out2</span><span class="p">,</span> <span class="n">d_num_selected2</span><span class="p">,</span> <span class="n">greater_than_5</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_in2</span><span class="p">))</span>
 
 <span class="n">num_selected2</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">d_num_selected2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
 <span class="n">result2</span> <span class="o">=</span> <span class="n">d_out2</span><span class="p">[:</span><span class="n">num_selected2</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">()</span>
@@ -3754,7 +3981,7 @@ boolean-like value (typically uint8) where non-zero means the item passes the se
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cuda.compute.algorithms.DoubleBuffer">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cuda.compute.algorithms.</span></span><span class="sig-name descname"><span class="pre">DoubleBuffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d_current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_alternate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.DoubleBuffer" title="Link to this definition">#</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cuda.compute.algorithms.</span></span><span class="sig-name descname"><span class="pre">DoubleBuffer</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d_current</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d_alternate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.DoubleBuffer" title="Link to this definition">#</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -3777,28 +4004,28 @@ boolean-like value (typically uint8) where non-zero means the item passes the se
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cuda.compute.algorithms.DoubleBuffer.alternate">
-<span class="sig-name descname"><span class="pre">alternate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.DoubleBuffer.alternate" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cuda.compute.algorithms.DoubleBuffer.current">
+<span class="sig-name descname"><span class="pre">current</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.DoubleBuffer.current" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="cuda.compute.algorithms.DoubleBuffer.current">
-<span class="sig-name descname"><span class="pre">current</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.DoubleBuffer.current" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="cuda.compute.algorithms.DoubleBuffer.alternate">
+<span class="sig-name descname"><span class="pre">alternate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.DoubleBuffer.alternate" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="cuda.compute.algorithms.SortOrder">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cuda.compute.algorithms.</span></span><span class="sig-name descname"><span class="pre">SortOrder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.SortOrder" title="Link to this definition">#</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cuda.compute.algorithms.</span></span><span class="sig-name descname"><span class="pre">SortOrder</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.algorithms.SortOrder" title="Link to this definition">#</a></dt>
 <dd><dl class="py attribute">
 <dt class="sig sig-object py" id="cuda.compute.algorithms.SortOrder.ASCENDING">
-<span class="sig-name descname"><span class="pre">ASCENDING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#cuda.compute.algorithms.SortOrder.ASCENDING" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">ASCENDING</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></span><a class="headerlink" href="#cuda.compute.algorithms.SortOrder.ASCENDING" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="cuda.compute.algorithms.SortOrder.DESCENDING">
-<span class="sig-name descname"><span class="pre">DESCENDING</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#cuda.compute.algorithms.SortOrder.DESCENDING" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">DESCENDING</span></span><span class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></span><a class="headerlink" href="#cuda.compute.algorithms.SortOrder.DESCENDING" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -4462,7 +4689,7 @@ combining two device arrays:</p>
 <h2>Operators<a class="headerlink" href="#operators" title="Link to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="cuda.compute.op.OpKind">
-<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cuda.compute.op.</span></span><span class="sig-name descname"><span class="pre">OpKind</span></span><a class="headerlink" href="#cuda.compute.op.OpKind" title="Link to this definition">#</a></dt>
+<span class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></span><span class="sig-prename descclassname"><span class="pre">cuda.compute.op.</span></span><span class="sig-name descname"><span class="pre">OpKind</span></span><a class="headerlink" href="#cuda.compute.op.OpKind" title="Link to this definition">#</a></dt>
 <dd><p>Enumeration of operator kinds for CUDA parallel algorithms.</p>
 <p>This enum defines the types of operations that can be performed
 in parallel algorithms, including arithmetic, logical, and bitwise operations.</p>
@@ -4591,57 +4818,11 @@ in parallel algorithms, including arithmetic, logical, and bitwise operations.</
 </section>
 <section id="module-cuda.compute.struct">
 <span id="utilities"></span><h2>Utilities<a class="headerlink" href="#module-cuda.compute.struct" title="Link to this heading">#</a></h2>
-<p>This module provides <cite>gpu_struct</cite>, a factory for producing “struct” types that have
-pass-by-value semantics when used with Numba CUDA device functions.</p>
-<p>Numba supports record types, but they have pass-by-reference semantics:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numba.np.numpy_support</span><span class="w"> </span><span class="kn">import</span> <span class="n">from_struct_dtype</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">numba</span><span class="w"> </span><span class="kn">import</span> <span class="n">cuda</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="n">tp</span> <span class="o">=</span> <span class="n">from_struct_dtype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;i4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;i8&#39;</span><span class="p">)]))</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">tp</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">tp</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span>
-
-<span class="n">ptx</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cuda</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="p">(</span><span class="n">tp</span><span class="p">,</span> <span class="n">tp</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ptx</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Inspecting the PTX, we see that the structs are passed by reference to the device function
-<cite>foo</cite>.</p>
-<div class="highlight-ptx notranslate"><div class="highlight"><pre><span></span><span class="kr">.visible</span><span class="w"> </span><span class="kr">.func</span><span class="w">  </span><span class="p">(</span><span class="kp">.param</span><span class="w"> </span><span class="kt">.b64</span><span class="w"> </span><span class="nv">func_retval0</span><span class="p">)</span><span class="w"> </span><span class="nv">foo</span><span class="p">(</span>
-<span class="w">        </span><span class="kp">.param</span><span class="w"> </span><span class="kt">.b64</span><span class="w"> </span><span class="nv">foo_param_0</span><span class="o">,</span>
-<span class="w">        </span><span class="kp">.param</span><span class="w"> </span><span class="kt">.b64</span><span class="w"> </span><span class="nv">foo_param_1</span>
-<span class="p">)</span>
-</pre></div>
-</div>
-<p>With gpu_struct, we can create a struct type with pass-by-value semantics:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numba.core.extending</span><span class="w"> </span><span class="kn">import</span> <span class="n">as_numba_type</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">cuda.compute</span><span class="w"> </span><span class="kn">import</span> <span class="n">gpu_struct</span>
-
-<span class="n">S</span> <span class="o">=</span> <span class="n">gpu_struct</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">})</span>
-<span class="n">tp</span> <span class="o">=</span> <span class="n">as_numba_type</span><span class="p">(</span><span class="n">S</span><span class="p">)</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">tp</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">tp</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span>
-
-<span class="n">ptx</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cuda</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="p">(</span><span class="n">tp</span><span class="p">,</span> <span class="n">tp</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ptx</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Inspecting the PTX, we see that the structs are passed by value to the device function:</p>
-<div class="highlight-ptx notranslate"><div class="highlight"><pre><span></span><span class="kr">.visible</span><span class="w"> </span><span class="kr">.func</span><span class="w">  </span><span class="p">(</span><span class="kp">.param</span><span class="w"> </span><span class="kr">.align</span><span class="w"> </span><span class="m">8</span><span class="w"> </span><span class="kt">.b8</span><span class="w"> </span><span class="nv">func_retval0</span><span class="p">[</span><span class="m">16</span><span class="p">])</span><span class="w"> </span><span class="nv">foo</span><span class="p">(</span>
-<span class="w">    </span><span class="kp">.param</span><span class="w"> </span><span class="kt">.b32</span><span class="w"> </span><span class="nv">foo_param_0</span><span class="o">,</span>
-<span class="w">    </span><span class="kp">.param</span><span class="w"> </span><span class="kt">.b64</span><span class="w"> </span><span class="nv">foo_param_1</span><span class="o">,</span>
-<span class="w">    </span><span class="kp">.param</span><span class="w"> </span><span class="kt">.b32</span><span class="w"> </span><span class="nv">foo_param_2</span><span class="o">,</span>
-<span class="w">    </span><span class="kp">.param</span><span class="w"> </span><span class="kt">.b64</span><span class="w"> </span><span class="nv">foo_param_3</span>
-<span class="p">)</span>
-</pre></div>
-</div>
+<p>This module provides <cite>gpu_struct</cite>, a factory for producing struct types.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="cuda.compute.struct.gpu_struct">
 <span class="sig-prename descclassname"><span class="pre">cuda.compute.struct.</span></span><span class="sig-name descname"><span class="pre">gpu_struct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'AnonymousStruct'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.struct.gpu_struct" title="Link to this definition">#</a></dt>
-<dd><p>A factory for creating struct types with pass-by-value semantics in Numba.</p>
+<dd><p>A factory for creating struct types.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -4651,78 +4832,7 @@ mapping of field names to data types.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A Python class that has been registered with Numba as a struct type.
-<code class="docutils literal notranslate"><span class="pre">as_numba_type()</span></code> can be used to get the underlying Numba type.
-Instances of this class can be passed as arguments to device functions.</p>
-</dd>
-</dl>
-<p>Examples:</p>
-<p>Construction from a dictionary.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">gpu_struct</span><span class="p">({</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">,</span> <span class="s1">&#39;y&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span><span class="p">})</span>
-</pre></div>
-</div>
-<p>Construction from a numpy dtype.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">S</span> <span class="o">=</span> <span class="n">gpu_struct</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dtype</span><span class="p">([(</span><span class="s1">&#39;x&#39;</span><span class="p">,</span> <span class="s1">&#39;i4&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="s1">&#39;i8&#39;</span><span class="p">)]))</span>
-</pre></div>
-</div>
-<p>Construction from an annotated class.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@gpu_struct</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">MyStruct</span><span class="p">:</span>
-    <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span>
-    <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span>
-</pre></div>
-</div>
-<p>Nesting gpu_structs.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@gpu_struct</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">MyStruct</span><span class="p">:</span>
-    <span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int32</span>
-    <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">int64</span>
-
-<span class="nd">@gpu_struct</span>
-<span class="k">class</span><span class="w"> </span><span class="nc">MyNestedStruct</span><span class="p">:</span>
-    <span class="n">a</span><span class="p">:</span> <span class="n">MyStruct</span>
-    <span class="n">b</span><span class="p">:</span> <span class="n">MyStruct</span>
-</pre></div>
-</div>
-<p>Compiling a device function with gpu_struct arguments.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">foo</span><span class="p">(</span><span class="n">a</span><span class="p">:</span> <span class="n">MyStruct</span><span class="p">,</span> <span class="n">b</span><span class="p">:</span> <span class="n">MyStruct</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">a</span>
-
-<span class="n">nb_type</span> <span class="o">=</span> <span class="n">as_numba_type</span><span class="p">(</span><span class="n">MyStruct</span><span class="p">)</span>
-<span class="n">ptx</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">cuda</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">foo</span><span class="p">,</span> <span class="p">(</span><span class="n">nb_type</span><span class="p">,</span> <span class="n">nb_type</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ptx</span><span class="p">)</span>
-</pre></div>
-</div>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="cuda.compute.struct.make_struct_type">
-<span class="sig-prename descclassname"><span class="pre">cuda.compute.struct.</span></span><span class="sig-name descname"><span class="pre">make_struct_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_types</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cuda.compute.struct.make_struct_type" title="Link to this definition">#</a></dt>
-<dd><p>Core factory function that uses the Numba extension machinery to
-create a struct type with pass-by-value semantics.</p>
-<ul class="simple">
-<li><p>Creates a Python type (and corresponding Numba type) representing a struct with the given
-field names and types.</p></li>
-<li><p>Implements typing and lowering for operations like construction, indexing, and attribute
-access within device functions.</p></li>
-<li><p>Returns the Python type. The corresponding Numba type can be obtained using
-<code class="docutils literal notranslate"><span class="pre">as_numba_type()</span></code>.</p></li>
-</ul>
-<p>Note, the return Python type does not have any useful methods or attributes,
-other than the private class attribute <code class="docutils literal notranslate"><span class="pre">_field_spec</span></code> containing the  mapping
-of field names to field types. Any Python-side functionality can be implemented
-by patching in methods.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>name</strong> – The name of the struct type that will be returned.</p></li>
-<li><p><strong>field_names</strong> – A tuple of field names.</p></li>
-<li><p><strong>field_types</strong> – A tuple of field types.</p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Python type that can be used to construct struct instances. The corresponding
-Numba type can be obtained using <code class="docutils literal notranslate"><span class="pre">as_numba_type()</span></code>.</p>
+<dd class="field-even"><p>A struct class helpful for writing operations on struct values.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -4782,6 +4892,10 @@ Numba type can be obtained using <code class="docutils literal notranslate"><spa
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-cuda.compute.algorithms">Algorithms</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.reduce_into"><code class="docutils literal notranslate"><span class="pre">reduce_into()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.make_reduce_into"><code class="docutils literal notranslate"><span class="pre">make_reduce_into()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.lower_bound"><code class="docutils literal notranslate"><span class="pre">lower_bound()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.make_lower_bound"><code class="docutils literal notranslate"><span class="pre">make_lower_bound()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.upper_bound"><code class="docutils literal notranslate"><span class="pre">upper_bound()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.make_upper_bound"><code class="docutils literal notranslate"><span class="pre">make_upper_bound()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.inclusive_scan"><code class="docutils literal notranslate"><span class="pre">inclusive_scan()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.make_inclusive_scan"><code class="docutils literal notranslate"><span class="pre">make_inclusive_scan()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.exclusive_scan"><code class="docutils literal notranslate"><span class="pre">exclusive_scan()</span></code></a></li>
@@ -4808,8 +4922,8 @@ Numba type can be obtained using <code class="docutils literal notranslate"><spa
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.make_select"><code class="docutils literal notranslate"><span class="pre">make_select()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.DoubleBuffer"><code class="docutils literal notranslate"><span class="pre">DoubleBuffer</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.DoubleBuffer.__init__"><code class="docutils literal notranslate"><span class="pre">__init__()</span></code></a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.DoubleBuffer.alternate"><code class="docutils literal notranslate"><span class="pre">alternate()</span></code></a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.DoubleBuffer.current"><code class="docutils literal notranslate"><span class="pre">current()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.DoubleBuffer.alternate"><code class="docutils literal notranslate"><span class="pre">alternate()</span></code></a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.algorithms.SortOrder"><code class="docutils literal notranslate"><span class="pre">SortOrder</span></code></a><ul class="nav section-nav flex-column">
@@ -4863,7 +4977,6 @@ Numba type can be obtained using <code class="docutils literal notranslate"><spa
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-cuda.compute.struct">Utilities</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.struct.gpu_struct"><code class="docutils literal notranslate"><span class="pre">gpu_struct()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cuda.compute.struct.make_struct_type"><code class="docutils literal notranslate"><span class="pre">make_struct_type()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -4915,7 +5028,7 @@ Numba type can be obtained using <code class="docutils literal notranslate"><spa
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>

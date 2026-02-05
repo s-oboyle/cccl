@@ -46,8 +46,8 @@
 
 
     <script src="../../_static/documentation_options.js?v=26f62d79"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=5ceeb459"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
@@ -330,7 +330,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/functional.html">Functional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/iterators.html">Fancy Iterators</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/type_traits.html">Type traits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/vector_tuple_protocol.html">Vector Tuple Protocol</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/numeric.html">Numeric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/random.html">Random</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/memory.html">Memory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/memory_resource.html">Memory Resources</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/math.html">Math</a></li>
@@ -421,7 +423,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../developer/warp_level.html">Warp-level</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../developer/block_scope.html">Block-scope</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../developer/device_scope.html">Device-scope</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../developer/visibility.html">Symbol Visibility</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../developer/nvtx.html">NVTX</a></li>
 </ul>
 </details></li>
@@ -830,10 +831,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1ae268bfffafaa04f5a8a4cf902861367c.html">thrust::next</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a253ceec56c467b5ce73b1593ff8b1375.html">thrust::prev</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1aadb50b0c546159c3f06ecdf8349fb901.html">thrust::make_tagged_deleter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a2ac27e75b5e3ff9162038c65f9a962e6.html">thrust::allocate_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a422a511a42fdee806b0c6fd3b2c1a297.html">thrust::uninitialized_allocate_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1ac43d207f42ebc9d5ecf79d7708119ec1.html">thrust::allocate_unique_n</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a107423505ed1d5bd9e05dda2e3c2a4ad.html">thrust::uninitialized_allocate_unique_n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a82dc371eac6d1499d28f153e3f921926.html">thrust::allocate_unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1ae7fd98cda27174a35283582ebdd724c1.html">thrust::uninitialized_allocate_unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a66c4817439220a11edc1c810c9f2c4e4.html">thrust::allocate_unique_n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a3a4c778f56a57b41e72b4a6037ed08da.html">thrust::uninitialized_allocate_unique_n</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/group__binary__search_1gad2ac5a1c5091366144d6fdbf2ff5551e.html">thrust::lower_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/group__binary__search_1gac85cc9ea00f4bdd8f80ad25fff16741d.html">thrust::upper_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/group__binary__search_1gaa855fdcf3942f95919bb712e26c7bfc6.html">thrust::binary_search</a></li>
@@ -1211,6 +1212,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__instance.html">cuda::experimental::stf::data_instance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__interface.html">cuda::experimental::stf::data_interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__place.html">cuda::experimental::stf::data_place</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__place__extension.html">cuda::experimental::stf::data_place_extension</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1deferred__stream__task.html">cuda::experimental::stf::deferred_stream_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1dim4.html">cuda::experimental::stf::dim4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html">cuda::experimental::stf::event_impl</a></li>
@@ -1220,6 +1222,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__cuda__stream.html">cuda::experimental::stf::exec_place_cuda_stream</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__green__ctx.html">cuda::experimental::stf::exec_place_green_ctx</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__grid.html">cuda::experimental::stf::exec_place_grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__guard.html">cuda::experimental::stf::exec_place_guard</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__host.html">cuda::experimental::stf::exec_place_host</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache.html">cuda::experimental::stf::executable_graph_cache</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache__stat.html">cuda::experimental::stf::executable_graph_cache_stat</a></li>
@@ -1231,6 +1234,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task.html">cuda::experimental::stf::graph_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html">cuda::experimental::stf::graph_task&lt;&gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__context__helper.html">cuda::experimental::stf::green_context_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__ctx__data__place.html">cuda::experimental::stf::green_ctx_data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__ctx__view.html">cuda::experimental::stf::green_ctx_view</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1hashtable.html">cuda::experimental::stf::hashtable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1hashtable__stream__interface.html">cuda::experimental::stf::hashtable_stream_interface</a></li>
@@ -1308,6 +1312,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01cuda_1_1experimental_1_1stf_1_1green__ctx__view_01_4.html">cuda::experimental::stf::hash&lt; cuda::experimental::stf::green_ctx_view &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01data__place_01_4.html">cuda::experimental::stf::hash&lt; data_place &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01dim4_01_4.html">cuda::experimental::stf::hash&lt; dim4 &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01exec__place_01_4.html">cuda::experimental::stf::hash&lt; exec_place &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01hashtable_01_4.html">cuda::experimental::stf::hash&lt; hashtable &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01mdspan_3_01P_8_8_8_01_4_01_4.html">cuda::experimental::stf::hash&lt; mdspan&lt; P… &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01pos4_01_4.html">cuda::experimental::stf::hash&lt; pos4 &gt;</a></li>
@@ -1352,6 +1357,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a1a3f54ba8407a462e7410a45af0f75a3.html">cuda::experimental::stf::data_hash</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1abe262e91fef7dd1a874d0c45463f4529.html">cuda::experimental::stf::data_dump</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1acddbda1fa79384aa723f05740d12001c.html">cuda::experimental::stf::pack_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a20c223a02a2cfb089fe1d91f932912f2.html">cuda::experimental::stf::make_green_ctx_data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a5b257d4c2331422fd492439852cb9005.html">cuda::experimental::stf::get_cuda_context_id</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a58cda9cdc2010f7451a34efc10f8f3f2.html">cuda::experimental::stf::place_partition_scope_to_string</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a742f1c47d0b76725772e86a449d8d604.html">cuda::experimental::stf::make_grid</a></li>
@@ -1423,6 +1429,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../../cccl/development/macro.html">CCCL Internal Macros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../cccl/development/testing.html">CCCL Testing Utilities</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../cccl/development/build_and_bisect_tools.html">Build and Bisect Utilities</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../cccl/development/visibility.html">Symbol Visibility</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../cccl/development/visibility/host_stub_visibility.html">Host Stub Visibility Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cccl/development/visibility/device_kernel_visibility.html">Device Kernel Visibility Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cccl/development/visibility/different_architectures.html">Linking TUs compiled with different architectures</a></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../cccl/contributing.html">Contributing to the CUDA Core Compute Libraries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1519,6 +1531,61 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4IDpDp000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEEN4cudaSt5tupleIDp24RandomAccessIteratorsOutEE9NumItemsT11TransformOp3Env">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname sig-name-template"><span class="n"><span class="pre">RandomAccessIteratorsIn</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname sig-name-template"><span class="n"><span class="pre">RandomAccessIteratorsOut</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname sig-name-template"><span class="n"><span class="pre">NumItemsT</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname sig-name-template"><span class="n"><span class="pre">TransformOp</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname sig-name-template"><span class="n"><span class="pre">Env</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cuda</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">execution</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structcub_1_1DeviceTransform_1a72c2a287a6ab4df774282ff054e544fd"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">cudaError_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Transform</span></span></span><span class="sig-paren">(</span>
+
+<dl>
+<dd><em class="sig-param"><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cuda</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4IDpDp000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEEN4cudaSt5tupleIDp24RandomAccessIteratorsOutEE9NumItemsT11TransformOp3Env" title="cub::DeviceTransform::Transform::RandomAccessIteratorsIn"><span class="n"><span class="pre">RandomAccessIteratorsIn</span></span></a><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">inputs</span></span></em>,</dd>
+<dd><em class="sig-param"><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cuda</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4IDpDp000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEEN4cudaSt5tupleIDp24RandomAccessIteratorsOutEE9NumItemsT11TransformOp3Env" title="cub::DeviceTransform::Transform::RandomAccessIteratorsOut"><span class="n"><span class="pre">RandomAccessIteratorsOut</span></span></a><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">outputs</span></span></em>,</dd>
+<dd><em class="sig-param"><a class="reference internal" href="#_CPPv4IDpDp000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEEN4cudaSt5tupleIDp24RandomAccessIteratorsOutEE9NumItemsT11TransformOp3Env" title="cub::DeviceTransform::Transform::NumItemsT"><span class="n"><span class="pre">NumItemsT</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">num_items</span></span></em>,</dd>
+<dd><em class="sig-param"><a class="reference internal" href="#_CPPv4IDpDp000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEEN4cudaSt5tupleIDp24RandomAccessIteratorsOutEE9NumItemsT11TransformOp3Env" title="cub::DeviceTransform::Transform::TransformOp"><span class="n"><span class="pre">TransformOp</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">transform_op</span></span></em>,</dd>
+<dd><em class="sig-param"><a class="reference internal" href="#_CPPv4IDpDp000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEEN4cudaSt5tupleIDp24RandomAccessIteratorsOutEE9NumItemsT11TransformOp3Env" title="cub::DeviceTransform::Transform::Env"><span class="n"><span class="pre">Env</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">env</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span></em></dd>
+</dl>
+
+<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDpDp000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEEN4cudaSt5tupleIDp24RandomAccessIteratorsOutEE9NumItemsT11TransformOp3Env" title="Link to this definition">#</a><br /></dt>
+<dd><p><section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<p>Transforms many input sequences into many output sequence, by applying a transformation operation on corresponding
+input elements and writing the tuple result to the corresponding output elements. No guarantee is given on the
+identity (i.e. address) of the objects passed to the call operator of the transformation operation.</p>
+</section>
+<section id="a-simple-example">
+<h2>A Simple Example<a class="headerlink" href="#a-simple-example" title="Link to this heading">#</a></h2>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">input1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">};</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">input2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">5.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.1</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">};</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">op</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">__device__</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">cuda</span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="n">product</span><span class="p">,</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span>
+<span class="p">};</span>
+
+<span class="k">auto</span><span class="w"> </span><span class="n">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">no_init</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">no_init</span><span class="p">);</span>
+<span class="n">cub</span><span class="o">::</span><span class="n">DeviceTransform</span><span class="o">::</span><span class="n">Transform</span><span class="p">(</span>
+<span class="w">  </span><span class="n">cuda</span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="p">{</span><span class="n">input1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">input2</span><span class="p">.</span><span class="n">begin</span><span class="p">()},</span>
+<span class="w">  </span><span class="n">cuda</span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="p">{</span><span class="n">result1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">result2</span><span class="p">.</span><span class="n">begin</span><span class="p">()},</span>
+<span class="w">  </span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span>
+<span class="w">  </span><span class="n">op</span><span class="p">);</span>
+
+<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">expected1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">host_vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">-3.1</span><span class="p">,</span><span class="w"> </span><span class="mf">-2.2</span><span class="p">,</span><span class="w"> </span><span class="mi">-9</span><span class="p">,</span><span class="w"> </span><span class="mf">12.8</span><span class="p">,</span><span class="w"> </span><span class="mi">-0</span><span class="p">};</span>
+<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">expected2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">host_vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">{</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">};</span>
+</pre></div>
+</div>
+</section>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inputs</strong> – A tuple of iterators to the input sequences where num_items elements are read from each. The iterators’ value types must be trivially relocatable. </p></li>
+<li><p><strong>outputs</strong> – A tuple of iterators to the output sequences where num_items results are written to each. Each sequence may point to the beginning of one of the input sequences, performing the transformation inplace. Any output sequence must not overlap with any of the input sequence in any other way. </p></li>
+<li><p><strong>num_items</strong> – The number of elements in each input and output sequence. </p></li>
+<li><p><strong>transform_op</strong> – An n-ary function object, where n is the number of input sequences. The input iterators’ value types must be convertible to the parameters of the function object’s call operator. The return type of the call operator must be a tuple where each tuple element is assignable to the corresponding dereferenced output iterators. </p></li>
+<li><p><strong>env</strong> – Execution environment, or cudaStream_t. Default is <code class="docutils literal notranslate"><span class="pre">cuda::std::execution::env{}</span></code>, which will run on stream\ :sub:<code class="docutils literal notranslate"><span class="pre">0</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4IDp0000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT11TransformOp3Env">
 <span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname sig-name-template"><span class="n"><span class="pre">RandomAccessIteratorsIn</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname sig-name-template"><span class="n"><span class="pre">RandomAccessIteratorOut</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname sig-name-template"><span class="n"><span class="pre">NumItemsT</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname sig-name-template"><span class="n"><span class="pre">TransformOp</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname sig-name-template"><span class="n"><span class="pre">Env</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">cuda</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">execution</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">env</span></span><span class="p"><span class="pre">&lt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="structcub_1_1DeviceTransform_1aa38218a8803137acebb6ecbcdca9417a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">cudaError_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Transform</span></span></span><span class="sig-paren">(</span>
 
@@ -1531,26 +1598,34 @@
 </dl>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDp0000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT11TransformOp3Env" title="Link to this definition">#</a><br /></dt>
-<dd><p><section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
+<dd><p><section id="id1">
+<h2>Overview<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <p>Transforms many input sequences into one output sequence, by applying a transformation operation on corresponding
 input elements and writing the result to the corresponding output element. No guarantee is given on the identity
 (i.e. address) of the objects passed to the call operator of the transformation operation.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.8.0: </span>First appears in CUDA Toolkit 12.9.</p>
+</div>
 </section>
-<section id="a-simple-example">
-<h2>A Simple Example<a class="headerlink" href="#a-simple-example" title="Link to this heading">#</a></h2>
-<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">input1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">input2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">5.2f</span><span class="p">,</span><span class="w"> </span><span class="mf">3.1f</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.1f</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0f</span><span class="p">};</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">input3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cuda</span><span class="o">::</span><span class="n">counting_iterator</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">100</span><span class="p">};</span>
-<span class="k">auto</span><span class="w"> </span><span class="n">op</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">__device__</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">;</span>
+<section id="id2">
+<h2>A Simple Example<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">input1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">};</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">input2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">{</span><span class="mf">5.2</span><span class="p">,</span><span class="w"> </span><span class="mf">3.1</span><span class="p">,</span><span class="w"> </span><span class="mf">-1.1</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">};</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">op</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">__device__</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">cuda</span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="o">&lt;</span><span class="kt">double</span><span class="p">,</span><span class="w"> </span><span class="kt">bool</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">const</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="n">product</span><span class="p">,</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">};</span>
 <span class="p">};</span>
 
-<span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">result1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">(</span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">no_init</span><span class="p">);</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">result2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">(</span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">no_init</span><span class="p">);</span>
 <span class="n">cub</span><span class="o">::</span><span class="n">DeviceTransform</span><span class="o">::</span><span class="n">Transform</span><span class="p">(</span>
-<span class="w">  </span><span class="n">cuda</span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="p">{</span><span class="n">input1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">input2</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">input3</span><span class="p">},</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">op</span><span class="p">);</span>
+<span class="w">  </span><span class="n">cuda</span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="p">{</span><span class="n">input1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">input2</span><span class="p">.</span><span class="n">begin</span><span class="p">()},</span>
+<span class="w">  </span><span class="n">cuda</span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="p">{</span><span class="n">result1</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">result2</span><span class="p">.</span><span class="n">begin</span><span class="p">()},</span>
+<span class="w">  </span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span>
+<span class="w">  </span><span class="n">op</span><span class="p">);</span>
 
-<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">expected</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">host_vector</span><span class="o">&lt;</span><span class="kt">float</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">520</span><span class="p">,</span><span class="w"> </span><span class="mi">111</span><span class="p">,</span><span class="w"> </span><span class="mi">397</span><span class="p">,</span><span class="w"> </span><span class="mi">618</span><span class="p">};</span>
+<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">expected1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">host_vector</span><span class="o">&lt;</span><span class="kt">double</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">-3.1</span><span class="p">,</span><span class="w"> </span><span class="mf">-2.2</span><span class="p">,</span><span class="w"> </span><span class="mi">-9</span><span class="p">,</span><span class="w"> </span><span class="mf">12.8</span><span class="p">,</span><span class="w"> </span><span class="mi">-0</span><span class="p">};</span>
+<span class="k">const</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">expected2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">host_vector</span><span class="o">&lt;</span><span class="kt">bool</span><span class="o">&gt;</span><span class="p">{</span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="nb">true</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">,</span><span class="w"> </span><span class="nb">false</span><span class="p">};</span>
 </pre></div>
 </div>
 </section>
@@ -1558,7 +1633,7 @@ input elements and writing the result to the corresponding output element. No gu
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – A tuple of iterators to the input sequences where num_items elements are read from each. The iterators’ value types must be trivially relocatable. </p></li>
+<li><p><strong>inputs</strong> – A tuple of iterators to the input sequences where num_items elements are read from each. </p></li>
 <li><p><strong>output</strong> – An iterator to the output sequence where num_items results are written to. May point to the beginning of one of the input sequences, performing the transformation inplace. The output sequence must not overlap with any of the input sequence in any other way. </p></li>
 <li><p><strong>num_items</strong> – The number of elements in each input sequence. </p></li>
 <li><p><strong>transform_op</strong> – An n-ary function object, where n is the number of input sequences. The input iterators’ value types must be convertible to the parameters of the function object’s call operator. The return type of the call operator must be assignable to the dereferenced output iterator. </p></li>
@@ -1581,13 +1656,17 @@ input elements and writing the result to the corresponding output element. No gu
 </dl>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00000EN3cub15DeviceTransform9TransformE11cudaError_t22RandomAccessIteratorIn23RandomAccessIteratorOut9NumItemsT11TransformOp3Env" title="Link to this definition">#</a><br /></dt>
-<dd><p>Transforms one input sequence into one output sequence, by applying a transformation operation on each input
+<dd><p><p>Transforms one input sequence into one output sequence, by applying a transformation operation on each input
 element and writing the result to the corresponding output element. No guarantee is given on the identity (i.e.
 address) of the objects passed to the call operator of the transformation operation.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.8.0: </span>First appears in CUDA Toolkit 12.9.</p>
+</div>
+</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>input</strong> – An iterator to the input sequence where num_items elements are read from. The iterator’s value type must be trivially relocatable. </p></li>
+<li><p><strong>input</strong> – An iterator to the input sequence where num_items elements are read from. </p></li>
 <li><p><strong>output</strong> – An iterator to the output sequence where num_items results are written to. May point to the same sequence as <code class="docutils literal notranslate"><span class="pre">input</span></code>, performing the transformation inplace. The output sequence must not overlap with the input sequence in any other way. </p></li>
 <li><p><strong>num_items</strong> – The number of elements in each input sequence. </p></li>
 <li><p><strong>transform_op</strong> – A unary function object. The input iterator’s value type must be convertible to the parameter of the function object’s call operator. The return type of the call operator must be assignable to the dereferenced output iterator. </p></li>
@@ -1609,10 +1688,13 @@ address) of the objects passed to the call operator of the transformation operat
 </dl>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000EN3cub15DeviceTransform8GenerateE11cudaError_t23RandomAccessIteratorOut9NumItemsT9Generator3Env" title="Link to this definition">#</a><br /></dt>
-<dd><p><section id="id1">
-<h2>Overview<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<dd><p><section id="id3">
+<h2>Overview<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
 <p>Fills the output sequence by invoking a generator operation for each output element and writing the result to it.
 This is effectively calling Transform with no input sequences.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.8.0: </span>First appears in CUDA Toolkit 12.9.</p>
+</div>
 </section>
 </p>
 <dl class="field-list simple">
@@ -1639,10 +1721,13 @@ This is effectively calling Transform with no input sequences.</p>
 </dl>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000EN3cub15DeviceTransform4FillE11cudaError_t23RandomAccessIteratorOut9NumItemsT5Value3Env" title="Link to this definition">#</a><br /></dt>
-<dd><p><section id="id2">
-<h2>Overview<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<dd><p><section id="id4">
+<h2>Overview<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
 <p>Fills the output sequence by writing the provided value to each element of the output sequence.
 This is effectively calling Generate with a functor returning that value.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.8.0: </span>First appears in CUDA Toolkit 12.9.</p>
+</div>
 </section>
 </p>
 <dl class="field-list simple">
@@ -1671,15 +1756,18 @@ This is effectively calling Generate with a functor returning that value.</p>
 </dl>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDp00000EN3cub15DeviceTransform11TransformIfE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT9Predicate11TransformOp3Env" title="Link to this definition">#</a><br /></dt>
-<dd><p><section id="id3">
-<h2>Overview<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<dd><p><section id="id5">
+<h2>Overview<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
 <p>Selectively transforms many input sequences into one output sequence, by applying a transformation operation on
 corresponding input elements, if a given predicate is true, and writing the result to the corresponding output
 element. No guarantee is given on the identity (i.e. address) of the objects passed to the call operator of the
 predicate and transformation operation. Output elements for which the predicate returns false are not written to.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.8.0: </span>First appears in CUDA Toolkit 12.9.</p>
+</div>
 </section>
-<section id="id4">
-<h2>A Simple Example<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<section id="id6">
+<h2>A Simple Example<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">input</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">predicate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">__device__</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -1699,7 +1787,7 @@ predicate and transformation operation. Output elements for which the predicate 
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – A tuple of iterators to the input sequences where num_items elements are read from each. The iterators’ value types must be trivially relocatable. </p></li>
+<li><p><strong>inputs</strong> – A tuple of iterators to the input sequences where num_items elements are read from each. </p></li>
 <li><p><strong>output</strong> – An iterator to the output sequence where num_items results are written to. May point to the beginning of one of the input sequences, performing the transformation inplace. The output sequence must not overlap with any of the input sequence in any other way. </p></li>
 <li><p><strong>num_items</strong> – The number of elements in each input sequence. </p></li>
 <li><p><strong>predicate</strong> – An n-ary function object, where n is the number of input sequences. The input iterators’ value types must be convertible to the parameters of the function object’s call operator, which must return a boolean value. </p></li>
@@ -1724,15 +1812,18 @@ predicate and transformation operation. Output elements for which the predicate 
 </dl>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000000EN3cub15DeviceTransform11TransformIfE11cudaError_t22RandomAccessIteratorIn23RandomAccessIteratorOut9NumItemsT9Predicate11TransformOp3Env" title="Link to this definition">#</a><br /></dt>
-<dd><p><section id="id5">
-<h2>Overview<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<dd><p><section id="id7">
+<h2>Overview<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
 <p>Selectively transforms one input sequence into one output sequence, by applying a transformation operation on each
 input element, if a given predicate is true, and writing the result to the corresponding output element. No
 guarantee is given on the identity (i.e. address) of the objects passed to the call operator of the predicate and
 transformation operation. Output elements for which the predicate returns false are not written to.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.8.0: </span>First appears in CUDA Toolkit 12.9.</p>
+</div>
 </section>
-<section id="id6">
-<h2>A Simple Example<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
+<section id="id8">
+<h2>A Simple Example<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">input</span><span class="w">     </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">-1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">-3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">-5</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">predicate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="n">__device__</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
@@ -1752,7 +1843,7 @@ transformation operation. Output elements for which the predicate returns false 
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>input</strong> – An iterator to the input sequence where num_items elements are read from. The iterator’s value type must be trivially relocatable. </p></li>
+<li><p><strong>input</strong> – An iterator to the input sequence where num_items elements are read from. </p></li>
 <li><p><strong>output</strong> – An iterator to the output sequence where num_items results are written to. May point to the same sequence as <code class="docutils literal notranslate"><span class="pre">input</span></code>, performing the transformation inplace. The output sequence must not overlap with the input sequence in any other way. </p></li>
 <li><p><strong>num_items</strong> – The number of elements in each input sequence. </p></li>
 <li><p><strong>predicate</strong> – A unary function objects returning <code class="docutils literal notranslate"><span class="pre">bool</span></code>. The input iterators’ value types must be convertible to the parameters of the function object’s call operator. </p></li>
@@ -1776,14 +1867,17 @@ transformation operation. Output elements for which the predicate returns false 
 </dl>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4IDp0000EN3cub15DeviceTransform32TransformStableArgumentAddressesE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT11TransformOp3Env" title="Link to this definition">#</a><br /></dt>
-<dd><p><section id="id7">
-<h2>Overview<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<dd><p><section id="id9">
+<h2>Overview<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
 <p>Transforms many input sequences into one output sequence, by applying a transformation operation on corresponding
 input elements and writing the result to the corresponding output element. The objects passed to the call operator
 of the transformation operation are guaranteed to reside in the input sequences and are never copied.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.8.0: </span>First appears in CUDA Toolkit 12.9.</p>
+</div>
 </section>
-<section id="id8">
-<h2>A Simple Example<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<section id="id10">
+<h2>A Simple Example<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">auto</span><span class="w"> </span><span class="n">input1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">-2</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">};</span>
 <span class="k">auto</span><span class="w"> </span><span class="n">input2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">{</span><span class="mi">52</span><span class="p">,</span><span class="w"> </span><span class="mi">31</span><span class="p">,</span><span class="w"> </span><span class="mi">-11</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">};</span>
 
@@ -1795,7 +1889,7 @@ of the transformation operation are guaranteed to reside in the input sequences 
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">input2_ptr</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
 <span class="p">};</span>
 
-<span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">());</span>
+<span class="k">auto</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">device_vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">thrust</span><span class="o">::</span><span class="n">no_init</span><span class="p">);</span>
 <span class="n">cub</span><span class="o">::</span><span class="n">DeviceTransform</span><span class="o">::</span><span class="n">TransformStableArgumentAddresses</span><span class="p">(</span>
 <span class="w">  </span><span class="n">cuda</span><span class="o">::</span><span class="n">std</span><span class="o">::</span><span class="n">tuple</span><span class="p">{</span><span class="n">input1_ptr</span><span class="p">},</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="w"> </span><span class="n">input1</span><span class="p">.</span><span class="n">size</span><span class="p">(),</span><span class="w"> </span><span class="n">op</span><span class="p">);</span>
 
@@ -1807,7 +1901,7 @@ of the transformation operation are guaranteed to reside in the input sequences 
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>inputs</strong> – A tuple of iterators to the input sequences where num_items elements are read from each. The iterators’ value types must be trivially relocatable. </p></li>
+<li><p><strong>inputs</strong> – A tuple of iterators to the input sequences where num_items elements are read from each. </p></li>
 <li><p><strong>output</strong> – An iterator to the output sequence where num_items results are written to. May point to the beginning of one of the input sequences, performing the transformation inplace. The output sequence must not overlap with any of the input sequence in any other way. </p></li>
 <li><p><strong>num_items</strong> – The number of elements in each input sequence. </p></li>
 <li><p><strong>transform_op</strong> – An n-ary function object, where n is the number of input sequences. The input iterators’ value types must be convertible to the parameters of the function object’s call operator. The return type of the call operator must be assignable to the dereferenced output iterator. </p></li>
@@ -1830,13 +1924,17 @@ of the transformation operation are guaranteed to reside in the input sequences 
 </dl>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00000EN3cub15DeviceTransform32TransformStableArgumentAddressesE11cudaError_t22RandomAccessIteratorIn23RandomAccessIteratorOut9NumItemsT11TransformOp3Env" title="Link to this definition">#</a><br /></dt>
-<dd><p>Transforms one input sequence into one output sequence, by applying a transformation operation on corresponding
+<dd><p><p>Transforms one input sequence into one output sequence, by applying a transformation operation on corresponding
 input elements and writing the result to the corresponding output element. The objects passed to the call operator
 of the transformation operation are guaranteed to reside in the input sequences and are never copied.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.8.0: </span>First appears in CUDA Toolkit 12.9.</p>
+</div>
+</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>input</strong> – An iterator to the input sequence where num_items elements are read from. The iterator’s value type must be trivially relocatable. </p></li>
+<li><p><strong>input</strong> – An iterator to the input sequence where num_items elements are read from. </p></li>
 <li><p><strong>output</strong> – An iterator to the output sequence where num_items results are written to. May point to the beginning of one of the input sequences, performing the transformation inplace. The output sequence must not overlap with any of the input sequence in any other way. </p></li>
 <li><p><strong>num_items</strong> – The number of elements in each input sequence. </p></li>
 <li><p><strong>transform_op</strong> – An n-ary function object, where n is the number of input sequences. The input iterators’ value types must be convertible to the parameters of the function object’s call operator. The return type of the call operator must be assignable to the dereferenced output iterator. </p></li>
@@ -1901,6 +1999,7 @@ of the transformation operation are guaranteed to reside in the input sequences 
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N3cub15DeviceTransformE"><code class="docutils literal notranslate"><span class="pre">cub::DeviceTransform</span></code></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4IDpDp000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEEN4cudaSt5tupleIDp24RandomAccessIteratorsOutEE9NumItemsT11TransformOp3Env"><code class="docutils literal notranslate"><span class="pre">Transform()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4IDp0000EN3cub15DeviceTransform9TransformE11cudaError_tN4cudaSt5tupleIDp23RandomAccessIteratorsInEE23RandomAccessIteratorOut9NumItemsT11TransformOp3Env"><code class="docutils literal notranslate"><span class="pre">Transform()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I00000EN3cub15DeviceTransform9TransformE11cudaError_t22RandomAccessIteratorIn23RandomAccessIteratorOut9NumItemsT11TransformOp3Env"><code class="docutils literal notranslate"><span class="pre">Transform()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0000EN3cub15DeviceTransform8GenerateE11cudaError_t23RandomAccessIteratorOut9NumItemsT9Generator3Env"><code class="docutils literal notranslate"><span class="pre">Generate()</span></code></a></li>
@@ -1960,7 +2059,7 @@ of the transformation operation are guaranteed to reside in the input sequences 
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>

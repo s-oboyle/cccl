@@ -46,14 +46,14 @@
 
 
     <script src="../../_static/documentation_options.js?v=26f62d79"></script>
-    <script src="../../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=5ceeb459"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'cub/api/structcub_1_1DeviceRadixSort';</script>
 
     <link rel="icon" href="../../_static/favicon.png"/>
@@ -332,7 +332,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/functional.html">Functional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/iterators.html">Fancy Iterators</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/type_traits.html">Type traits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/vector_tuple_protocol.html">Vector Tuple Protocol</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/numeric.html">Numeric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/random.html">Random</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/memory.html">Memory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/memory_resource.html">Memory Resources</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../libcudacxx/extended_api/math.html">Math</a></li>
@@ -423,7 +425,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../developer/warp_level.html">Warp-level</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../developer/block_scope.html">Block-scope</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../developer/device_scope.html">Device-scope</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../developer/visibility.html">Symbol Visibility</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../developer/nvtx.html">NVTX</a></li>
 </ul>
 </details></li>
@@ -832,10 +833,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1ae268bfffafaa04f5a8a4cf902861367c.html">thrust::next</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a253ceec56c467b5ce73b1593ff8b1375.html">thrust::prev</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1aadb50b0c546159c3f06ecdf8349fb901.html">thrust::make_tagged_deleter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a2ac27e75b5e3ff9162038c65f9a962e6.html">thrust::allocate_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a422a511a42fdee806b0c6fd3b2c1a297.html">thrust::uninitialized_allocate_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1ac43d207f42ebc9d5ecf79d7708119ec1.html">thrust::allocate_unique_n</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a107423505ed1d5bd9e05dda2e3c2a4ad.html">thrust::uninitialized_allocate_unique_n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a82dc371eac6d1499d28f153e3f921926.html">thrust::allocate_unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1ae7fd98cda27174a35283582ebdd724c1.html">thrust::uninitialized_allocate_unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a66c4817439220a11edc1c810c9f2c4e4.html">thrust::allocate_unique_n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../thrust/api/namespacethrust_1a3a4c778f56a57b41e72b4a6037ed08da.html">thrust::uninitialized_allocate_unique_n</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/group__binary__search_1gad2ac5a1c5091366144d6fdbf2ff5551e.html">thrust::lower_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/group__binary__search_1gac85cc9ea00f4bdd8f80ad25fff16741d.html">thrust::upper_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../thrust/api/group__binary__search_1gaa855fdcf3942f95919bb712e26c7bfc6.html">thrust::binary_search</a></li>
@@ -1213,6 +1214,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__instance.html">cuda::experimental::stf::data_instance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__interface.html">cuda::experimental::stf::data_interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__place.html">cuda::experimental::stf::data_place</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1data__place__extension.html">cuda::experimental::stf::data_place_extension</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1deferred__stream__task.html">cuda::experimental::stf::deferred_stream_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1dim4.html">cuda::experimental::stf::dim4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html">cuda::experimental::stf::event_impl</a></li>
@@ -1222,6 +1224,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__cuda__stream.html">cuda::experimental::stf::exec_place_cuda_stream</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__green__ctx.html">cuda::experimental::stf::exec_place_green_ctx</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__grid.html">cuda::experimental::stf::exec_place_grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__guard.html">cuda::experimental::stf::exec_place_guard</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1exec__place__host.html">cuda::experimental::stf::exec_place_host</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache.html">cuda::experimental::stf::executable_graph_cache</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache__stat.html">cuda::experimental::stf::executable_graph_cache_stat</a></li>
@@ -1233,6 +1236,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task.html">cuda::experimental::stf::graph_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html">cuda::experimental::stf::graph_task&lt;&gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__context__helper.html">cuda::experimental::stf::green_context_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__ctx__data__place.html">cuda::experimental::stf::green_ctx_data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1green__ctx__view.html">cuda::experimental::stf::green_ctx_view</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1hashtable.html">cuda::experimental::stf::hashtable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/classcuda_1_1experimental_1_1stf_1_1hashtable__stream__interface.html">cuda::experimental::stf::hashtable_stream_interface</a></li>
@@ -1310,6 +1314,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01cuda_1_1experimental_1_1stf_1_1green__ctx__view_01_4.html">cuda::experimental::stf::hash&lt; cuda::experimental::stf::green_ctx_view &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01data__place_01_4.html">cuda::experimental::stf::hash&lt; data_place &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01dim4_01_4.html">cuda::experimental::stf::hash&lt; dim4 &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01exec__place_01_4.html">cuda::experimental::stf::hash&lt; exec_place &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01hashtable_01_4.html">cuda::experimental::stf::hash&lt; hashtable &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01mdspan_3_01P_8_8_8_01_4_01_4.html">cuda::experimental::stf::hash&lt; mdspan&lt; P… &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/structcuda_1_1experimental_1_1stf_1_1hash_3_01pos4_01_4.html">cuda::experimental::stf::hash&lt; pos4 &gt;</a></li>
@@ -1354,6 +1359,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a1a3f54ba8407a462e7410a45af0f75a3.html">cuda::experimental::stf::data_hash</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1abe262e91fef7dd1a874d0c45463f4529.html">cuda::experimental::stf::data_dump</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1acddbda1fa79384aa723f05740d12001c.html">cuda::experimental::stf::pack_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a20c223a02a2cfb089fe1d91f932912f2.html">cuda::experimental::stf::make_green_ctx_data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a5b257d4c2331422fd492439852cb9005.html">cuda::experimental::stf::get_cuda_context_id</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a58cda9cdc2010f7451a34efc10f8f3f2.html">cuda::experimental::stf::place_partition_scope_to_string</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../cudax/api/namespacecuda_1_1experimental_1_1stf_1a742f1c47d0b76725772e86a449d8d604.html">cuda::experimental::stf::make_grid</a></li>
@@ -1425,6 +1431,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../../cccl/development/macro.html">CCCL Internal Macros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../cccl/development/testing.html">CCCL Testing Utilities</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../cccl/development/build_and_bisect_tools.html">Build and Bisect Utilities</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../cccl/development/visibility.html">Symbol Visibility</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../cccl/development/visibility/host_stub_visibility.html">Host Stub Visibility Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cccl/development/visibility/device_kernel_visibility.html">Device Kernel Visibility Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../cccl/development/visibility/different_architectures.html">Linking TUs compiled with different architectures</a></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../../cccl/contributing.html">Contributing to the CUDA Core Compute Libraries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1618,6 +1630,9 @@ the input.</p>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort9SortPairsE11cudaError_tPvR6size_tPK4KeyTP4KeyTPK6ValueTP6ValueT9NumItemsTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into ascending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -1718,6 +1733,9 @@ keys with associated vector of <code class="docutils literal notranslate"><span 
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000EN3cub15DeviceRadixSort9SortPairsEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tPK4KeyTP4KeyTPK6ValueTP6ValueT9NumItemsT11DecomposerTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into ascending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -1890,6 +1908,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000EN3cub15DeviceRadixSort9SortPairsEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tPK4KeyTP4KeyTPK6ValueTP6ValueT9NumItemsT11DecomposerT12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into ascending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -2028,6 +2049,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort9SortPairsE11cudaError_tPvR6size_tR12DoubleBufferI4KeyTER12DoubleBufferI6ValueTE9NumItemsTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into ascending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers and a corresponding
 pair of associated value buffers.  Each pair is managed by a DoubleBuffer
@@ -2132,6 +2156,9 @@ keys with associated vector of <code class="docutils literal notranslate"><span 
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000EN3cub15DeviceRadixSort9SortPairsEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tR12DoubleBufferI4KeyTER12DoubleBufferI6ValueTE9NumItemsT11DecomposerT12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into ascending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers and a corresponding
 pair of associated value buffers.  Each pair is managed by a DoubleBuffer
@@ -2284,6 +2311,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000EN3cub15DeviceRadixSort9SortPairsEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tR12DoubleBufferI4KeyTER12DoubleBufferI6ValueTE9NumItemsT11DecomposerTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into ascending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers and a corresponding
 pair of associated value buffers.  Each pair is managed by a DoubleBuffer
@@ -2454,6 +2484,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort19SortPairsDescendingE11cudaError_tPvR6size_tPK4KeyTP4KeyTPK6ValueTP6ValueT9NumItemsTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into descending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -2556,6 +2589,9 @@ keys with associated vector of <code class="docutils literal notranslate"><span 
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000EN3cub15DeviceRadixSort19SortPairsDescendingEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tPK4KeyTP4KeyTPK6ValueTP6ValueT9NumItemsT11DecomposerTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into descending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -2728,6 +2764,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000EN3cub15DeviceRadixSort19SortPairsDescendingEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tPK4KeyTP4KeyTPK6ValueTP6ValueT9NumItemsT11DecomposerT12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into descending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -2866,6 +2905,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort19SortPairsDescendingE11cudaError_tPvR6size_tR12DoubleBufferI4KeyTER12DoubleBufferI6ValueTE9NumItemsTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into descending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers and a corresponding
 pair of associated value buffers.  Each pair is managed by a DoubleBuffer
@@ -2970,6 +3012,9 @@ keys with associated vector of <code class="docutils literal notranslate"><span 
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000EN3cub15DeviceRadixSort19SortPairsDescendingEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tR12DoubleBufferI4KeyTER12DoubleBufferI6ValueTE9NumItemsT11DecomposerT12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into descending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers and a corresponding
 pair of associated value buffers.  Each pair is managed by a DoubleBuffer
@@ -3124,6 +3169,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0000EN3cub15DeviceRadixSort19SortPairsDescendingEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tR12DoubleBufferI4KeyTER12DoubleBufferI6ValueTE9NumItemsT11DecomposerTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts key-value pairs into descending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers and a corresponding
 pair of associated value buffers.  Each pair is managed by a DoubleBuffer
@@ -3296,6 +3344,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00EN3cub15DeviceRadixSort8SortKeysE11cudaError_tPvR6size_tPK4KeyTP4KeyT9NumItemsTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into ascending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -3387,6 +3438,9 @@ the sorting interface using DoubleBuffer wrappers below.</p></li>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort8SortKeysEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tPK4KeyTP4KeyT9NumItemsT11DecomposerTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into ascending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -3527,6 +3581,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort8SortKeysEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tPK4KeyTP4KeyT9NumItemsT11DecomposerT12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into ascending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -3655,6 +3712,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00EN3cub15DeviceRadixSort8SortKeysE11cudaError_tPvR6size_tR12DoubleBufferI4KeyTE9NumItemsTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into ascending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers managed by a
 DoubleBuffer structure that indicates which of the two buffers is
@@ -3748,6 +3808,9 @@ yield a corresponding performance improvement.</p></li>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort8SortKeysEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tR12DoubleBufferI4KeyTE9NumItemsT11DecomposerT12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into ascending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers managed by a
 DoubleBuffer structure that indicates which of the two buffers is
@@ -3879,6 +3942,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort8SortKeysEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tR12DoubleBufferI4KeyTE9NumItemsT11DecomposerTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into ascending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers managed by a
 DoubleBuffer structure that indicates which of the two buffers is
@@ -4028,7 +4094,10 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 </dl>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00EN3cub15DeviceRadixSort18SortKeysDescendingE11cudaError_tPvR6size_tPK4KeyTP4KeyT9NumItemsTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
-<dd><p><ul class="simple">
+<dd><p><div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
+<ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
 supported.</p></li>
@@ -4121,6 +4190,9 @@ the sorting interface using DoubleBuffer wrappers below.</p></li>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort18SortKeysDescendingEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tPK4KeyTP4KeyT9NumItemsT11DecomposerTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into descending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -4258,6 +4330,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort18SortKeysDescendingEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tPK4KeyTP4KeyT9NumItemsT11DecomposerT12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into descending order using <span class="math notranslate nohighlight">\(\approx 2N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The contents of the input data are not altered by the sorting operation.</p></li>
 <li><p>Pointers to contiguous memory must be used; iterators are not currently
@@ -4380,6 +4455,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I00EN3cub15DeviceRadixSort18SortKeysDescendingE11cudaError_tPvR6size_tR12DoubleBufferI4KeyTE9NumItemsTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into descending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers managed by a
 DoubleBuffer structure that indicates which of the two buffers is
@@ -4472,6 +4550,9 @@ yield a corresponding performance improvement.</p></li>
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort18SortKeysDescendingEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tR12DoubleBufferI4KeyTE9NumItemsT11DecomposerT12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into descending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers managed by a
 DoubleBuffer structure that indicates which of the two buffers is
@@ -4603,6 +4684,9 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
 
 <span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I000EN3cub15DeviceRadixSort18SortKeysDescendingEN4cudaSt11enable_if_tIXntN4cudaSt16is_convertible_vI11DecomposerTiEEE11cudaError_tEEPvR6size_tR12DoubleBufferI4KeyTE9NumItemsT11DecomposerTii12cudaStream_t" title="Link to this definition">#</a><br /></dt>
 <dd><p><p>Sorts keys into descending order using <span class="math notranslate nohighlight">\(\approx N\)</span> auxiliary storage.</p>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 2.2.0: </span>First appears in CUDA Toolkit 12.3.</p>
+</div>
 <ul class="simple">
 <li><p>The sorting operation is given a pair of key buffers managed by a
 DoubleBuffer structure that indicates which of the two buffers is
@@ -4866,7 +4950,7 @@ using <code class="docutils literal notranslate"><span class="pre">cub::DeviceRa
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>

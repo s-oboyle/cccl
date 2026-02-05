@@ -46,8 +46,8 @@
 
 
     <script src="../_static/documentation_options.js?v=26f62d79"></script>
-    <script src="../_static/doctools.js?v=9bcbadda"></script>
-    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+    <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=5ceeb459"></script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
@@ -330,7 +330,9 @@
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/functional.html">Functional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/iterators.html">Fancy Iterators</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/type_traits.html">Type traits</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/vector_tuple_protocol.html">Vector Tuple Protocol</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/numeric.html">Numeric</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/random.html">Random</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/memory.html">Memory</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/memory_resource.html">Memory Resources</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/extended_api/math.html">Math</a></li>
@@ -421,7 +423,6 @@
 <li class="toctree-l4"><a class="reference internal" href="../cub/developer/warp_level.html">Warp-level</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/developer/block_scope.html">Block-scope</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/developer/device_scope.html">Device-scope</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../cub/developer/visibility.html">Symbol Visibility</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../cub/developer/nvtx.html">NVTX</a></li>
 </ul>
 </details></li>
@@ -830,10 +831,10 @@
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1ae268bfffafaa04f5a8a4cf902861367c.html">thrust::next</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a253ceec56c467b5ce73b1593ff8b1375.html">thrust::prev</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1aadb50b0c546159c3f06ecdf8349fb901.html">thrust::make_tagged_deleter</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a2ac27e75b5e3ff9162038c65f9a962e6.html">thrust::allocate_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a422a511a42fdee806b0c6fd3b2c1a297.html">thrust::uninitialized_allocate_unique</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1ac43d207f42ebc9d5ecf79d7708119ec1.html">thrust::allocate_unique_n</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a107423505ed1d5bd9e05dda2e3c2a4ad.html">thrust::uninitialized_allocate_unique_n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a82dc371eac6d1499d28f153e3f921926.html">thrust::allocate_unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1ae7fd98cda27174a35283582ebdd724c1.html">thrust::uninitialized_allocate_unique</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a66c4817439220a11edc1c810c9f2c4e4.html">thrust::allocate_unique_n</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../thrust/api/namespacethrust_1a3a4c778f56a57b41e72b4a6037ed08da.html">thrust::uninitialized_allocate_unique_n</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__binary__search_1gad2ac5a1c5091366144d6fdbf2ff5551e.html">thrust::lower_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__binary__search_1gac85cc9ea00f4bdd8f80ad25fff16741d.html">thrust::upper_bound</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../thrust/api/group__binary__search_1gaa855fdcf3942f95919bb712e26c7bfc6.html">thrust::binary_search</a></li>
@@ -1211,6 +1212,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1data__instance.html">cuda::experimental::stf::data_instance</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1data__interface.html">cuda::experimental::stf::data_interface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1data__place.html">cuda::experimental::stf::data_place</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1data__place__extension.html">cuda::experimental::stf::data_place_extension</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1deferred__stream__task.html">cuda::experimental::stf::deferred_stream_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1dim4.html">cuda::experimental::stf::dim4</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1event__impl.html">cuda::experimental::stf::event_impl</a></li>
@@ -1220,6 +1222,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1exec__place__cuda__stream.html">cuda::experimental::stf::exec_place_cuda_stream</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1exec__place__green__ctx.html">cuda::experimental::stf::exec_place_green_ctx</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1exec__place__grid.html">cuda::experimental::stf::exec_place_grid</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1exec__place__guard.html">cuda::experimental::stf::exec_place_guard</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1exec__place__host.html">cuda::experimental::stf::exec_place_host</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache.html">cuda::experimental::stf::executable_graph_cache</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1executable__graph__cache__stat.html">cuda::experimental::stf::executable_graph_cache_stat</a></li>
@@ -1231,6 +1234,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1graph__task.html">cuda::experimental::stf::graph_task</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html">cuda::experimental::stf::graph_task&lt;&gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1green__context__helper.html">cuda::experimental::stf::green_context_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1green__ctx__data__place.html">cuda::experimental::stf::green_ctx_data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1green__ctx__view.html">cuda::experimental::stf::green_ctx_view</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1hashtable.html">cuda::experimental::stf::hashtable</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/classcuda_1_1experimental_1_1stf_1_1hashtable__stream__interface.html">cuda::experimental::stf::hashtable_stream_interface</a></li>
@@ -1308,6 +1312,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/structcuda_1_1experimental_1_1stf_1_1hash_3_01cuda_1_1experimental_1_1stf_1_1green__ctx__view_01_4.html">cuda::experimental::stf::hash&lt; cuda::experimental::stf::green_ctx_view &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/structcuda_1_1experimental_1_1stf_1_1hash_3_01data__place_01_4.html">cuda::experimental::stf::hash&lt; data_place &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/structcuda_1_1experimental_1_1stf_1_1hash_3_01dim4_01_4.html">cuda::experimental::stf::hash&lt; dim4 &gt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/structcuda_1_1experimental_1_1stf_1_1hash_3_01exec__place_01_4.html">cuda::experimental::stf::hash&lt; exec_place &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/structcuda_1_1experimental_1_1stf_1_1hash_3_01hashtable_01_4.html">cuda::experimental::stf::hash&lt; hashtable &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/structcuda_1_1experimental_1_1stf_1_1hash_3_01mdspan_3_01P_8_8_8_01_4_01_4.html">cuda::experimental::stf::hash&lt; mdspan&lt; P… &gt; &gt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/structcuda_1_1experimental_1_1stf_1_1hash_3_01pos4_01_4.html">cuda::experimental::stf::hash&lt; pos4 &gt;</a></li>
@@ -1352,6 +1357,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/namespacecuda_1_1experimental_1_1stf_1a1a3f54ba8407a462e7410a45af0f75a3.html">cuda::experimental::stf::data_hash</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/namespacecuda_1_1experimental_1_1stf_1abe262e91fef7dd1a874d0c45463f4529.html">cuda::experimental::stf::data_dump</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/namespacecuda_1_1experimental_1_1stf_1acddbda1fa79384aa723f05740d12001c.html">cuda::experimental::stf::pack_state</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/namespacecuda_1_1experimental_1_1stf_1a20c223a02a2cfb089fe1d91f932912f2.html">cuda::experimental::stf::make_green_ctx_data_place</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/namespacecuda_1_1experimental_1_1stf_1a5b257d4c2331422fd492439852cb9005.html">cuda::experimental::stf::get_cuda_context_id</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/namespacecuda_1_1experimental_1_1stf_1a58cda9cdc2010f7451a34efc10f8f3f2.html">cuda::experimental::stf::place_partition_scope_to_string</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/namespacecuda_1_1experimental_1_1stf_1a742f1c47d0b76725772e86a449d8d604.html">cuda::experimental::stf::make_grid</a></li>
@@ -1423,6 +1429,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../cccl/development/macro.html">CCCL Internal Macros</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cccl/development/testing.html">CCCL Testing Utilities</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../cccl/development/build_and_bisect_tools.html">Build and Bisect Utilities</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../cccl/development/visibility.html">Symbol Visibility</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../cccl/development/visibility/host_stub_visibility.html">Host Stub Visibility Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cccl/development/visibility/device_kernel_visibility.html">Device Kernel Visibility Issue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cccl/development/visibility/different_architectures.html">Linking TUs compiled with different architectures</a></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="../cccl/contributing.html">Contributing to the CUDA Core Compute Libraries</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -3399,6 +3411,117 @@ management:</p>
 <span class="n">gc_place</span><span class="p">.</span><span class="n">deactivate</span><span class="p">(</span><span class="n">prev</span><span class="p">);</span><span class="w">  </span><span class="c1">// Restore original context</span>
 </pre></div>
 </div>
+<p><strong>RAII guard for scoped activation:</strong></p>
+<p>For exception-safe code or when you want automatic restoration, use the
+<code class="docutils literal notranslate"><span class="pre">exec_place_guard</span></code> RAII helper:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">    </span><span class="n">exec_place_guard</span><span class="w"> </span><span class="nf">guard</span><span class="p">(</span><span class="n">exec_place</span><span class="o">::</span><span class="n">device</span><span class="p">(</span><span class="mi">1</span><span class="p">));</span>
+<span class="w">    </span><span class="c1">// Device 1 is now active</span>
+<span class="w">    </span><span class="c1">// ... perform operations on device 1 ...</span>
+<span class="p">}</span>
+<span class="c1">// Previous device is automatically restored when guard goes out of scope</span>
+</pre></div>
+</div>
+<p>The guard automatically restores the previous execution place when it goes out
+of scope, making it useful for exception-safe code.</p>
+</section>
+<section id="memory-allocation-with-data-places">
+<h3>Memory allocation with data places<a class="headerlink" href="#memory-allocation-with-data-places" title="Link to this heading">#</a></h3>
+<p>Data places provide a unified interface for memory allocation that works across
+different memory types (host, device, managed) and place extensions (green
+contexts, user-defined places). This allows you to allocate memory without using
+CUDASTF tasks, while benefiting from the place abstraction.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">data_place::allocate()</span></code> and <code class="docutils literal notranslate"><span class="pre">data_place::deallocate()</span></code> methods provide
+raw memory allocation. The stream parameter defaults to <code class="docutils literal notranslate"><span class="pre">nullptr</span></code>, which is
+convenient for non-stream-ordered allocations (host, managed) where the stream
+is ignored:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cuda/experimental/stf.cuh&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">cuda</span><span class="o">::</span><span class="nn">experimental</span><span class="o">::</span><span class="nn">stf</span><span class="p">;</span>
+
+<span class="c1">// Allocate on host (pinned memory) - stream defaults to nullptr</span>
+<span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">host_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data_place</span><span class="o">::</span><span class="n">host</span><span class="p">().</span><span class="n">allocate</span><span class="p">(</span><span class="mi">1024</span><span class="p">);</span>
+<span class="c1">// ... use host_ptr ...</span>
+<span class="n">data_place</span><span class="o">::</span><span class="n">host</span><span class="p">().</span><span class="n">deallocate</span><span class="p">(</span><span class="n">host_ptr</span><span class="p">,</span><span class="w"> </span><span class="mi">1024</span><span class="p">);</span>
+
+<span class="c1">// Allocate on a specific device (stream-ordered)</span>
+<span class="n">cudaStream_t</span><span class="w"> </span><span class="n">stream</span><span class="p">;</span>
+<span class="n">cudaStreamCreate</span><span class="p">(</span><span class="o">&amp;</span><span class="n">stream</span><span class="p">);</span>
+<span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">dev_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data_place</span><span class="o">::</span><span class="n">device</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">allocate</span><span class="p">(</span><span class="mi">1024</span><span class="p">,</span><span class="w"> </span><span class="n">stream</span><span class="p">);</span>
+<span class="c1">// ... use dev_ptr with stream ...</span>
+<span class="n">data_place</span><span class="o">::</span><span class="n">device</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">deallocate</span><span class="p">(</span><span class="n">dev_ptr</span><span class="p">,</span><span class="w"> </span><span class="mi">1024</span><span class="p">,</span><span class="w"> </span><span class="n">stream</span><span class="p">);</span>
+<span class="n">cudaStreamDestroy</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+
+<span class="c1">// Allocate managed memory - stream defaults to nullptr</span>
+<span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">managed_ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data_place</span><span class="o">::</span><span class="n">managed</span><span class="p">().</span><span class="n">allocate</span><span class="p">(</span><span class="mi">1024</span><span class="p">);</span>
+<span class="c1">// ... use managed_ptr from host or device ...</span>
+<span class="n">data_place</span><span class="o">::</span><span class="n">managed</span><span class="p">().</span><span class="n">deallocate</span><span class="p">(</span><span class="n">managed_ptr</span><span class="p">,</span><span class="w"> </span><span class="mi">1024</span><span class="p">);</span>
+</pre></div>
+</div>
+<p><strong>Stream-ordered vs immediate allocations:</strong></p>
+<p>Different data places have different allocation behaviors:</p>
+<ul class="simple">
+<li><p><strong>Host</strong> (<code class="docutils literal notranslate"><span class="pre">data_place::host()</span></code>): Uses <code class="docutils literal notranslate"><span class="pre">cudaMallocHost()</span></code> / <code class="docutils literal notranslate"><span class="pre">cudaFreeHost()</span></code> - immediate, stream parameter is ignored</p></li>
+<li><p><strong>Managed</strong> (<code class="docutils literal notranslate"><span class="pre">data_place::managed()</span></code>): Uses <code class="docutils literal notranslate"><span class="pre">cudaMallocManaged()</span></code> / <code class="docutils literal notranslate"><span class="pre">cudaFree()</span></code> - immediate, stream parameter is ignored (note: <code class="docutils literal notranslate"><span class="pre">cudaFree</span></code> may introduce implicit synchronization)</p></li>
+<li><p><strong>Device</strong> (<code class="docutils literal notranslate"><span class="pre">data_place::device(id)</span></code>): Uses <code class="docutils literal notranslate"><span class="pre">cudaMallocAsync()</span></code> / <code class="docutils literal notranslate"><span class="pre">cudaFreeAsync()</span></code> - stream-ordered</p></li>
+<li><p><strong>Extensions</strong> (green contexts, etc.): Behavior depends on the extension implementation</p></li>
+</ul>
+<p>You can query whether a place uses stream-ordered allocation with
+<code class="docutils literal notranslate"><span class="pre">allocation_is_stream_ordered()</span></code>:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">data_place</span><span class="w"> </span><span class="n">place</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">data_place</span><span class="o">::</span><span class="n">device</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">place</span><span class="p">.</span><span class="n">allocation_is_stream_ordered</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Allocation is stream-ordered - synchronize via the stream</span>
+<span class="w">    </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">place</span><span class="p">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">stream</span><span class="p">);</span>
+<span class="w">    </span><span class="n">myKernel</span><span class="o">&lt;&lt;&lt;</span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">block</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">stream</span><span class="o">&gt;&gt;&gt;</span><span class="p">(</span><span class="n">ptr</span><span class="p">);</span>
+<span class="w">    </span><span class="n">place</span><span class="p">.</span><span class="n">deallocate</span><span class="p">(</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">,</span><span class="w"> </span><span class="n">stream</span><span class="p">);</span>
+<span class="w">    </span><span class="n">cudaStreamSynchronize</span><span class="p">(</span><span class="n">stream</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Allocation is immediate - stream is ignored, safe to use right away</span>
+<span class="w">    </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">place</span><span class="p">.</span><span class="n">allocate</span><span class="p">(</span><span class="n">size</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// ... use ptr ...</span>
+<span class="w">    </span><span class="n">place</span><span class="p">.</span><span class="n">deallocate</span><span class="p">(</span><span class="n">ptr</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>This abstraction is particularly useful when writing generic code that needs to
+work with different types of places, including custom place extensions.</p>
+</section>
+<section id="vmm-based-allocation-with-mem-create">
+<h3>VMM-based allocation with mem_create<a class="headerlink" href="#vmm-based-allocation-with-mem-create" title="Link to this heading">#</a></h3>
+<p>For advanced use cases involving CUDA’s Virtual Memory Management (VMM) API,
+<code class="docutils literal notranslate"><span class="pre">data_place</span></code> also provides the <code class="docutils literal notranslate"><span class="pre">mem_create()</span></code> method. This is a lower-level
+interface used internally by localized arrays (<code class="docutils literal notranslate"><span class="pre">composite_slice</span></code>) to create
+physical memory segments that are then mapped into a contiguous virtual address
+space.</p>
+<p>Unlike <code class="docutils literal notranslate"><span class="pre">allocate()</span></code>, which returns a usable pointer directly, <code class="docutils literal notranslate"><span class="pre">mem_create()</span></code>
+returns a <code class="docutils literal notranslate"><span class="pre">CUmemGenericAllocationHandle</span></code> that must be subsequently mapped with
+<code class="docutils literal notranslate"><span class="pre">cuMemMap()</span></code> before use:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;cuda/experimental/stf.cuh&gt;</span>
+<span class="k">using</span><span class="w"> </span><span class="k">namespace</span><span class="w"> </span><span class="nn">cuda</span><span class="o">::</span><span class="nn">experimental</span><span class="o">::</span><span class="nn">stf</span><span class="p">;</span>
+
+<span class="c1">// Create a physical memory handle for device 0</span>
+<span class="n">CUmemGenericAllocationHandle</span><span class="w"> </span><span class="n">handle</span><span class="p">;</span>
+<span class="n">data_place</span><span class="o">::</span><span class="n">device</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="n">mem_create</span><span class="p">(</span><span class="o">&amp;</span><span class="n">handle</span><span class="p">,</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
+
+<span class="c1">// The handle must be mapped to a virtual address before use</span>
+<span class="c1">// (see CUDA VMM documentation for cuMemMap, cuMemSetAccess, etc.)</span>
+</pre></div>
+</div>
+<p><strong>When to use each method:</strong></p>
+<ul class="simple">
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">allocate()</span></code> for most cases - it provides ready-to-use memory with
+stream-ordered semantics where applicable.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">mem_create()</span></code> only when you need explicit control over virtual memory
+mapping, such as creating localized arrays that span multiple devices with a
+unified virtual address space.</p></li>
+</ul>
+<p><strong>Limitations of mem_create:</strong></p>
+<ul class="simple">
+<li><p>Only supports device memory and host memory (pinned)</p></li>
+<li><p>Managed memory is <strong>not supported</strong> by the VMM API</p></li>
+<li><p>The returned handle requires additional VMM API calls to be usable</p></li>
+</ul>
+<p>Custom place extensions can override <code class="docutils literal notranslate"><span class="pre">mem_create()</span></code> to provide specialized
+VMM allocation behavior (e.g., memory localization for hardware partitions).</p>
 </section>
 </section>
 <section id="debugging">
@@ -3984,6 +4107,8 @@ symbols set in the tasks of the miniWeather examples : <img alt="image1" src="..
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tokens">Tokens</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#stream-management-with-execution-places">Stream management with execution places</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-the-current-device-or-context">Setting the current device or context</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-allocation-with-data-places">Memory allocation with data places</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vmm-based-allocation-with-mem-create">VMM-based allocation with mem_create</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#debugging">Debugging</a><ul class="visible nav section-nav flex-column">
@@ -4072,7 +4197,7 @@ symbols set in the tasks of the miniWeather examples : <img alt="image1" src="..
         <div class="footer-item">
 
   <p class="sphinx-version">
-    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 8.2.3.
+    Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 9.1.0.
     <br/>
   </p>
 </div>
