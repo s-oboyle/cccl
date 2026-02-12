@@ -44,7 +44,7 @@
 
 
 
-    <script src="_static/documentation_options.js?v=26f62d79"></script>
+    <script src="_static/documentation_options.js?v=ed7fbdb4"></script>
     <script src="_static/doctools.js?v=fd6eb6e6"></script>
     <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -61,7 +61,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="3.3" />
+  <meta name="docsearch:version" content="3.4" />
 
 
   </head>
@@ -337,10 +337,16 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="libcudacxx/runtime.html">Runtime</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="libcudacxx/runtime/cudart_interactions.html">CUDA Runtime interactions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="libcudacxx/runtime/stream.html">Streams</a></li>
 <li class="toctree-l4"><a class="reference internal" href="libcudacxx/runtime/event.html">Events</a></li>
 <li class="toctree-l4"><a class="reference internal" href="libcudacxx/runtime/algorithm.html">Algorithm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="libcudacxx/runtime/device.html">Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="libcudacxx/runtime/hierarchy.html">Hierarchy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="libcudacxx/runtime/launch.html">Launch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="libcudacxx/runtime/buffer.html">Buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="libcudacxx/runtime/memory_pools.html">Memory Pools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="libcudacxx/runtime/legacy_resources.html">Legacy resources</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="libcudacxx/ptx_api.html">PTX API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1490,6 +1496,7 @@
  | <a href="#G"><strong>G</strong></a>
  | <a href="#H"><strong>H</strong></a>
  | <a href="#I"><strong>I</strong></a>
+ | <a href="#K"><strong>K</strong></a>
  | <a href="#L"><strong>L</strong></a>
  | <a href="#M"><strong>M</strong></a>
  | <a href="#N"><strong>N</strong></a>
@@ -1499,6 +1506,7 @@
  | <a href="#S"><strong>S</strong></a>
  | <a href="#T"><strong>T</strong></a>
  | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
  | <a href="#W"><strong>W</strong></a>
  | <a href="#Z"><strong>Z</strong></a>
  
@@ -1506,14 +1514,54 @@
 <h2 id="_">_</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="python/compute_api.html#cuda.compute.algorithms.DoubleBuffer.__init__">__init__() (cuda.compute.algorithms.DoubleBuffer method)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.CacheModifiedInputIterator.__add__">__add__() (cuda.compute.iterators.CacheModifiedInputIterator method)</a>
+
+      <ul>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.ConstantIterator.__add__">(cuda.compute.iterators.ConstantIterator method)</a>
 </li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.CountingIterator.__add__">(cuda.compute.iterators.CountingIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.PermutationIterator.__add__">(cuda.compute.iterators.PermutationIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.ZipIterator.__add__">(cuda.compute.iterators.ZipIterator method)</a>
+</li>
+      </ul></li>
+      <li><a href="python/compute_api.html#cuda.compute.algorithms.DoubleBuffer.__init__">__init__() (cuda.compute.algorithms.DoubleBuffer method)</a>
+
+      <ul>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.CacheModifiedInputIterator.__init__">(cuda.compute.iterators.CacheModifiedInputIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.ConstantIterator.__init__">(cuda.compute.iterators.ConstantIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.CountingIterator.__init__">(cuda.compute.iterators.CountingIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.DiscardIterator.__init__">(cuda.compute.iterators.DiscardIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.__init__">(cuda.compute.iterators.IteratorBase method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.PermutationIterator.__init__">(cuda.compute.iterators.PermutationIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.ReverseIterator.__init__">(cuda.compute.iterators.ReverseIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.TransformIterator.__init__">(cuda.compute.iterators.TransformIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.TransformOutputIterator.__init__">(cuda.compute.iterators.TransformOutputIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.ZipIterator.__init__">(cuda.compute.iterators.ZipIterator method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.op.RawOp.__init__">(cuda.compute.op.RawOp method)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.typing.DeviceArrayLike.__init__">(cuda.compute.typing.DeviceArrayLike method)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
 <h2 id="A">A</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.TransformIterator.advance">advance() (cuda.compute.iterators.TransformIterator method)</a>
+</li>
       <li><a href="cub/api/structcub_1_1AgentAdjacentDifferencePolicy.html#_CPPv4I_i_i_N3cub18BlockLoadAlgorithmE_N3cub17CacheLoadModifierE_N3cub19BlockStoreAlgorithmEEN3cub29AgentAdjacentDifferencePolicyE">AgentAdjacentDifferencePolicy (C++ struct)</a>
 </li>
       <li><a href="cub/api/structcub_1_1AgentAdjacentDifferencePolicy.html#_CPPv4N3cub29AgentAdjacentDifferencePolicy13BLOCK_THREADSE">AgentAdjacentDifferencePolicy::BLOCK_THREADS (C++ member)</a>
@@ -2417,9 +2465,11 @@
       <li><a href="cub/api/namespacecub_1ac5f2805ad56fdd0f2860a5421d76d9b9.html#_CPPv4N3cub17CacheLoadModifier13LOAD_VOLATILEE">CacheLoadModifier::LOAD_VOLATILE (C++ enumerator)</a>
 </li>
       <li><a href="cub/api/classcub_1_1CacheModifiedInputIterator.html#_CPPv4I_17CacheLoadModifier00EN3cub26CacheModifiedInputIteratorE">CacheModifiedInputIterator (C++ class)</a>
+
+      <ul>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.CacheModifiedInputIterator">(class in cuda.compute.iterators)</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.iterators.CacheModifiedInputIterator">CacheModifiedInputIterator() (in module cuda.compute.iterators)</a>
-</li>
+      </ul></li>
       <li><a href="cub/api/classcub_1_1CacheModifiedInputIterator.html#_CPPv4I0EN3cub26CacheModifiedInputIterator26CacheModifiedInputIteratorEP18QualifiedValueType">CacheModifiedInputIterator::CacheModifiedInputIterator (C++ function)</a>
 </li>
       <li><a href="cub/api/classcub_1_1CacheModifiedInputIterator.html#_CPPv4N3cub26CacheModifiedInputIterator15difference_typeE">CacheModifiedInputIterator::difference_type (C++ type)</a>
@@ -2536,6 +2586,20 @@
 </li>
       <li><a href="cub/api/structcub_1_1ChainedPolicy.html#_CPPv4I0EN3cub13ChainedPolicy6InvokeE11cudaError_tiR8FunctorT">ChainedPolicy::Invoke (C++ function)</a>
 </li>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.children">children (cuda.compute.iterators.IteratorBase property)</a>
+
+      <ul>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.PermutationIterator.children">(cuda.compute.iterators.PermutationIterator property)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.ReverseIterator.children">(cuda.compute.iterators.ReverseIterator property)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.TransformIterator.children">(cuda.compute.iterators.TransformIterator property)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.ZipIterator.children">(cuda.compute.iterators.ZipIterator property)</a>
+</li>
+      </ul></li>
+      <li><a href="python/compute_api.html#cuda.compute.op.RawOp.compile">compile() (cuda.compute.op.RawOp method)</a>
+</li>
       <li><a href="libcudacxx/api/classcompute__capability.html#_CPPv418compute_capability">compute_capability (C++ class)</a>
 </li>
       <li><a href="libcudacxx/api/classcompute__capability.html#_CPPv4N18compute_capability18compute_capabilityE7arch_id">compute_capability::compute_capability (C++ function)</a>, <a href="libcudacxx/api/classcompute__capability.html#_CPPv4N18compute_capability18compute_capabilityERK18compute_capability">[1]</a>, <a href="libcudacxx/api/classcompute__capability.html#_CPPv4N18compute_capability18compute_capabilityEi">[2]</a>, <a href="libcudacxx/api/classcompute__capability.html#_CPPv4N18compute_capability18compute_capabilityEii">[3]</a>, <a href="libcudacxx/api/classcompute__capability.html#_CPPv4N18compute_capability18compute_capabilityEv">[4]</a>
@@ -2612,7 +2676,7 @@
 </li>
       <li><a href="libcudacxx/api/classconstant__iterator.html#_CPPv4N17constant_iterator10value_typeE">constant_iterator::value_type (C++ type)</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.iterators.ConstantIterator">ConstantIterator() (in module cuda.compute.iterators)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.ConstantIterator">ConstantIterator (class in cuda.compute.iterators)</a>
 </li>
       <li><a href="libcudacxx/api/structcopy__configuration.html#_CPPv418copy_configuration">copy_configuration (C++ struct)</a>
 </li>
@@ -2670,7 +2734,7 @@
 </li>
       <li><a href="libcudacxx/api/classcounting__iterator.html#_CPPv4N17counting_iterator10value_typeE">counting_iterator::value_type (C++ type)</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.iterators.CountingIterator">CountingIterator() (in module cuda.compute.iterators)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.CountingIterator">CountingIterator (class in cuda.compute.iterators)</a>
 </li>
       <li>
     cuda.compute.algorithms
@@ -2691,6 +2755,13 @@
 
       <ul>
         <li><a href="python/compute_api.html#module-cuda.compute.struct">module</a>
+</li>
+      </ul></li>
+      <li>
+    cuda.compute.typing
+
+      <ul>
+        <li><a href="python/compute_api.html#module-cuda.compute.typing">module</a>
 </li>
       </ul></li>
       <li>
@@ -3841,7 +3912,7 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html#_CPPv4N4cuda12experimental3stf10event_impl10event_implERK10event_impl">cuda::experimental::stf::event_impl::event_impl (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html#_CPPv4N4cuda12experimental3stf10event_impl10event_implEv">[1]</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html#_CPPv4N4cuda12experimental3stf10event_impl9factorizeER19backend_ctx_untypedRN8reserved12event_vectorE">cuda::experimental::stf::event_impl::factorize (C++ function)</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html#_CPPv4N4cuda12experimental3stf10event_impl9factorizeERK19backend_ctx_untypedRN8reserved12event_vectorE">cuda::experimental::stf::event_impl::factorize (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html#_CPPv4NK4cuda12experimental3stf10event_impl11from_streamER19backend_ctx_untyped12cudaStream_t">cuda::experimental::stf::event_impl::from_stream (C++ function)</a>
 </li>
@@ -3859,7 +3930,7 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html#_CPPv4N4cuda12experimental3stf10event_impl19set_symbol_with_dotERN8reserved11per_ctx_dotENSt6stringE">cuda::experimental::stf::event_impl::set_symbol_with_dot (C++ function)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html#_CPPv4NK4cuda12experimental3stf10event_impl16sync_with_streamER19backend_ctx_untypedR10event_list12cudaStream_t">cuda::experimental::stf::event_impl::sync_with_stream (C++ function)</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html#_CPPv4NK4cuda12experimental3stf10event_impl16sync_with_streamERK19backend_ctx_untypedR10event_list12cudaStream_t">cuda::experimental::stf::event_impl::sync_with_stream (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__impl.html#_CPPv4N4cuda12experimental3stf10event_impl16unique_prereq_idE">cuda::experimental::stf::event_impl::unique_prereq_id (C++ member)</a>
 </li>
@@ -3889,7 +3960,7 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__list.html#_CPPv4N4cuda12experimental3stf10event_listaSERK10event_list">cuda::experimental::stf::event_list::operator= (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__list.html#_CPPv4N4cuda12experimental3stf10event_listaSERR10event_list">[1]</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__list.html#_CPPv4N4cuda12experimental3stf10event_list8optimizeER19backend_ctx_untyped">cuda::experimental::stf::event_list::optimize (C++ function)</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__list.html#_CPPv4N4cuda12experimental3stf10event_list8optimizeERK19backend_ctx_untyped">cuda::experimental::stf::event_list::optimize (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1event__list.html#_CPPv4NK4cuda12experimental3stf10event_list4sizeEv">cuda::experimental::stf::event_list::size (C++ function)</a>
 </li>
@@ -4685,10 +4756,10 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__ctx.html#_CPPv4NK4cuda12experimental3stf9graph_ctx15get_graph_stageEv">cuda::experimental::stf::graph_ctx::get_graph_stage (C++ function)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__ctx.html#_CPPv4NK4cuda12experimental3stf9graph_ctx9get_phaseEv">cuda::experimental::stf::graph_ctx::get_phase (C++ function)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__ctx.html#_CPPv4NK4cuda12experimental3stf9graph_ctx9get_phaseEv">cuda::experimental::stf::graph_ctx::get_phase (C++ function)</a>
+</li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__ctx.html#_CPPv4NK4cuda12experimental3stf9graph_ctx16get_shared_graphEv">cuda::experimental::stf::graph_ctx::get_shared_graph (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__ctx.html#_CPPv4NK4cuda12experimental3stf9graph_ctx16get_start_eventsEv">cuda::experimental::stf::graph_ctx::get_start_events (C++ function)</a>
@@ -4877,6 +4948,8 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html#_CPPv4NK4cuda12experimental3stf10graph_taskIE22get_ready_dependenciesEv">cuda::experimental::stf::graph_task&lt;&gt;::get_ready_dependencies (C++ function)</a>
 </li>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html#_CPPv4NK4cuda12experimental3stf10graph_taskIE17get_ready_prereqsEv">cuda::experimental::stf::graph_task&lt;&gt;::get_ready_prereqs (C++ function)</a>
+</li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html#_CPPv4NK4cuda12experimental3stf10graph_taskIE10get_streamEv">cuda::experimental::stf::graph_task&lt;&gt;::get_stream (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html#_CPPv4NK4cuda12experimental3stf10graph_taskIE10get_symbolEv">cuda::experimental::stf::graph_task&lt;&gt;::get_symbol (C++ function)</a>
@@ -4930,6 +5003,8 @@
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html#_CPPv4N4cuda12experimental3stf10graph_taskIE14set_exec_placeERK10exec_place">cuda::experimental::stf::graph_task&lt;&gt;::set_exec_place (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html#_CPPv4N4cuda12experimental3stf10graph_taskIE16set_input_eventsE10event_list">cuda::experimental::stf::graph_task&lt;&gt;::set_input_events (C++ function)</a>
+</li>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html#_CPPv4N4cuda12experimental3stf10graph_taskIE17set_ready_prereqsE10event_list">cuda::experimental::stf::graph_task&lt;&gt;::set_ready_prereqs (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1graph__task_3_4.html#_CPPv4N4cuda12experimental3stf10graph_taskIE10set_symbolENSt6stringE">cuda::experimental::stf::graph_task&lt;&gt;::set_symbol (C++ function)</a>
 </li>
@@ -5993,7 +6068,7 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__and__event.html#_CPPv4N4cuda12experimental3stf16stream_and_eventE">cuda::experimental::stf::stream_and_event (C++ class)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__and__event.html#_CPPv4N4cuda12experimental3stf16stream_and_event9factorizeER19backend_ctx_untypedRN8reserved12event_vectorE">cuda::experimental::stf::stream_and_event::factorize (C++ function)</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__and__event.html#_CPPv4N4cuda12experimental3stf16stream_and_event9factorizeERK19backend_ctx_untypedRN8reserved12event_vectorE">cuda::experimental::stf::stream_and_event::factorize (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__and__event.html#_CPPv4NK4cuda12experimental3stf16stream_and_event11from_streamER19backend_ctx_untyped12cudaStream_t">cuda::experimental::stf::stream_and_event::from_stream (C++ function)</a>
 </li>
@@ -6023,7 +6098,7 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__and__event.html#_CPPv4N4cuda12experimental3stf16stream_and_event19set_symbol_with_dotERN8reserved11per_ctx_dotENSt6stringE">cuda::experimental::stf::stream_and_event::set_symbol_with_dot (C++ function)</a>
 </li>
-      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__and__event.html#_CPPv4NK4cuda12experimental3stf16stream_and_event16sync_with_streamER19backend_ctx_untypedR10event_list12cudaStream_t">cuda::experimental::stf::stream_and_event::sync_with_stream (C++ function)</a>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__and__event.html#_CPPv4NK4cuda12experimental3stf16stream_and_event16sync_with_streamERK19backend_ctx_untypedR10event_list12cudaStream_t">cuda::experimental::stf::stream_and_event::sync_with_stream (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__and__event.html#_CPPv4N4cuda12experimental3stf16stream_and_event16unique_prereq_idE">cuda::experimental::stf::stream_and_event::unique_prereq_id (C++ member)</a>
 </li>
@@ -6369,6 +6444,8 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__task_3_4.html#_CPPv4NK4cuda12experimental3stf11stream_taskIE14get_mapping_idEv">cuda::experimental::stf::stream_task&lt;&gt;::get_mapping_id (C++ function)</a>
 </li>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__task_3_4.html#_CPPv4NK4cuda12experimental3stf11stream_taskIE17get_ready_prereqsEv">cuda::experimental::stf::stream_task&lt;&gt;::get_ready_prereqs (C++ function)</a>
+</li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__task_3_4.html#_CPPv4NK4cuda12experimental3stf11stream_taskIE10get_streamE6size_t">cuda::experimental::stf::stream_task&lt;&gt;::get_stream (C++ function)</a>, <a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__task_3_4.html#_CPPv4NK4cuda12experimental3stf11stream_taskIE10get_streamEv">[1]</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__task_3_4.html#_CPPv4NK4cuda12experimental3stf11stream_taskIE10get_symbolEv">cuda::experimental::stf::stream_task&lt;&gt;::get_symbol (C++ function)</a>
@@ -6418,6 +6495,8 @@
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__task_3_4.html#_CPPv4N4cuda12experimental3stf11stream_taskIE14set_exec_placeERK10exec_place">cuda::experimental::stf::stream_task&lt;&gt;::set_exec_place (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__task_3_4.html#_CPPv4N4cuda12experimental3stf11stream_taskIE16set_input_eventsE10event_list">cuda::experimental::stf::stream_task&lt;&gt;::set_input_events (C++ function)</a>
+</li>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__task_3_4.html#_CPPv4N4cuda12experimental3stf11stream_taskIE17set_ready_prereqsE10event_list">cuda::experimental::stf::stream_task&lt;&gt;::set_ready_prereqs (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1stream__task_3_4.html#_CPPv4N4cuda12experimental3stf11stream_taskIE10set_streamE12cudaStream_t">cuda::experimental::stf::stream_task&lt;&gt;::set_stream (C++ function)</a>
 </li>
@@ -6475,6 +6554,8 @@
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1task.html#_CPPv4NK4cuda12experimental3stf4task14get_mapping_idEv">cuda::experimental::stf::task::get_mapping_id (C++ function)</a>
 </li>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1task.html#_CPPv4NK4cuda12experimental3stf4task17get_ready_prereqsEv">cuda::experimental::stf::task::get_ready_prereqs (C++ function)</a>
+</li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1task.html#_CPPv4NK4cuda12experimental3stf4task10get_symbolEv">cuda::experimental::stf::task::get_symbol (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1task.html#_CPPv4NK4cuda12experimental3stf4task13get_task_depsEv">cuda::experimental::stf::task::get_task_deps (C++ function)</a>
@@ -6514,6 +6595,8 @@
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1task.html#_CPPv4N4cuda12experimental3stf4task14set_exec_placeERK10exec_place">cuda::experimental::stf::task::set_exec_place (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1task.html#_CPPv4N4cuda12experimental3stf4task16set_input_eventsE10event_list">cuda::experimental::stf::task::set_input_events (C++ function)</a>
+</li>
+      <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1task.html#_CPPv4N4cuda12experimental3stf4task17set_ready_prereqsE10event_list">cuda::experimental::stf::task::set_ready_prereqs (C++ function)</a>
 </li>
       <li><a href="cudax/api/classcuda_1_1experimental_1_1stf_1_1task.html#_CPPv4N4cuda12experimental3stf4task10set_symbolENSt6stringE">cuda::experimental::stf::task::set_symbol (C++ function)</a>
 </li>
@@ -7033,6 +7116,8 @@
 </li>
       <li><a href="cub/api/structcub_1_1DeviceAdjacentDifference.html#_CPPv4I0000EN3cub24DeviceAdjacentDifference17SubtractRightCopyE11cudaError_tPvR6size_t14InputIteratorT15OutputIteratorT9NumItemsT13DifferenceOpT12cudaStream_t">DeviceAdjacentDifference::SubtractRightCopy (C++ function)</a>
 </li>
+      <li><a href="python/compute_api.html#cuda.compute.typing.DeviceArrayLike">DeviceArrayLike (class in cuda.compute.typing)</a>
+</li>
       <li><a href="cub/api/structcub_1_1DeviceCopy.html#_CPPv4N3cub10DeviceCopyE">DeviceCopy (C++ struct)</a>
 </li>
       <li><a href="cub/api/structcub_1_1DeviceCopy.html#_CPPv4I000EN3cub10DeviceCopy7BatchedE11cudaError_tPvR6size_t7InputIt8OutputIt13SizeIteratorTN4cudaSt7int64_tE12cudaStream_t">DeviceCopy::Batched (C++ function)</a>
@@ -7339,7 +7424,7 @@
 </li>
       <li><a href="libcudacxx/api/classdiscard__iterator.html#_CPPv4N16discard_iterator10value_typeE">discard_iterator::value_type (C++ type)</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.iterators.DiscardIterator">DiscardIterator() (in module cuda.compute.iterators)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.DiscardIterator">DiscardIterator (class in cuda.compute.iterators)</a>
 </li>
       <li><a href="cub/api/structcub_1_1DispatchAdjacentDifference.html#_CPPv4I0000_8MayAlias_10ReadOption0EN3cub26DispatchAdjacentDifferenceE">DispatchAdjacentDifference (C++ struct)</a>
 </li>
@@ -7979,6 +8064,14 @@
 <h2 id="G">G</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.get_advance_op">get_advance_op() (cuda.compute.iterators.IteratorBase method)</a>
+</li>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.get_input_deref_op">get_input_deref_op() (cuda.compute.iterators.IteratorBase method)</a>
+</li>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.get_output_deref_op">get_output_deref_op() (cuda.compute.iterators.IteratorBase method)</a>
+</li>
+      <li><a href="python/compute_api.html#cuda.compute.op.RawOp.get_state">get_state() (cuda.compute.op.RawOp method)</a>
+</li>
       <li><a href="libcudacxx/api/structget__stream__t.html#_CPPv412get_stream_t">get_stream_t (C++ struct)</a>
 </li>
       <li><a href="libcudacxx/api/structget__stream__t.html#_CPPv4I0_N4cudaSt11enable_if_tI19__has_member_streamI3_TpEiEEENK12get_stream_tclEN4cuda10stream_refERK3_Tp">get_stream_t::operator() (C++ function)</a>, <a href="libcudacxx/api/structget__stream__t.html#_CPPv4I0_N4cudaSt11enable_if_tI22__has_query_get_streamI4_EnvEiEEENK12get_stream_tclEN4cuda10stream_refERK4_Env">[1]</a>, <a href="libcudacxx/api/structget__stream__t.html#_CPPv4I0_N4cudaSt11enable_if_tI23__has_member_get_streamI3_TpEiEEENK12get_stream_tclEN4cuda10stream_refERK3_Tp">[2]</a>, <a href="libcudacxx/api/structget__stream__t.html#_CPPv4I0_N4cudaSt11enable_if_tI27__convertible_to_stream_refI3_TpEiEEENK12get_stream_tclEN4cuda10stream_refERK3_Tp">[3]</a>, <a href="libcudacxx/api/structget__stream__t.html#_CPPv4NK12get_stream_tclE12cudaStream_t">[4]</a>
@@ -7988,6 +8081,8 @@
       <li><a href="cub/api/namespacecub_1a52c685e4755c10f3ec27da259f2f0220.html#_CPPv4I0EN3cub26GetPerDeviceAttributeCacheER23PerDeviceAttributeCachev">GetPerDeviceAttributeCache (C++ function)</a>
 </li>
       <li><a href="python/compute_api.html#cuda.compute.struct.gpu_struct">gpu_struct() (in module cuda.compute.struct)</a>
+</li>
+      <li><a href="python/compute_api.html#cuda.compute.typing.GpuStruct">GpuStruct (class in cuda.compute.typing)</a>
 </li>
       <li><a href="python/compute_api.html#cuda.compute.op.OpKind.GREATER">GREATER (cuda.compute.op.OpKind attribute)</a>
 </li>
@@ -8003,12 +8098,12 @@
 </li>
       <li><a href="cub/api/structcub_1_1GridEvenShare.html#_CPPv4I_i0EN3cub13GridEvenShare9BlockInitEv8OffsetT18OffsetT1">GridEvenShare::BlockInit (C++ function)</a>, <a href="cub/api/structcub_1_1GridEvenShare.html#_CPPv4I_iEN3cub13GridEvenShare9BlockInitEviN6detail10constant_tI17GRID_MAPPING_RAKEEE">[1]</a>, <a href="cub/api/structcub_1_1GridEvenShare.html#_CPPv4I_iEN3cub13GridEvenShare9BlockInitEviN6detail10constant_tI23GRID_MAPPING_STRIP_MINEEE">[2]</a>, <a href="cub/api/structcub_1_1GridEvenShare.html#_CPPv4I_i_19GridMappingStrategyEN3cub13GridEvenShare9BlockInitEvv">[3]</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cub/api/structcub_1_1GridEvenShare.html#_CPPv4N3cub13GridEvenShare12DispatchInitE7OffsetTii">GridEvenShare::DispatchInit (C++ function)</a>
 </li>
       <li><a href="cub/api/structcub_1_1GridEvenShare.html#_CPPv4N3cub13GridEvenShare9grid_sizeE">GridEvenShare::grid_size (C++ member)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cub/api/structcub_1_1GridEvenShare.html#_CPPv4N3cub13GridEvenShare13GridEvenShareEv">GridEvenShare::GridEvenShare (C++ function)</a>
 </li>
       <li><a href="cub/api/structcub_1_1GridEvenShare.html#_CPPv4N3cub13GridEvenShare9num_itemsE">GridEvenShare::num_items (C++ member)</a>
@@ -8095,16 +8190,44 @@
       </ul></li>
       <li><a href="python/coop_api.html#cuda.coop.block.inclusive_sum">inclusive_sum() (in module cuda.coop.block)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cub/api/structcub_1_1InequalityWrapper.html#_CPPv4I0EN3cub17InequalityWrapperE">InequalityWrapper (C++ struct)</a>
 </li>
       <li><a href="cub/api/structcub_1_1InequalityWrapper.html#_CPPv4N3cub17InequalityWrapper17InequalityWrapperE10EqualityOp">InequalityWrapper::InequalityWrapper (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="cub/api/structcub_1_1InequalityWrapper.html#_CPPv4N3cub17InequalityWrapper2opE">InequalityWrapper::op (C++ member)</a>
 </li>
       <li><a href="cub/api/structcub_1_1InequalityWrapper.html#_CPPv4I00EN3cub17InequalityWrapperclEbRR1TRR1U">InequalityWrapper::operator() (C++ function)</a>
 </li>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.is_input_iterator">is_input_iterator (cuda.compute.iterators.IteratorBase property)</a>
+</li>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.is_output_iterator">is_output_iterator (cuda.compute.iterators.IteratorBase property)</a>
+</li>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase">IteratorBase (class in cuda.compute.iterators)</a>
+</li>
+      <li><a href="python/compute_api.html#cuda.compute.typing.IteratorT">IteratorT (class in cuda.compute.typing)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="K">K</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.CacheModifiedInputIterator.kind">kind (cuda.compute.iterators.CacheModifiedInputIterator property)</a>
+
+      <ul>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.kind">(cuda.compute.iterators.IteratorBase property)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.PermutationIterator.kind">(cuda.compute.iterators.PermutationIterator property)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.ReverseIterator.kind">(cuda.compute.iterators.ReverseIterator property)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.TransformIterator.kind">(cuda.compute.iterators.TransformIterator property)</a>
+</li>
+        <li><a href="python/compute_api.html#cuda.compute.iterators.ZipIterator.kind">(cuda.compute.iterators.ZipIterator property)</a>
+</li>
+      </ul></li>
   </ul></td>
 </tr></table>
 
@@ -8279,6 +8402,8 @@
 </li>
         <li><a href="python/compute_api.html#module-cuda.compute.struct">cuda.compute.struct</a>
 </li>
+        <li><a href="python/compute_api.html#module-cuda.compute.typing">cuda.compute.typing</a>
+</li>
         <li><a href="python/coop_api.html#module-cuda.coop.block">cuda.coop.block</a>
 </li>
         <li><a href="python/coop_api.html#module-cuda.coop.warp">cuda.coop.warp</a>
@@ -8311,6 +8436,10 @@
 
 <h2 id="O">O</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="python/compute_api.html#cuda.compute.typing.Operator">Operator (in module cuda.compute.typing)</a>
+</li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="python/compute_api.html#cuda.compute.op.OpKind">OpKind (class in cuda.compute.op)</a>
 </li>
@@ -8366,7 +8495,7 @@
 </li>
       <li><a href="libcudacxx/api/classpermutation__iterator.html#_CPPv4N20permutation_iterator10value_typeE">permutation_iterator::value_type (C++ type)</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.iterators.PermutationIterator">PermutationIterator() (in module cuda.compute.iterators)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.PermutationIterator">PermutationIterator (class in cuda.compute.iterators)</a>
 </li>
       <li><a href="libcudacxx/api/structpinned__memory__pool.html#_CPPv418pinned_memory_pool">pinned_memory_pool (C++ struct)</a>
 </li>
@@ -8440,12 +8569,14 @@
 </li>
       <li><a href="cub/api/structcub_1_1RadixSortTwiddle.html#_CPPv4I0EN3cub16RadixSortTwiddle3OutE16bit_ordered_type16bit_ordered_type11DecomposerT">RadixSortTwiddle::Out (C++ function)</a>
 </li>
-      <li><a href="cub/api/namespacecub_1abb27bd14e08948ee1505e33d2f5dbc91.html#_CPPv4N3cub10ReadOptionE">ReadOption (C++ enum)</a>
+      <li><a href="python/compute_api.html#cuda.compute.op.RawOp">RawOp (class in cuda.compute.op)</a>
 </li>
-      <li><a href="cub/api/namespacecub_1abb27bd14e08948ee1505e33d2f5dbc91.html#_CPPv4N3cub10ReadOption4LeftE">ReadOption::Left (C++ enumerator)</a>
+      <li><a href="cub/api/namespacecub_1abb27bd14e08948ee1505e33d2f5dbc91.html#_CPPv4N3cub10ReadOptionE">ReadOption (C++ enum)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="cub/api/namespacecub_1abb27bd14e08948ee1505e33d2f5dbc91.html#_CPPv4N3cub10ReadOption4LeftE">ReadOption::Left (C++ enumerator)</a>
+</li>
       <li><a href="cub/api/namespacecub_1abb27bd14e08948ee1505e33d2f5dbc91.html#_CPPv4N3cub10ReadOption5RightE">ReadOption::Right (C++ enumerator)</a>
 </li>
       <li><a href="python/coop_api.html#cuda.coop.block.reduce">reduce() (in module cuda.coop.block)</a>
@@ -8480,7 +8611,7 @@
 </li>
       <li><a href="cub/api/structcub_1_1ReduceBySegmentOp.html#_CPPv4N3cub17ReduceBySegmentOp17ReduceBySegmentOpE12ReductionOpT">ReduceBySegmentOp::ReduceBySegmentOp (C++ function)</a>, <a href="cub/api/structcub_1_1ReduceBySegmentOp.html#_CPPv4N3cub17ReduceBySegmentOp17ReduceBySegmentOpEv">[1]</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.iterators.ReverseIterator">ReverseIterator() (in module cuda.compute.iterators)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.ReverseIterator">ReverseIterator (class in cuda.compute.iterators)</a>
 </li>
       <li><a href="cub/api/namespacecub_1a767f6bb0f696ac8264755e2c5549ba52.html#_CPPv4N3cub11RowMajorTidEiii">RowMajorTid (C++ function)</a>
 </li>
@@ -8668,9 +8799,9 @@
 </li>
       <li><a href="cub/api/namespacecub_1a7fbefdee9a2b826e71ea84be34d81c95.html#_CPPv4I000_iEN3cub17StableOddEvenSortEvRA16ITEMS_PER_THREAD_4KeyTRA16ITEMS_PER_THREAD_6ValueT9CompareOp">StableOddEvenSort (C++ function)</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.op.OpKind.STATEFUL">STATEFUL (cuda.compute.op.OpKind attribute)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.state">state (cuda.compute.iterators.IteratorBase property)</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.op.OpKind.STATELESS">STATELESS (cuda.compute.op.OpKind attribute)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.state_alignment">state_alignment (cuda.compute.iterators.IteratorBase property)</a>
 </li>
       <li><a href="python/coop_api.html#cuda.coop.block.store">store() (in module cuda.coop.block)</a>
 </li>
@@ -10842,6 +10973,8 @@
 </li>
       <li><a href="libcudacxx/api/classtimed__event.html#_CPPv4N11timed_event10value_typeE">timed_event::value_type (C++ type)</a>
 </li>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.to_cccl_iter">to_cccl_iter() (cuda.compute.iterators.IteratorBase method)</a>
+</li>
       <li><a href="libcudacxx/api/classtransform__input__output__iterator.html#_CPPv4I000E31transform_input_output_iterator">transform_input_output_iterator (C++ class)</a>
 </li>
       <li><a href="libcudacxx/api/classtransform__input__output__iterator.html#_CPPv4NKR31transform_input_output_iterator4baseEv">transform_input_output_iterator::base (C++ function)</a>, <a href="libcudacxx/api/classtransform__input__output__iterator.html#_CPPv4NO31transform_input_output_iterator4baseEv">[1]</a>
@@ -10978,9 +11111,9 @@
 </li>
       <li><a href="libcudacxx/api/classtransform__output__iterator.html#_CPPv4N25transform_output_iterator10value_typeE">transform_output_iterator::value_type (C++ type)</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.iterators.TransformIterator">TransformIterator() (in module cuda.compute.iterators)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.TransformIterator">TransformIterator (class in cuda.compute.iterators)</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.iterators.TransformOutputIterator">TransformOutputIterator() (in module cuda.compute.iterators)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.TransformOutputIterator">TransformOutputIterator (class in cuda.compute.iterators)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -10997,6 +11130,14 @@
       <li><a href="python/compute_api.html#cuda.compute.algorithms.upper_bound">upper_bound() (in module cuda.compute.algorithms)</a>
 </li>
       <li><a href="cub/api/namespacecub_1a9ce53dad7978b7158b23949f6cc959ee.html#_CPPv4I000EN3cub10UpperBoundE7OffsetT14InputIteratorT7OffsetT1T">UpperBound (C++ function)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.IteratorBase.value_type">value_type (cuda.compute.iterators.IteratorBase property)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -11218,7 +11359,7 @@
 </li>
       <li><a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4I0_N4cudaSt11enable_if_tIXaaN4cudaSt21default_initializableI4_Fn2EEN22__zip_iter_constraintsIDp10_IteratorsE27__all_default_initializableEEiEEEN22zip_transform_iterator22zip_transform_iteratorEv">zip_transform_iterator::zip_transform_iterator (C++ function)</a>, <a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4N22zip_transform_iterator22zip_transform_iteratorE3_FnDp10_Iterators">[1]</a>, <a href="libcudacxx/api/classzip__transform__iterator.html#_CPPv4N22zip_transform_iterator22zip_transform_iteratorE3_FnN4cudaSt5tupleIDp10_IteratorsEE">[2]</a>
 </li>
-      <li><a href="python/compute_api.html#cuda.compute.iterators.ZipIterator">ZipIterator() (in module cuda.compute.iterators)</a>
+      <li><a href="python/compute_api.html#cuda.compute.iterators.ZipIterator">ZipIterator (class in cuda.compute.iterators)</a>
 </li>
   </ul></td>
 </tr></table>

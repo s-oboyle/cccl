@@ -45,7 +45,7 @@
 
 
 
-    <script src="../_static/documentation_options.js?v=26f62d79"></script>
+    <script src="../_static/documentation_options.js?v=ed7fbdb4"></script>
     <script src="../_static/doctools.js?v=fd6eb6e6"></script>
     <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -64,7 +64,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="3.3" />
+  <meta name="docsearch:version" content="3.4" />
 
 
   </head>
@@ -344,10 +344,16 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../libcudacxx/runtime.html">Runtime</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/runtime/cudart_interactions.html">CUDA Runtime interactions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/runtime/stream.html">Streams</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/runtime/event.html">Events</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/runtime/algorithm.html">Algorithm</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../libcudacxx/runtime/device.html">Devices</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/runtime/hierarchy.html">Hierarchy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/runtime/launch.html">Launch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/runtime/buffer.html">Buffer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/runtime/memory_pools.html">Memory Pools</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../libcudacxx/runtime/legacy_resources.html">Legacy resources</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="../libcudacxx/ptx_api.html">PTX API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -1517,7 +1523,7 @@ parallel algorithms on the GPU—without writing CUDA kernels directly.</p>
 <section id="algorithms">
 <h2>Algorithms<a class="headerlink" href="#algorithms" title="Link to this heading">#</a></h2>
 <p>Algorithms are the core of <code class="docutils literal notranslate"><span class="pre">cuda.compute</span></code>. They operate on arrays or
-<a class="reference internal" href="#cuda-compute-iterators"><span class="std std-ref">iterators</span></a> and can be composed to build specialized
+<span class="xref std std-ref">iterators</span> and can be composed to build specialized
 GPU operations—reductions, scans, sorts, transforms, and more.</p>
 <p>Typical usage of an algorithm looks like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cuda</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">reduce_into</span><span class="p">(</span>
@@ -1540,10 +1546,10 @@ rather than returning them. This keeps memory ownership explicit and lifetimes u
 your control.</p></li>
 <li><p><strong>Operators</strong> — Many algorithms accept an <code class="docutils literal notranslate"><span class="pre">op</span></code> parameter. This can be a built-in
 <a class="reference internal" href="compute_api.html#cuda.compute.op.OpKind" title="cuda.compute.op.OpKind"><code class="xref py py-class docutils literal notranslate"><span class="pre">OpKind</span></code></a> value or a
-<a class="reference internal" href="#cuda-compute-user-defined-operations"><span class="std std-ref">user-defined function</span></a>.
+<a class="reference internal" href="#cuda-compute-user-defined-operators"><span class="std std-ref">user-defined operator</span></a>.
 When possible, prefer built-in operators (e.g., <code class="docutils literal notranslate"><span class="pre">OpKind.PLUS</span></code>) over the equivalent
 user-defined operation (e.g., <code class="docutils literal notranslate"><span class="pre">lambda</span> <span class="pre">a,</span> <span class="pre">b:</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code>) for better performance.</p></li>
-<li><p><strong>Iterators</strong> — Inputs and outputs can be <a class="reference internal" href="#cuda-compute-iterators"><span class="std std-ref">iterators</span></a>
+<li><p><strong>Iterators</strong> — Inputs and outputs can be <span class="xref std std-ref">iterators</span>
 instead of arrays, enabling lazy evaluation and operation fusion.</p></li>
 </ul>
 </section>
@@ -1622,9 +1628,9 @@ must be the same.</p></li>
 </ul>
 </section>
 </section>
-<section id="user-defined-operations">
-<span id="cuda-compute-user-defined-operations"></span><h2>User-Defined Operations<a class="headerlink" href="#user-defined-operations" title="Link to this heading">#</a></h2>
-<p>A powerful feature is the ability to use algorithms with user-defined operations.
+<section id="user-defined-operators">
+<span id="cuda-compute-user-defined-operators"></span><h2>User-Defined Operators<a class="headerlink" href="#user-defined-operators" title="Link to this heading">#</a></h2>
+<p>A powerful feature is the ability to use algorithms with user-defined operators.
 For example, to compute the sum of only the even values in a sequence,
 we can use <a class="reference internal" href="compute_api.html#cuda.compute.algorithms.reduce_into" title="cuda.compute.algorithms.reduce_into"><code class="xref py py-func docutils literal notranslate"><span class="pre">reduce_into</span></code></a> with a custom binary operation:</p>
 <div class="literal-block-wrapper docutils container" id="id3">
@@ -1664,13 +1670,13 @@ we can use <a class="reference internal" href="compute_api.html#cuda.compute.alg
 </div>
 <section id="features-and-restrictions">
 <h3>Features and Restrictions<a class="headerlink" href="#features-and-restrictions" title="Link to this heading">#</a></h3>
-<p>User-defined operations are compiled into device code using
+<p>User-defined operations are just-in-time (JIT) compiled into device code using
 <a class="reference external" href="https://nvidia.github.io/numba-cuda/">Numba CUDA</a>, so they inherit many
 of the same features and restrictions as Numba CUDA functions:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://nvidia.github.io/numba-cuda/user/cudapysupported.html">Python features</a>
 and <a class="reference external" href="https://nvidia.github.io/numba-cuda/user/intrinsics.html">atomic operations</a>
-supported by Numba CUDA are also supported within user-defined operations.</p></li>
+supported by Numba CUDA are also supported within user-defined operators.</p></li>
 <li><p>Nested functions must be decorated with <code class="docutils literal notranslate"><span class="pre">&#64;numba.cuda.jit</span></code>.</p></li>
 <li><p>Variables captured in closures or globals follow
 <a class="reference external" href="https://nvidia.github.io/numba-cuda/user/globals.html">Numba CUDA semantics</a>:
@@ -1680,7 +1686,7 @@ while device arrays are captured by reference.</p></li>
 </section>
 </section>
 <section id="iterators">
-<span id="cuda-compute-iterators"></span><h2>Iterators<a class="headerlink" href="#iterators" title="Link to this heading">#</a></h2>
+<h2>Iterators<a class="headerlink" href="#iterators" title="Link to this heading">#</a></h2>
 <p>Iterators represent sequences whose elements are computed <strong>on the fly</strong>. They can
 be used in place of arrays in most algorithms, enabling lazy evaluation, operation
 fusion, and custom data access patterns.</p>
@@ -1803,6 +1809,7 @@ it into the underlying array.</p>
 
 <span class="c1"># Define the transform operation to be applied</span>
 <span class="c1"># to the result of the sum reduction.</span>
+<span class="c1"># TransformOutputIterator requires type annotations:</span>
 <span class="k">def</span><span class="w"> </span><span class="nf">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="mf">0.5</span>
 
@@ -2010,6 +2017,107 @@ notebooks, this can accumulate significant memory.</p>
 compilation time or reclaiming memory.</p>
 </section>
 </section>
+<section id="externally-compiled-operators">
+<h2>Externally Compiled Operators<a class="headerlink" href="#externally-compiled-operators" title="Link to this heading">#</a></h2>
+<p><a class="reference internal" href="compute_api.html#cuda.compute.op.RawOp" title="cuda.compute.op.RawOp"><code class="xref py py-class docutils literal notranslate"><span class="pre">RawOp</span></code></a> can be used to directly pass compiled device code
+(LTO-IR) implementing custom operators.</p>
+<p>This is useful for users who wish to use a different compilation pipeline than the default
+used by <code class="docutils literal notranslate"><span class="pre">cuda.compute</span></code> (JIT compilation of Python callables using Numba CUDA).</p>
+<p>The example below shows how to compile a C++ device function
+to LTO-IR using <a class="reference external" href="https://nvidia.github.io/cuda-python/cuda-core/latest/">cuda.core</a>,</p>
+<p><a class="reference internal" href="compute_api.html#cuda.compute.algorithms.reduce_into" title="cuda.compute.algorithms.reduce_into"><code class="xref py py-func docutils literal notranslate"><span class="pre">reduce_into</span></code></a>:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Create a custom C++ operator from LTOIR bytecode using RawOp.</span>
+
+<span class="sd">This example demonstrates how to compile C++ device code to LTOIR and use it</span>
+<span class="sd">as a custom operator.</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">cupy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">cp</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">cuda.compute</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cuda.compute.op</span><span class="w"> </span><span class="kn">import</span> <span class="n">RawOp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">cuda.core</span><span class="w"> </span><span class="kn">import</span> <span class="n">Device</span><span class="p">,</span> <span class="n">Program</span><span class="p">,</span> <span class="n">ProgramOptions</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_arch</span><span class="p">():</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Get the SM architecture string for the current device.&quot;&quot;&quot;</span>
+    <span class="n">device</span> <span class="o">=</span> <span class="n">Device</span><span class="p">()</span>
+    <span class="n">device</span><span class="o">.</span><span class="n">set_current</span><span class="p">()</span>
+    <span class="n">cc_major</span><span class="p">,</span> <span class="n">cc_minor</span> <span class="o">=</span> <span class="n">device</span><span class="o">.</span><span class="n">compute_capability</span>
+    <span class="k">return</span> <span class="sa">f</span><span class="s2">&quot;sm_</span><span class="si">{</span><span class="n">cc_major</span><span class="si">}{</span><span class="n">cc_minor</span><span class="si">}</span><span class="s2">&quot;</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">compile_cpp_to_ltoir</span><span class="p">(</span><span class="n">source</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">arch</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bytes</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Compile C++ source to LTOIR using cuda.core.&quot;&quot;&quot;</span>
+    <span class="n">opts</span> <span class="o">=</span> <span class="n">ProgramOptions</span><span class="p">(</span>
+        <span class="n">arch</span><span class="o">=</span><span class="n">arch</span><span class="p">,</span>
+        <span class="n">relocatable_device_code</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">link_time_optimization</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">prog</span> <span class="o">=</span> <span class="n">Program</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="s2">&quot;c++&quot;</span><span class="p">,</span> <span class="n">options</span><span class="o">=</span><span class="n">opts</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">prog</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="s2">&quot;ltoir&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">code</span>
+
+
+<span class="c1"># Define a C++ custom multiply operator</span>
+<span class="n">cpp_source</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">extern &quot;C&quot; __device__ void multiply_op(void* a, void* b, void* result) {</span>
+<span class="s2">    *static_cast&lt;int*&gt;(result) = *static_cast&lt;int*&gt;(a) * *static_cast&lt;int*&gt;(b);</span>
+<span class="s2">}</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Compile C++ to LTOIR</span>
+<span class="n">arch</span> <span class="o">=</span> <span class="n">get_arch</span><span class="p">()</span>
+<span class="n">ltoir_bytes</span> <span class="o">=</span> <span class="n">compile_cpp_to_ltoir</span><span class="p">(</span><span class="n">cpp_source</span><span class="p">,</span> <span class="n">arch</span><span class="p">)</span>
+
+<span class="c1"># Create a RawOp from the LTOIR bytecode</span>
+<span class="n">multiply_op</span> <span class="o">=</span> <span class="n">RawOp</span><span class="p">(</span><span class="n">ltoir</span><span class="o">=</span><span class="n">ltoir_bytes</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s2">&quot;multiply_op&quot;</span><span class="p">)</span>
+
+<span class="c1"># Prepare test data</span>
+<span class="n">h_input</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">d_input</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">h_input</span><span class="p">)</span>
+<span class="n">d_output</span> <span class="o">=</span> <span class="n">cp</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+<span class="n">h_init</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">int32</span><span class="p">)</span>
+
+<span class="c1"># Use the custom operator with reduce_into</span>
+<span class="n">cuda</span><span class="o">.</span><span class="n">compute</span><span class="o">.</span><span class="n">reduce_into</span><span class="p">(</span><span class="n">d_input</span><span class="p">,</span> <span class="n">d_output</span><span class="p">,</span> <span class="n">multiply_op</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">d_input</span><span class="p">),</span> <span class="n">h_init</span><span class="p">)</span>
+
+<span class="c1"># Verify the result</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">d_output</span><span class="o">.</span><span class="n">get</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">expected</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">prod</span><span class="p">(</span><span class="n">h_input</span><span class="p">)</span>  <span class="c1"># 1 * 2 * 3 * 4 * 5 = 120</span>
+<span class="k">assert</span> <span class="n">result</span> <span class="o">==</span> <span class="n">expected</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;Expected </span><span class="si">{</span><span class="n">expected</span><span class="si">}</span><span class="s2">, got </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Custom multiply reduction result: </span><span class="si">{</span><span class="n">result</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;RawOp stateless example completed successfully!&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Required calling convention</strong>: Compiled functions must use untyped pointers for
+all parameters, with manual type casting inside the function. In C++, this means
+all arguments (and the return value) must be passed as <code class="docutils literal notranslate"><span class="pre">void*</span></code> pointers:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="w"> </span><span class="n">__device__</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">my_binary_op</span><span class="p">(</span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="o">*</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">result</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">*</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="o">*</span><span class="k">static_cast</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">*&gt;</span><span class="p">(</span><span class="n">b</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>You must ensure that:</p>
+<ul class="simple">
+<li><p>All parameters are untyped pointers with manual casting in the function body</p></li>
+<li><p>Type casts match the actual data types passed at runtime</p></li>
+<li><p>For stateful operators, state is the first parameter (also an untyped pointer)</p></li>
+<li><p>State bytes have the correct layout and alignment</p></li>
+</ul>
+<p>Type mismatches can cause crashes, memory corruption, or silent incorrect results.</p>
+</div>
+<p>If you wish to use <code class="docutils literal notranslate"><span class="pre">cuda.compute</span></code> solely with externally compiled operators
+(i.e., without native JIT support), you can install a
+minimal version of the <cite>cuda-cccl</cite> package that ships without Numba/Numba CUDA dependencies:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>cuda-cccl<span class="o">[</span>minimal-cu13<span class="o">]</span><span class="w">  </span><span class="c1"># or minimal-cu12</span>
+</pre></div>
+</div>
+</section>
 <section id="examples">
 <h2>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h2>
 <p>For complete runnable examples and additional usage patterns, see the
@@ -2078,7 +2186,7 @@ compilation time or reclaiming memory.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#object-based-api-expert-mode">Object-based API (expert mode)</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-defined-operations">User-Defined Operations</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#user-defined-operators">User-Defined Operators</a><ul class="visible nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#features-and-restrictions">Features and Restrictions</a></li>
 </ul>
 </li>
@@ -2093,6 +2201,7 @@ compilation time or reclaiming memory.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#memory-considerations">Memory considerations</a></li>
 </ul>
 </li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#externally-compiled-operators">Externally Compiled Operators</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#examples">Examples</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#api-reference">API Reference</a></li>
 </ul>
