@@ -1,0 +1,9 @@
+[
+  {
+    "name": "unstable",
+    "version": "unstable",
+    "url": "https://s-oboyle.github.io/cccl/unstable/",
+    "latest": true,
+    "preferred": true
+  }
+]
